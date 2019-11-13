@@ -9,6 +9,7 @@ import general.RechercheURIService;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import general.RechercheURIService;
+import java.util.Map;
 
 
 /**
@@ -20,7 +21,7 @@ public class ActionTraiterRecherche extends Action{
     public boolean executer(HttpServletRequest request){
         try{
             String recherche = request.getParameter("recherche");
-            List<String> URIs = RechercheURIService.getListeURI(recherche);
+            Map<String, String> URIs = RechercheURIService.getListeURI(recherche);
             request.setAttribute("listeURIs", URIs);
             return true;
         } catch (Exception e){

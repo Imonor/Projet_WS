@@ -33,7 +33,7 @@ public class RechercheURIService {
     
     protected void remplirHashmap( Map<String,String> hash, String categorie) throws FileNotFoundException{
         
-        String nomFichier;
+        String nomFichier = "";
         switch (categorie){
             case "Chanteur" :
                 nomFichier = "Chanteurs.txt";
