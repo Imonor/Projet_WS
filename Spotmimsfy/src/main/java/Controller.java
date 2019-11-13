@@ -34,11 +34,19 @@ public class Controller extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
+            
             
             String todo = request.getParameter("todo");
             Action action = null;
             Serialization serialisation = null;
+            
+            if("traiterRecherche".equals(todo)){
+//                new TraiterRecherche().executer(request);
+//                new TraiterRechercheSerialisation().serialiser(request, response);
+//                if((boolean)request.getAttribute("success")){
+//                    session.setAttribute("utilisateur", request.getAttribute("utilisateur"));
+//                }
+            }
             
             out.println("<!DOCTYPE html>");
             out.println("<html>");
