@@ -5,8 +5,6 @@
  */
 package action;
 
-import general.RechercheURIService;
-import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import general.RechercheURIService;
 import java.util.Map;

@@ -47,3 +47,47 @@
 13-Nov-2019 10:22:52.106 INFO [http-nio-8080-exec-15] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [C:\Users\herme\OneDrive\Documents\école\4IF\WS\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml]
 13-Nov-2019 10:22:52.226 INFO [http-nio-8080-exec-15] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [C:\Users\herme\OneDrive\Documents\école\4IF\WS\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml] has finished in [120] ms
 13-Nov-2019 10:22:52.233 INFO [http-nio-8080-exec-18] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy]] after start() had already been called. The second call will be ignored.
+13-Nov-2019 16:50:14.637 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.29
+13-Nov-2019 16:50:14.641 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 5 2018 13:11:12 UTC
+13-Nov-2019 16:50:14.641 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.29.0
+13-Nov-2019 16:50:14.641 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+13-Nov-2019 16:50:14.643 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+13-Nov-2019 16:50:14.643 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+13-Nov-2019 16:50:14.643 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-13
+13-Nov-2019 16:50:14.643 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           13+33
+13-Nov-2019 16:50:14.643 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+13-Nov-2019 16:50:14.644 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\herme\OneDrive\Documents\école\4IF\WS\Projet_WS\TOMCAT\H4142
+13-Nov-2019 16:50:14.644 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\herme\OneDrive\Documents\école\4IF\WS\Projet_WS\TOMCAT\apache-tomcat-8.5.29
+13-Nov-2019 16:50:14.645 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+13-Nov-2019 16:50:14.645 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+13-Nov-2019 16:50:14.646 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\herme\OneDrive\Documents\école\4IF\WS\Projet_WS\TOMCAT\H4142\conf\logging.properties
+13-Nov-2019 16:50:14.646 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+13-Nov-2019 16:50:14.646 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|LAPTOP-TMF4AIPV
+13-Nov-2019 16:50:14.646 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+13-Nov-2019 16:50:14.647 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+13-Nov-2019 16:50:14.647 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+13-Nov-2019 16:50:14.647 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\herme\OneDrive\Documents\école\4IF\WS\Projet_WS\TOMCAT\H4142
+13-Nov-2019 16:50:14.647 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\herme\OneDrive\Documents\école\4IF\WS\Projet_WS\TOMCAT\apache-tomcat-8.5.29
+13-Nov-2019 16:50:14.647 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\herme\OneDrive\Documents\école\4IF\WS\Projet_WS\TOMCAT\H4142\temp
+13-Nov-2019 16:50:14.648 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk-13\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Users\herme\AppData\Local\Microsoft\WindowsApps;C:\Users\herme\AppData\Roaming\npm;C:\Users\herme\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Java\jdk-13\bin;;.]
+13-Nov-2019 16:50:14.855 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+13-Nov-2019 16:50:15.343 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+13-Nov-2019 16:50:15.352 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+13-Nov-2019 16:50:15.352 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+13-Nov-2019 16:50:15.361 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1463 ms
+13-Nov-2019 16:50:15.463 INFO [main] org.apache.catalina.core.StandardService.startInternal Démarrage du service [Catalina]
+13-Nov-2019 16:50:15.463 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.29
+13-Nov-2019 16:50:15.487 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [C:\Users\herme\OneDrive\Documents\école\4IF\WS\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\manager.xml]
+13-Nov-2019 16:50:16.352 WARNING [localhost-startStop-1] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [202] milliseconds.
+13-Nov-2019 16:50:16.405 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [C:\Users\herme\OneDrive\Documents\école\4IF\WS\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\manager.xml] has finished in [918] ms
+13-Nov-2019 16:50:16.408 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [C:\Users\herme\OneDrive\Documents\école\4IF\WS\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\ROOT.xml]
+13-Nov-2019 16:50:16.486 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [C:\Users\herme\OneDrive\Documents\école\4IF\WS\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\ROOT.xml] has finished in [78] ms
+13-Nov-2019 16:50:16.486 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [C:\Users\herme\OneDrive\Documents\école\4IF\WS\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml]
+13-Nov-2019 16:50:16.653 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [C:\Users\herme\OneDrive\Documents\école\4IF\WS\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml] has finished in [167] ms
+13-Nov-2019 16:50:16.659 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+13-Nov-2019 16:50:16.680 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+13-Nov-2019 16:50:16.687 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 1325 ms
+13-Nov-2019 16:50:20.717 INFO [http-nio-8080-exec-10] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Spotmimsfy]
+13-Nov-2019 16:50:20.775 INFO [http-nio-8080-exec-8] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [C:\Users\herme\OneDrive\Documents\école\4IF\WS\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml]
+13-Nov-2019 16:50:20.886 INFO [http-nio-8080-exec-8] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [C:\Users\herme\OneDrive\Documents\école\4IF\WS\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml] has finished in [112] ms
+13-Nov-2019 16:50:20.897 INFO [http-nio-8080-exec-9] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy]] after start() had already been called. The second call will be ignored.
