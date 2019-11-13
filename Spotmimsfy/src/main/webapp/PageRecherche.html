@@ -6,11 +6,47 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Page recherche</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <title>Accueil</title>
+
+        <link rel="stylesheet" href="style.css">
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+        
+        <!-- Ajax -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     </head>
-    <body>
-        <div>Page recherche</div>
-    </body>
+
+    <body id="body-choix-recherche">
+        <div id="search_bar">
+            <h1>Mims'Music</h1>
+            <input id="recherche" name="recherche" type="text" placeholder="Rechercher...">
+            <input id="bouton-recherche" name="bouton-recherche" type="submit" value="" src="https://www.pngfind.com/pngs/m/54-545482_vector-search-icon-search-icon-vector-png-transparent.png">
+        </div>
+        
+        <script>
+            $(document).ready(function () {
+                $('#bouton-recherche').on('click', function () {
+                    $.ajax({
+                        url: './ActionServlet',
+                        type: 'POST',
+                        data: {
+                            todo: 'traiterRecherche',
+                            recherche: $('#recherche').val()
+                        },
+                        dataType: 'json'
+                    }).done(function (response) {
+                        console.log(response);
+                        window.location = "./ChoixRecherche.html";
+                    }).fail(function (error) {
+                        console.log(error);
+                        alert("[ERROR] Problème lors de la recherche. Réessayez plus tard :)");
+                    });
+                });
+            });
+        </script>
+    </body>  
 </html>
