@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 
+import action.Action;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -11,6 +12,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import serialization.Serialization;
 
 /**
  *
@@ -33,6 +35,11 @@ public class Controller extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
+            
+            String todo = request.getParameter("todo");
+            Action action = null;
+            Serialization serialisation = null;
+            
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
