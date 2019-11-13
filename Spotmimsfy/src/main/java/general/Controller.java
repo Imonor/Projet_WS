@@ -7,6 +7,7 @@ package general;
  */
 
 import action.Action;
+import action.ActionTraiterRecherche;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -43,11 +44,12 @@ public class Controller extends HttpServlet {
             Serialization serialisation = null;
             
             if("traiterRecherche".equals(todo)){
-//                new TraiterRecherche().executer(request);
+                new ActionTraiterRecherche().executer(request);
 //                new TraiterRechercheSerialisation().serialiser(request, response);
-//                if((boolean)request.getAttribute("success")){
-//                    session.setAttribute("utilisateur", request.getAttribute("utilisateur"));
-//                }
+            }else if("getInfo".equals(todo)){
+//                new ActionGetInfo().executer(request);
+//                new ActionGetInfoSerialisation().serialiser(request, response);
+//                
             }
             
             out.println("<!DOCTYPE html>");
