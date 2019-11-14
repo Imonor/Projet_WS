@@ -201,18 +201,20 @@
     width: 50%;
     border-width:1px;
     border-style:solid; 
-    border-color:rgb(255,236,145);
+    border-color:rgb(157,190,187);
     border-radius: 10px;
     text-align: center;
+    background-color: rgb(51,61,64);
 }
 
 .chanson-col-1-small {
     width: 25%;
     border-width:1px;
     border-style:solid; 
-    border-color:rgb(255,236,145);
+    border-color:rgb(157,190,187);
     border-radius: 10px;
     text-align: center;
+    background-color: rgb(51,61,64);
 }
 
 .separer-col {
@@ -227,7 +229,8 @@
     width: 40%;
     border-width:1px;
     border-style:solid; 
-    border-color:rgb(255,236,145);
-    border-radius: 30px;
+    border-color:rgb(157,190,187);
+    border-radius: 10px;
     text-align: center;
+    background-color: rgb(51,61,64);
 }
