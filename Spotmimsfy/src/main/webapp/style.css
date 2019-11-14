@@ -168,3 +168,51 @@
     border-radius: 30px;
     text-align: center;
 }
+
+/******************************************* PageChanson.html *****************************/
+
+#table-chanson {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    border-collapse: separate;
+}
+
+#small-tab {
+    border-collapse: separate;
+}
+
+.chanson-col-1 {
+    width: 50%;
+    border-width:1px;
+    border-style:solid; 
+    border-color:rgb(255,236,145);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.chanson-col-1-small {
+    width: 25%;
+    border-width:1px;
+    border-style:solid; 
+    border-color:rgb(255,236,145);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.separer-col {
+    width: 10%;
+}
+
+.separer-ligne {
+    height: 50px;
+}
+
+.chanson-col-2 {
+    width: 40%;
+    border-width:1px;
+    border-style:solid; 
+    border-color:rgb(255,236,145);
+    border-radius: 30px;
+    text-align: center;
+}
