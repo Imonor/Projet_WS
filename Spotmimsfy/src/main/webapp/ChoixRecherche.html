@@ -10,12 +10,12 @@ and open the template in the editor.
         <title>Recherche...</title>
 
         <link rel="stylesheet" href="style.css">
-        
+
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-        
+
         <!-- Ajax -->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     </head>
@@ -24,104 +24,71 @@ and open the template in the editor.
             <input type="text" placeholder="Recherche..">
             <input type="submit" value="" src="https://www.pngfind.com/pngs/m/54-545482_vector-search-icon-search-icon-vector-png-transparent.png">
         </div>
-        <div>
-            <div id="artistes">
-                <table class="table table-dark choix-recherche">
-                    <thead>
+        <br>
+
+        <div id="cadre"> 
+
+            <div class="row">
+                <div id="column1" style="background-color:#22A2AB;">
+                    <h2 style="color:#104A4E">ALBUMS</h2>
+                    
+                    <table>
+                        
+                        
+                    </table>
+                    
+                </div>
+                
+                <div id="column2" style="background-color:#C6FFF4;">
+                    <h2 style="color:#5A746F">CHANSONS</h2>
+                    
+                    <table>
                         <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
-                          </tr>
-                        </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
+                            Some text
                         </tr>
+                    </table>
+                    
+                </div>
+                
+                <div id="column3" style="background-color:#FFEC91;">
+                    <h2 style="color:#746C42">ARTISTES</h2>
+                    
+                    <table>
                         <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
+                            Some text
                         </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
-                    </tbody>
-                </table>
+                    </table>
+                    
+                </div>
             </div>
-            
-            <div id="albums">
-                <table class="table table-dark choix-recherche">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
-                          </tr>
-                        </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
-                    </tbody>
-                </table>                
-            </div>
-            <div id="titres">
-                <table class="table table-dark choix-recherche">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
-                          </tr>
-                        </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
-                    </tbody>
-                </table>               
-            </div>
+
         </div>
+        <script>
+            $(document).ready(function () {
+                $.ajax({
+                    url: './ActionServlet',
+                    type: 'POST',
+                    data: {
+                        todo: 'chargerDonneesArtistes'
+                    },
+                    dataType: 'json'
+                }).done(function (response) {
+                    console.log(response);
+                    for (var i = 0; i < response.nbLignes; i++) {
+                        var tableArtiste = document.getElementById("tableArtiste");
+                        var nouvelleLigne = tableArtiste.insertRow(-1);
+                        var nouvelleCellule1 = nouvelleLigne.insertCell(-1);
+                        var nouveauTexte1 = document.createTextNode(response.resultat[i].URI);
+                        nouvelleCellule1.appendChild(nouveauTexte1);
+                        var nouvelleCellule2 = nouvelleLigne.insertCell(-1);
+                        var nouveauTexte2 = document.createTextNode(response.resultat[i].type);
+                        nouvelleCellule2.appendChild(nouveauTexte2);
+                        var nouvelleCellule3 = nouvelleLigne.insertCell(-1);
+                        var nouveauTexte3 = document.createTextNode(response.resultat[i].name);
+                        nouvelleCellule3.appendChild(nouveauTexte3);
+                    }
+                });
+            });
+        </script>
     </body>
 </html>
