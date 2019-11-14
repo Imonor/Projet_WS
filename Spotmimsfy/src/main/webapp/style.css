@@ -137,9 +137,10 @@
     width: 33%;
 }
 
-#table-artiste {
+#table-artiste, #table-artiste-albums {
     margin-left: 5%;
     margin-right: 5%;
+    margin-top: 2.5%;
     width: 90%;
     border-collapse: separate;
 }
@@ -147,9 +148,10 @@
     width: 30%;
     border-width:1px;
     border-style:solid; 
-    border-color:rgb(255,236,145);
-    border-radius: 30px;
+    border-color:rgb(157,190,187);
+    border-radius: 10px;
     text-align: center;
+    background-color: rgb(51,61,64);
 }
 
 .separer-col {
@@ -160,11 +162,25 @@
     height: 50px;
 }
 
+.separer-album-col {
+    width: 2%;
+}
+
 .artiste-col-2 {
     width: 60%;
     border-width:1px;
     border-style:solid; 
-    border-color:rgb(255,236,145);
-    border-radius: 30px;
+    border-color:rgb(157,190,187);
+    border-radius: 10px;
     text-align: center;
+    background-color: rgb(51,61,64);
+}
+
+.artiste-album-col {
+    width: 10%;
+    border-style:solid; 
+    border-color:rgb(157,190,187);
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgb(51,61,64);
 }
