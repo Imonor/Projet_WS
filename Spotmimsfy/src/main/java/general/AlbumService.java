@@ -22,85 +22,22 @@ public class AlbumService {
     public static Map<String, List<String>> getInfosAlbum(String albumURI) {
         Map<String, List<String>> infosAlbum = new HashMap<>();
 
-        infosAlbum.put("title", getLiteral(albumURI, "dbp:thisAlbum"));
+        infosAlbum.put("title", SPARQLService.getLiteral(albumURI, "dbp:thisAlbum"));
         infosAlbum.put("resume", getResume(albumURI));
-        infosAlbum.put("artist", getResourceURI(albumURI, "dbo:artist"));
-        infosAlbum.put("recordLabel", getResourceText(albumURI, "dbo:recordLabel"));
-        infosAlbum.put("releaseDate", getLiteral(albumURI, "dbo:releaseDate"));
-        infosAlbum.put("runtime", getLiteral(albumURI, "dbo:runtime"));
-        infosAlbum.put("thumbnail", getResourceURI(albumURI, "dbo:thumbnail"));
-        infosAlbum.put("producer", getResourceText(albumURI, "dbo:producer"));
-        infosAlbum.put("awrads", getLiteral(albumURI, "dbp:award"));
+        infosAlbum.put("artist", SPARQLService.getResourceURI(albumURI, "dbo:artist"));
+        infosAlbum.put("recordLabel", SPARQLService.getResourceText(albumURI, "dbo:recordLabel"));
+        infosAlbum.put("releaseDate", SPARQLService.getLiteral(albumURI, "dbo:releaseDate"));
+        infosAlbum.put("runtime", SPARQLService.getLiteral(albumURI, "dbo:runtime"));
+        infosAlbum.put("thumbnail", SPARQLService.getResourceURI(albumURI, "dbo:thumbnail"));
+        infosAlbum.put("producer", SPARQLService.getResourceText(albumURI, "dbo:producer"));
+        infosAlbum.put("awrads", SPARQLService.getLiteral(albumURI, "dbp:award"));
         infosAlbum.put("songTitles", getSongTitles(albumURI));
-        infosAlbum.put("genres", getResourceText(albumURI, "dbo:genre"));
+        infosAlbum.put("genres", SPARQLService.getResourceText(albumURI, "dbo:genre"));
 
         return infosAlbum;
     }
 
-    private static List<String> getLiteral(String albumURI, String literalName) {
-        String query = "PREFIX dbr:<http://dbpedia.org/resource/>\n"
-                + "PREFIX dbo:<http://dbpedia.org/ontology/>\n"
-                + "PREFIX dbp: <http://dbpedia.org/property/>\n"
-                + "PREFIX foaf:<http://xmlns.com/foaf/0.1/>\n"
-                + "PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#/>\n"
-                + "PREFIX dct:<http://purl.org/dc/terms/>\n"
-                + "PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n"
-                + "SELECT  ?value\n"
-                + "WHERE {\n"
-                + "       <" + albumURI + ">\n"
-                + "              " + literalName + " ?value.\n"
-                + "}";
-        List<QuerySolution> results = SPARQLService.executeQuery(query);
-        List<String> values = new ArrayList<>();
-        for (QuerySolution line : results) {
-            values.add(line.getLiteral("value").getString());
-        }
-        return values;
-    }
 
-    private static List<String> getResourceText(String albumURI, String resourceName) {
-        String query = "PREFIX dbr:<http://dbpedia.org/resource/>\n"
-                + "PREFIX dbo:<http://dbpedia.org/ontology/>\n"
-                + "PREFIX dbp: <http://dbpedia.org/property/>\n"
-                + "PREFIX foaf:<http://xmlns.com/foaf/0.1/>\n"
-                + "PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#/>\n"
-                + "PREFIX dct:<http://purl.org/dc/terms/>\n"
-                + "PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n"
-                + "SELECT  ?value\n"
-                + "WHERE {\n"
-                + "       <" + albumURI + ">\n"
-                + "              " + resourceName + " ?value.\n"
-                + "}";
-        List<QuerySolution> results = SPARQLService.executeQuery(query);
-        List<String> values = new ArrayList<>();
-        for (QuerySolution line : results) {
-            String[] yay = line.getResource("value").toString().split("/");
-            System.out.println(yay[yay.length-1].replace("_", " "));
-            values.add(line.getResource("value").getLocalName().replace("_", " "));
-        }
-        return values;
-    }
-
-    private static List<String> getResourceURI(String albumURI, String resourceName) {
-        String query = "PREFIX dbr:<http://dbpedia.org/resource/>\n"
-                + "PREFIX dbo:<http://dbpedia.org/ontology/>\n"
-                + "PREFIX dbp: <http://dbpedia.org/property/>\n"
-                + "PREFIX foaf:<http://xmlns.com/foaf/0.1/>\n"
-                + "PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#/>\n"
-                + "PREFIX dct:<http://purl.org/dc/terms/>\n"
-                + "PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n"
-                + "SELECT  ?value\n"
-                + "WHERE {\n"
-                + "       <" + albumURI + ">\n"
-                + "              " + resourceName + " ?value.\n"
-                + "}";
-        List<QuerySolution> results = SPARQLService.executeQuery(query);
-        List<String> values = new ArrayList<>();
-        for (QuerySolution line : results) {
-            values.add(line.getResource("value").getURI());
-        }
-        return values;
-    }
     
     private static List<String> getResume(String albumURI) {
         String query = "PREFIX dbo:<http://dbpedia.org/ontology/>\n"
@@ -141,7 +78,7 @@ public class AlbumService {
     
 
     public static void main(String[] args) {
-        Map<String, List<String>> albumInfos = getInfosAlbum("");
+        Map<String, List<String>> albumInfos = getInfosAlbum("http://dbpedia.org/resource/Thriller_25");
 
         for (String key : albumInfos.keySet()) {
             System.out.println(key + " : ");
