@@ -1,0 +1,15 @@
+127.0.0.1 - - [14/Nov/2019:09:05:22 +0100] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - - [14/Nov/2019:09:05:23 +0100] "GET /manager/text/ HTTP/1.1" 401 2536
+127.0.0.1 - tomcat [14/Nov/2019:09:05:25 +0100] "GET /manager/text/ HTTP/1.1" 200 42
+127.0.0.1 - - [14/Nov/2019:09:05:25 +0100] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - tomcat [14/Nov/2019:09:05:25 +0100] "GET /manager/text/ HTTP/1.1" 200 42
+127.0.0.1 - - [14/Nov/2019:09:05:25 +0100] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - tomcat [14/Nov/2019:09:05:25 +0100] "GET /manager/text/ HTTP/1.1" 200 42
+127.0.0.1 - - [14/Nov/2019:09:05:25 +0100] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - tomcat [14/Nov/2019:09:05:25 +0100] "GET /manager/text/ HTTP/1.1" 200 42
+127.0.0.1 - tomcat [14/Nov/2019:09:05:25 +0100] "GET /manager/text/list HTTP/1.1" 200 322
+127.0.0.1 - tomcat [14/Nov/2019:09:05:25 +0100] "GET /manager/text/list HTTP/1.1" 200 322
+127.0.0.1 - tomcat [14/Nov/2019:09:05:27 +0100] "GET /manager/text/deploy?config=file%3A%2FC%3A%2FUsers%2Fherme%2FAppData%2FLocal%2FTemp%2Fcontext11082568013164527602.xml&path=/Spotmimsfy HTTP/1.1" 200 81
+127.0.0.1 - tomcat [14/Nov/2019:09:05:27 +0100] "GET /manager/text/start?path=/Spotmimsfy HTTP/1.1" 200 81
+0:0:0:0:0:0:0:1 - - [14/Nov/2019:09:05:28 +0100] "GET /Spotmimsfy HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [14/Nov/2019:09:05:28 +0100] "GET /Spotmimsfy/ HTTP/1.1" 304 -

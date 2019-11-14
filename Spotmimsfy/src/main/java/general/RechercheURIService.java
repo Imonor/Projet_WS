@@ -66,14 +66,14 @@ public class RechercheURIService {
             String line;
             while ((line = br.readLine()) != null) {
               String[] URIDecoupee = line.split("/"); //pour récupérer les differentes etapes du chemin
-              String pageAChercher = URIDecoupee[2]; //On récupère le nom de la page au bout de l'URI
-              pageAChercher.toLowerCase();
-              recherche.toLowerCase();
-              String[] rechercheDecoupee = recherche.split(" ");
+              String pageAChercher = URIDecoupee[4]; //On récupère le nom de la page au bout de l'URI
+              String lowerCasePageAChercher = pageAChercher.toLowerCase();
+              String lowerCaseRecherche = recherche.toLowerCase();
+              String[] rechercheDecoupee = lowerCaseRecherche.split(" ");
               boolean aSelectionner = true; //true si l'URL mérite d'être sélectionnée
               
               for (int i = 0; i < rechercheDecoupee.length; i++) {
-                  if (!pageAChercher.contains(rechercheDecoupee[i])){ //Check si chaque mot de la recherche est bien présent dans le nom de la page
+                  if (!lowerCasePageAChercher.contains(rechercheDecoupee[i])){ //Check si chaque mot de la recherche est bien présent dans le nom de la page
                       aSelectionner = false;
                       break;
                   }
@@ -84,6 +84,15 @@ public class RechercheURIService {
             }
         }catch (Exception e) {
             System.err.println("Error in Afficher Contenu:" + e); 
+        }
+    }
+    
+    public static void main(String[] args) throws FileNotFoundException{ //args[1]: recherche
+        Map h = getListeURI("Californication");
+        for(Object name: h.keySet()){
+            String key = name.toString();
+            String value = h.get(name).toString();
+            System.out.println(key + " , " + value);
         }
     }
 }
