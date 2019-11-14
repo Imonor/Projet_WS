@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import serialization.Serialization;
+import serialization.SerializationListeURIs;
 
 /**
  *
@@ -23,7 +24,7 @@ import serialization.Serialization;
  */
 @WebServlet(urlPatterns = {"/Controller"})
 public class Controller extends HttpServlet {
-
+    
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -35,32 +36,22 @@ public class Controller extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
-            
-            
+            String servletContextPath = this.getServletContext().getRealPath("/WEB-INF/database/");
             String todo = request.getParameter("todo");
             Action action = null;
-            Serialization serialisation = null;
+            Serialization serialization = null;
             
             if("traiterRecherche".equals(todo)){
-                new ActionTraiterRecherche().executer(request);
-//                new TraiterRechercheSerialisation().serialiser(request, response);
+                action = new ActionTraiterRecherche(servletContextPath);
+                action.executer(request);
+                serialization = new SerializationListeURIs();
+                serialization.serialiser(request, response);
             }else if("getInfo".equals(todo)){
 //                new ActionGetInfo().executer(request);
 //                new ActionGetInfoSerialisation().serialiser(request, response);
 //                
             }
-            
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet Controller</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet Controller at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
         }
     }
 

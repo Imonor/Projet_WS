@@ -19,11 +19,15 @@ public class ActionTraiterRecherche extends Action{
     public boolean executer(HttpServletRequest request){
         try{
             String recherche = request.getParameter("recherche");
-            Map<String, String> URIs = RechercheURIService.getListeURI(recherche);
+            Map<String, String> URIs = RechercheURIService.getListeURI(recherche, this.path);
             request.setAttribute("listeURIs", URIs);
             return true;
         } catch (Exception e){
             return false;
         }
+    }
+    
+    public ActionTraiterRecherche(String path){
+        super(path);
     }
 }

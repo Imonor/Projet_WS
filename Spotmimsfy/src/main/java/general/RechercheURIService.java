@@ -20,43 +20,38 @@ import java.util.Map;
  * @author herme
  */
 public class RechercheURIService {
-    private static final String CHEMIN_FIC_CHANTEURS = "src/main/java/database/Chanteurs.csv";
-    private static final String CHEMIN_FIC_COMPOSITEURS = "src/main/java/database/Compositeurs.csv";
-     private static final String CHEMIN_FIC_GROUPES = "src/main/java/database/Groupes.csv";
-    private static final String CHEMIN_FIC_ALBUMS = "src/main/java/database/Albums.csv";
-    private static final String CHEMIN_FIC_CHANSONS = "src/main/java/database/Chansons.csv";
     
-    public static Map<String, String> getListeURI(String recherche) throws FileNotFoundException{
+    public static Map<String, String> getListeURI(String recherche, String path) throws FileNotFoundException{
         
         Map<String, String> hash = new HashMap<>();
-        remplirHashmap(hash, "Chanteur", recherche);
-        remplirHashmap(hash, "Groupe", recherche);
-        remplirHashmap(hash, "Compositeur", recherche);
-        remplirHashmap(hash, "Album", recherche);
-        remplirHashmap(hash, "Chanson", recherche);
+        remplirHashmap(hash, "Chanteur", recherche, path);
+        remplirHashmap(hash, "Groupe", recherche, path);
+        remplirHashmap(hash, "Compositeur", recherche, path);
+        remplirHashmap(hash, "Album", recherche, path);
+        remplirHashmap(hash, "Chanson", recherche, path);
         
         return hash;
     }
     
     
-    protected static void remplirHashmap( Map<String,String> hash, String categorie, String recherche) throws FileNotFoundException{
+    protected static void remplirHashmap( Map<String,String> hash, String categorie, String recherche, String path) throws FileNotFoundException{
         
         String nomFichier = "";
         switch (categorie){
             case "Chanteur" :
-                nomFichier = CHEMIN_FIC_CHANTEURS;
+                nomFichier = path + "Chanteurs.csv";
                 break;
             case "Groupe" :
-                nomFichier = CHEMIN_FIC_GROUPES;
+                nomFichier = path + "Groupes.csv";
                 break;
             case "Compositeur" :
-                nomFichier = CHEMIN_FIC_COMPOSITEURS;
+                nomFichier = path + "Compositeurs.csv";
                 break;
             case "Album" :
-                nomFichier = CHEMIN_FIC_ALBUMS;
+                nomFichier = path + "Albums.csv";
                 break;
             case "Chanson" :
-                nomFichier = CHEMIN_FIC_CHANSONS;
+                nomFichier = path + "Chansons.csv";
                 break;
         }
         
@@ -88,7 +83,7 @@ public class RechercheURIService {
     }
     
     public static void main(String[] args) throws FileNotFoundException{ //args[1]: recherche
-        Map h = getListeURI("Californication");
+        Map h = getListeURI("Californication", "");
         for(Object name: h.keySet()){
             String key = name.toString();
             String value = h.get(name).toString();
