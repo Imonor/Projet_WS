@@ -21,8 +21,8 @@ public class ArtisteService {
         Map<String, List<String>> infosArtiste = new HashMap<>();
 
         infosArtiste.put("description", SPARQLService.getLiteral(artistURI, "dct:description"));
-        infosArtiste.put("birthDate", SPARQLService.getLiteral(artistURI, "dbp:birthDate"));
-        infosArtiste.put("deathDate", SPARQLService.getLiteral(artistURI, "dbp:deathDate"));
+        infosArtiste.put("birthDate", SPARQLService.getLiteral(artistURI, "dbo:birthDate", " LIMIT 1"));
+        infosArtiste.put("deathDate", SPARQLService.getLiteral(artistURI, "dbo:deathDate", " LIMIT 1"));
         infosArtiste.put("thumbnail", SPARQLService.getResourceURI(artistURI, "dbo:thumbnail"));
         infosArtiste.put("resume",SPARQLService.getResume(artistURI));
         infosArtiste.put("genres", SPARQLService.getResourceText(artistURI, "dbo:genre", " LIMIT 5"));
@@ -58,7 +58,7 @@ public class ArtisteService {
 
 // For Test purposes
 //    public static void main(String[] args) {
-//        Map<String, List<String>> albumInfos = getInfosArtiste("http://dbpedia.org/resource/Michael_Jackson");
+//        Map<String, List<String>> albumInfos = getInfosArtiste("http://dbpedia.org/resource/Kanye_West");
 //
 //        for (String key : albumInfos.keySet()) {
 //            System.out.println(key + " : ");
