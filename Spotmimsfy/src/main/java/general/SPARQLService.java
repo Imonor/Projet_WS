@@ -85,8 +85,7 @@ public class SPARQLService {
         List<String> values = new ArrayList<>();
         for (QuerySolution line : results) {
             String[] yay = line.getResource("value").toString().split("/");
-            //System.out.println(yay[yay.length-1].replace("_", " "));
-            values.add(line.getResource("value").getLocalName().replace("_", " "));
+            values.add(yay[yay.length-1].replace("_", " "));
         }
         return values;
     }
