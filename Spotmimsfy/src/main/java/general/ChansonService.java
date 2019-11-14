@@ -24,9 +24,9 @@ public class ChansonService {
         infosChanson.put("album", SPARQLService.getResourceURI(albumURI, "dbo:album"));
         infosChanson.put("recordLabel", SPARQLService.getResourceText(albumURI, "dbo:recordLabel"));
         infosChanson.put("releaseDate", SPARQLService.getLiteral(albumURI, "dbo:releaseDate"));
-        infosChanson.put("awards", SPARQLService.getLiteral(albumURI, "dbp:award"));
-        
-        
+        infosChanson.put("genres", SPARQLService.getLiteral(albumURI, "dbp:award", " LIMIT 5"));
+        infosChanson.put("writer", SPARQLService.getResourceText(albumURI, "dbo:writer"));
+        infosChanson.put("runtime", SPARQLService.getLiteral(albumURI, "dbo:runtime"));
         
         return infosChanson;
     }

@@ -49,6 +49,11 @@
     width: 500px;
 }
 
+#cadre {
+    margin-left: 12.5%;
+    width: 75%;
+}
+
 #recherche-choix input[type="text"] {
     margin-top: 10%;
     width: 300px;
@@ -68,19 +73,16 @@
     background-repeat: no-repeat
 }
 
-
 #recherche-choix input[type="submit"]:hover {
     border: solid lightgrey;
 }
 
-#artistes,#titres,#albums .choix-recherche {
-    border-collapse:separate;
-    border:solid black 1px;
-    border-radius:6px;
-    width: 75%;
-    margin-left: 10%;
-    margin-top: 5%;
-    margin-bottom: 5%;
+#column1,#column2,#column3{
+    overflow:scroll;
+    overflow-x: hidden;
+    width: 30%;
+    margin:10px;
+    text-align: center;
 }
 
 /******************************************* PageArtiste.html *****************************/
@@ -124,7 +126,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-color: rgb(32,33,38);
-    
+
 }
 
 #en-tete {
@@ -190,12 +192,14 @@
 #table-chanson {
     margin-left: 5%;
     margin-right: 5%;
+    margin-top :2.5%;
     width: 90%;
     border-collapse: separate;
 }
 
 #small-tab {
     border-collapse: separate;
+    width: 100%;
 }
 
 .chanson-col-1 {
@@ -228,6 +232,46 @@
 
 .chanson-col-2 {
     width: 40%;
+    border-width:1px;
+    border-style:solid; 
+    border-color:rgb(157,190,187);
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgb(51,61,64);
+}
+
+/******************************************* PageAlbum.html *****************************/
+
+#table-album, #table-autres-albums{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2.5%;
+    width: 90%;
+    border-collapse: separate;
+}
+
+.album-col-1{
+    width: 60%;
+    border-width:1px;
+    border-style:solid; 
+    border-color:rgb(157,190,187);
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgb(51,61,64);
+}
+
+.album-col-2{
+    width: 30%;
+    border-width:1px;
+    border-style:solid; 
+    border-color:rgb(157,190,187);
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgb(51,61,64);
+}
+
+.album-col-small {
+    width: 25%;
     border-width:1px;
     border-style:solid; 
     border-color:rgb(157,190,187);

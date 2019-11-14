@@ -32,7 +32,7 @@ public class AlbumService {
         infosAlbum.put("producer", SPARQLService.getResourceText(albumURI, "dbo:producer"));
         infosAlbum.put("awrads", SPARQLService.getLiteral(albumURI, "dbp:award"));
         infosAlbum.put("songTitles", getSongTitles(albumURI));
-        infosAlbum.put("genres", SPARQLService.getResourceText(albumURI, "dbo:genre"));
+        infosAlbum.put("genres", SPARQLService.getResourceText(albumURI, "dbo:genre", " LIMIT 5"));
 
         return infosAlbum;
     }
