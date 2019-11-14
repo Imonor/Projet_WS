@@ -1,0 +1,237 @@
+/******************************************* common *****************************/
+#body-accueil,#body-choix-recherche, #body-informations  {
+    background-color: rgb(32,33,38);
+}
+/******************************************* PageRecherche.html *****************************/
+#titre-page-accueil {
+    color : rgb(157,190,187);
+}
+
+#search_bar {
+    margin: 0 auto;
+    width: 45%;
+    text-align: center;
+}
+
+#search_bar h1 {
+    font-size: 80px;    
+    margin-top: 10%;
+}
+
+#search_bar input[type="text"]{
+    margin-top: 10%;
+    width: 100%;
+    font-size: 25px;
+    border-radius:10px;
+    padding: 10px;
+}
+
+#search_bar input[type="submit"] {
+    margin-left: -55px;
+    height: 45px;
+    width: 45px;
+    border: solid white;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkaUBQ17BFyItcM9n_oZHtj5ioSpXEYJhz_xYPsEJijgfd57Riuw&s);
+    background-size: contain;
+    background-repeat: no-repeat
+}
+
+#search_bar input[type="submit"]:hover {
+    border: solid lightgrey;
+}
+
+/******************************************* ChoixRecherche.html *****************************/
+
+#recherche-choix {
+    margin: 0 auto;
+    margin-left: 75%;
+    margin-right: 10%;
+    width: 500px;
+}
+
+#recherche-choix input[type="text"] {
+    margin-top: 10%;
+    width: 300px;
+    font-size: 25px;
+    border-radius:10px;
+    padding: 10px;
+}
+
+#recherche-choix input[type="submit"] {
+    margin-left: -60px;
+    margin-bottom: 10px;
+    height: 45px;
+    width: 45px;
+    border: solid white;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkaUBQ17BFyItcM9n_oZHtj5ioSpXEYJhz_xYPsEJijgfd57Riuw&s);
+    background-size: contain;
+    background-repeat: no-repeat
+}
+
+
+#recherche-choix input[type="submit"]:hover {
+    border: solid lightgrey;
+}
+
+#artistes,#titres,#albums .choix-recherche {
+    border-collapse:separate;
+    border:solid black 1px;
+    border-radius:6px;
+    width: 75%;
+    margin-left: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+/******************************************* PageArtiste.html *****************************/
+
+#recherche-informations {
+    margin: 0 auto;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 500px;
+}
+
+#recherche-informations input[type="text"]{
+    margin-top: 10%;
+    width: 300px;
+    font-size: 20px;
+    border-radius:10px;
+    padding: 5px;
+}
+
+#recherche-informations input[type="submit"] {
+    margin-left: -50px;
+    margin-bottom: 10px;
+    height: 35px;
+    width: 35px;
+    border: solid white;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkaUBQ17BFyItcM9n_oZHtj5ioSpXEYJhz_xYPsEJijgfd57Riuw&s);
+    background-size: contain;
+    background-repeat: no-repeat
+}
+
+#recherche-informations input[type="submit"]:hover {
+    border: solid lightgrey;
+}
+
+#bouton-retour {
+    text-decoration: none;
+    padding: 40px 40px;
+    height: 100px;
+    width: 100px;
+    background-image: url("./logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: rgb(32,33,38);
+    
+}
+
+#en-tete {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+}
+
+.case-en-tete {
+    width: 33%;
+}
+
+#table-artiste, #table-artiste-albums {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2.5%;
+    width: 90%;
+    border-collapse: separate;
+}
+.artiste-col-1 {
+    width: 30%;
+    border-width:1px;
+    border-style:solid; 
+    border-color:rgb(157,190,187);
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgb(51,61,64);
+}
+
+.separer-col {
+    width: 10%;
+}
+
+.separer-ligne {
+    height: 50px;
+}
+
+.separer-album-col {
+    width: 2%;
+}
+
+.artiste-col-2 {
+    width: 60%;
+    border-width:1px;
+    border-style:solid; 
+    border-color:rgb(157,190,187);
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgb(51,61,64);
+}
+
+.artiste-album-col {
+    width: 10%;
+    border-style:solid; 
+    border-color:rgb(157,190,187);
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgb(51,61,64);
+}
+
+/******************************************* PageChanson.html *****************************/
+
+#table-chanson {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    border-collapse: separate;
+}
+
+#small-tab {
+    border-collapse: separate;
+}
+
+.chanson-col-1 {
+    width: 50%;
+    border-width:1px;
+    border-style:solid; 
+    border-color:rgb(157,190,187);
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgb(51,61,64);
+}
+
+.chanson-col-1-small {
+    width: 25%;
+    border-width:1px;
+    border-style:solid; 
+    border-color:rgb(157,190,187);
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgb(51,61,64);
+}
+
+.separer-col {
+    width: 10%;
+}
+
+.separer-ligne {
+    height: 50px;
+}
+
+.chanson-col-2 {
+    width: 40%;
+    border-width:1px;
+    border-style:solid; 
+    border-color:rgb(157,190,187);
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgb(51,61,64);
+}

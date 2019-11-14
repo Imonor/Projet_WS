@@ -5,6 +5,7 @@
  */
 package action;
 
+import general.Paire;
 import javax.servlet.http.HttpServletRequest;
 import general.RechercheURIService;
 import java.util.Map;
@@ -19,7 +20,16 @@ public class ActionTraiterRecherche extends Action{
     public boolean executer(HttpServletRequest request){
         try{
             String recherche = request.getParameter("recherche");
-            Map<String, String> URIs = RechercheURIService.getListeURI(recherche, this.path);
+            Map<String, Paire> URIs = RechercheURIService.getListeURIV2(recherche, this.path);
+            System.out.println("-----");
+            for(Object name: URIs.keySet()){
+                String key = name.toString();
+                String value1 = ((Paire)(URIs.get(name))).getCategorie();
+                double value2 = ((Paire)(URIs.get(name))).getDistance();
+                double value3 = ((Paire)(URIs.get(name))).getReputation();
+                System.out.println(key + " , " + value1 + " , " + value2 + " , " + value3);
+            }
+            System.out.println("----");
             request.setAttribute("listeURIs", URIs);
             return true;
         } catch (Exception e){

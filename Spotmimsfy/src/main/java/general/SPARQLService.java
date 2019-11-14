@@ -14,7 +14,6 @@ import org.apache.jena.vocabulary.DC;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author herme
@@ -32,7 +31,7 @@ public class SPARQLService {
         // be found in almost any Jena/SPARQL tutorial.
         try {
             ResultSet results = qexec.execSelect();
-            for(;results.hasNext();) {
+            for (; results.hasNext();) {
                 youpi.add(results.next());
             }
             // Result processing is done here.
@@ -40,6 +39,97 @@ public class SPARQLService {
             qexec.close();
         }
         return youpi;
+    }
+
+    public static List<String> getLiteral(String URI, String literalName) {
+        return getLiteral(URI, literalName, "");
+    }
+    public static List<String> getLiteral(String URI, String literalName, String addOn) {
+        String query = "PREFIX dbr:<http://dbpedia.org/resource/>\n"
+                + "PREFIX dbo:<http://dbpedia.org/ontology/>\n"
+                + "PREFIX dbp: <http://dbpedia.org/property/>\n"
+                + "PREFIX foaf:<http://xmlns.com/foaf/0.1/>\n"
+                + "PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#/>\n"
+                + "PREFIX dct:<http://purl.org/dc/terms/>\n"
+                + "PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n"
+                + "SELECT  ?value\n"
+                + "WHERE {\n"
+                + "       <" + URI + ">\n"
+                + "              " + literalName + " ?value.\n"
+                + "}" + addOn;
+        List<QuerySolution> results = SPARQLService.executeQuery(query);
+        List<String> values = new ArrayList<>();
+        for (QuerySolution line : results) {
+            values.add(line.getLiteral("value").getString());
+        }
+        return values;
+    }
+
+    public static List<String> getResourceText(String URI, String resourceName) {
+        return getResourceText(URI, resourceName, "");
+    }
+    public static List<String> getResourceText(String URI, String resourceName, String addOn) {
+        String query = "PREFIX dbr:<http://dbpedia.org/resource/>\n"
+                + "PREFIX dbo:<http://dbpedia.org/ontology/>\n"
+                + "PREFIX dbp: <http://dbpedia.org/property/>\n"
+                + "PREFIX foaf:<http://xmlns.com/foaf/0.1/>\n"
+                + "PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#/>\n"
+                + "PREFIX dct:<http://purl.org/dc/terms/>\n"
+                + "PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n"
+                + "SELECT  ?value\n"
+                + "WHERE {\n"
+                + "       <" + URI + ">\n"
+                + "              " + resourceName + " ?value.\n"
+                + "}" + addOn;
+        List<QuerySolution> results = SPARQLService.executeQuery(query);
+        List<String> values = new ArrayList<>();
+        for (QuerySolution line : results) {
+            String[] yay = line.getResource("value").toString().split("/");
+            //System.out.println(yay[yay.length-1].replace("_", " "));
+            values.add(line.getResource("value").getLocalName().replace("_", " "));
+        }
+        return values;
+    }
+
+    public static List<String> getResourceURI(String URI, String resourceName) {
+        return getResourceURI(URI, resourceName, "");
+    }
+    public static List<String> getResourceURI(String URI, String resourceName, String addOn) {
+        String query = "PREFIX dbr:<http://dbpedia.org/resource/>\n"
+                + "PREFIX dbo:<http://dbpedia.org/ontology/>\n"
+                + "PREFIX dbp: <http://dbpedia.org/property/>\n"
+                + "PREFIX foaf:<http://xmlns.com/foaf/0.1/>\n"
+                + "PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#/>\n"
+                + "PREFIX dct:<http://purl.org/dc/terms/>\n"
+                + "PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n"
+                + "SELECT  ?value\n"
+                + "WHERE {\n"
+                + "       <" + URI + ">\n"
+                + "              " + resourceName + " ?value.\n"
+                + "}" + addOn;
+        List<QuerySolution> results = SPARQLService.executeQuery(query);
+        List<String> values = new ArrayList<>();
+        for (QuerySolution line : results) {
+            values.add(line.getResource("value").getURI());
+        }
+        return values;
+    }
+    
+    
+    public static List<String> getResume(String URI) {
+        String query = "PREFIX dbo:<http://dbpedia.org/ontology/>\n"
+                + "SELECT  ?value\n"
+                + "WHERE {\n"
+                + "       <" + URI + ">\n"
+                + "              dbo:abstract ?value.\n"
+                + "FILTER langMatches(lang(?value), 'en')\n"
+                + "}";
+        List<QuerySolution> results = SPARQLService.executeQuery(query);
+        List<String> values = new ArrayList<>();
+        for (QuerySolution line : results) {
+            values.add(line.getLiteral("value").getString());
+        }
+        return values;
     }
 
 //    public static void main(String[] args) {
