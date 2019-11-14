@@ -9,7 +9,8 @@
 
 #search_bar {
     margin: 0 auto;
-    width: 45%; 
+    width: 45%;
+    text-align: center;
 }
 
 #search_bar h1 {
@@ -116,9 +117,10 @@
 
 #bouton-retour {
     text-decoration: none;
-    padding: 8px 16px;
-    border-radius: 50%;
-    background-image: url(https://cdn.pixabay.com/photo/2013/07/12/12/22/previous-145675_960_720.png);
+    padding: 40px 40px;
+    height: 100px;
+    width: 100px;
+    background-image: url("./logo.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-color: rgb(32,33,38);
