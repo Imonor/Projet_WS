@@ -196,6 +196,7 @@
 
 #small-tab {
     border-collapse: separate;
+    width: 100%;
 }
 
 .chanson-col-1 {
@@ -228,6 +229,46 @@
 
 .chanson-col-2 {
     width: 40%;
+    border-width:1px;
+    border-style:solid; 
+    border-color:rgb(157,190,187);
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgb(51,61,64);
+}
+
+/******************************************* PageAlbum.html *****************************/
+
+#table-album, #table-autres-albums{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2.5%;
+    width: 90%;
+    border-collapse: separate;
+}
+
+.album-col-1{
+    width: 60%;
+    border-width:1px;
+    border-style:solid; 
+    border-color:rgb(157,190,187);
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgb(51,61,64);
+}
+
+.album-col-2{
+    width: 30%;
+    border-width:1px;
+    border-style:solid; 
+    border-color:rgb(157,190,187);
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgb(51,61,64);
+}
+
+.album-col-small {
+    width: 25%;
     border-width:1px;
     border-style:solid; 
     border-color:rgb(157,190,187);
