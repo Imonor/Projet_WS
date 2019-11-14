@@ -114,6 +114,23 @@ public class SPARQLService {
         }
         return values;
     }
+    
+    
+    public static List<String> getResume(String URI) {
+        String query = "PREFIX dbo:<http://dbpedia.org/ontology/>\n"
+                + "SELECT  ?value\n"
+                + "WHERE {\n"
+                + "       <" + URI + ">\n"
+                + "              dbo:abstract ?value.\n"
+                + "FILTER langMatches(lang(?value), 'en')\n"
+                + "}";
+        List<QuerySolution> results = SPARQLService.executeQuery(query);
+        List<String> values = new ArrayList<>();
+        for (QuerySolution line : results) {
+            values.add(line.getLiteral("value").getString());
+        }
+        return values;
+    }
 
 //    public static void main(String[] args) {
 //        String query = "PREFIX dbr:<http://dbpedia.org/resource/>\n"

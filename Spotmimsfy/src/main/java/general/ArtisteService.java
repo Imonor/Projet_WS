@@ -24,28 +24,13 @@ public class ArtisteService {
         infosArtiste.put("birthDate", SPARQLService.getLiteral(artistURI, "dbp:birthDate"));
         infosArtiste.put("deathDate", SPARQLService.getLiteral(artistURI, "dbp:deathDate"));
         infosArtiste.put("thumbnail", SPARQLService.getResourceURI(artistURI, "dbo:thumbnail"));
-        infosArtiste.put("resume",getResume(artistURI));
+        infosArtiste.put("resume",SPARQLService.getResume(artistURI));
         infosArtiste.put("genres", SPARQLService.getResourceText(artistURI, "dbo:genre", " LIMIT 5"));
         infosArtiste.put("bands", SPARQLService.getResourceURI(artistURI, "dbo:associatedBand"));
         infosArtiste.put("occupations", SPARQLService.getLiteral(artistURI, "dbp:occupation", " LIMIT 3"));
         infosArtiste.put("albums", getAlbums(artistURI));
 
         return infosArtiste;
-    }
-    private static List<String> getResume(String artisteURI) {
-        String query = "PREFIX dbo:<http://dbpedia.org/ontology/>\n"
-                + "SELECT  ?value\n"
-                + "WHERE {\n"
-                + "       <" + artisteURI + ">\n"
-                + "              dbo:abstract ?value.\n"
-                + "FILTER langMatches(lang(?value), 'en')\n"
-                + "}";
-        List<QuerySolution> results = SPARQLService.executeQuery(query);
-        List<String> values = new ArrayList<>();
-        for (QuerySolution line : results) {
-            values.add(line.getLiteral("value").getString());
-        }
-        return values;
     }
 
     private static List<String> getAlbums(String artisteURI) {

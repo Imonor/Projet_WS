@@ -23,7 +23,7 @@ public class AlbumService {
         Map<String, List<String>> infosAlbum = new HashMap<>();
 
         infosAlbum.put("title", SPARQLService.getLiteral(albumURI, "dbp:thisAlbum"));
-        infosAlbum.put("resume", getResume(albumURI));
+        infosAlbum.put("resume", SPARQLService.getResume(albumURI));
         infosAlbum.put("artist", SPARQLService.getResourceURI(albumURI, "dbo:artist"));
         infosAlbum.put("recordLabel", SPARQLService.getResourceText(albumURI, "dbo:recordLabel"));
         infosAlbum.put("releaseDate", SPARQLService.getLiteral(albumURI, "dbo:releaseDate"));
@@ -35,24 +35,6 @@ public class AlbumService {
         infosAlbum.put("genres", SPARQLService.getResourceText(albumURI, "dbo:genre"));
 
         return infosAlbum;
-    }
-
-
-    
-    private static List<String> getResume(String albumURI) {
-        String query = "PREFIX dbo:<http://dbpedia.org/ontology/>\n"
-                + "SELECT  ?value\n"
-                + "WHERE {\n"
-                + "       <" + albumURI + ">\n"
-                + "              dbo:abstract ?value.\n"
-                + "FILTER langMatches(lang(?value), 'en')\n"
-                + "}";
-        List<QuerySolution> results = SPARQLService.executeQuery(query);
-        List<String> values = new ArrayList<>();
-        for (QuerySolution line : results) {
-            values.add(line.getLiteral("value").getString());
-        }
-        return values;
     }
     
     private static List<String> getSongTitles(String albumURI) {
@@ -76,18 +58,18 @@ public class AlbumService {
         return values;
     }
     
-
-    public static void main(String[] args) {
-        Map<String, List<String>> albumInfos = getInfosAlbum("http://dbpedia.org/resource/Thriller_25");
-
-        for (String key : albumInfos.keySet()) {
-            System.out.println(key + " : ");
-            List<String> values = albumInfos.get(key);
-            for (String val : values) {
-                System.out.print(val + ", ");
-            }
-            System.out.println("\n");
-        }
-    }
+// For test purposes
+//    public static void main(String[] args) {
+//        Map<String, List<String>> albumInfos = getInfosAlbum("http://dbpedia.org/resource/Thriller_25");
+//
+//        for (String key : albumInfos.keySet()) {
+//            System.out.println(key + " : ");
+//            List<String> values = albumInfos.get(key);
+//            for (String val : values) {
+//                System.out.print(val + ", ");
+//            }
+//            System.out.println("\n");
+//        }
+//    }
 
 }
