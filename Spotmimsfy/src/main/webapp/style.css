@@ -83,7 +83,7 @@
     margin-bottom: 5%;
 }
 
-/******************************************* PageInformations.html *****************************/
+/******************************************* PageArtiste.html *****************************/
 
 #recherche-informations {
     margin: 0 auto;
@@ -141,11 +141,30 @@
     margin-left: 5%;
     margin-right: 5%;
     width: 90%;
+    border-collapse: separate;
 }
 .artiste-col-1 {
-    width: 34%;
+    width: 30%;
+    border-width:1px;
+    border-style:solid; 
+    border-color:rgb(255,236,145);
+    border-radius: 30px;
+    text-align: center;
+}
+
+.separer-col {
+    width: 10%;
+}
+
+.separer-ligne {
+    height: 50px;
 }
 
 .artiste-col-2 {
-    width: 66%;
+    width: 60%;
+    border-width:1px;
+    border-style:solid; 
+    border-color:rgb(255,236,145);
+    border-radius: 30px;
+    text-align: center;
 }
