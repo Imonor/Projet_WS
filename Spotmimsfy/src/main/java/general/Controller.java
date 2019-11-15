@@ -7,6 +7,7 @@ package general;
  */
 
 import action.Action;
+import action.ActionGetInfos;
 import action.ActionTraiterRecherche;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -16,6 +17,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import serialization.Serialization;
+import serialization.SerializationInfos;
 import serialization.SerializationListeURIs;
 
 /**
@@ -47,9 +49,11 @@ public class Controller extends HttpServlet {
                 action.executer(request);
                 serialization = new SerializationListeURIs();
                 serialization.serialiser(request, response);
-            }else if("getInfo".equals(todo)){
-//                new ActionGetInfo().executer(request);
-//                new ActionGetInfoSerialisation().serialiser(request, response);
+            }else if("getInfos".equals(todo)){
+                action = new ActionGetInfos(servletContextPath);
+                action.executer(request);
+                serialization = new SerializationInfos();
+                serialization.serialiser(request, response);
 //                
             }
         }

@@ -21,7 +21,6 @@ public class ActionTraiterRecherche extends Action{
         try{
             String recherche = request.getParameter("recherche");
             Map<String, Paire> URIs = RechercheURIService.getListeURIV2(recherche, this.path);
-            System.out.println("-----");
             for(Object name: URIs.keySet()){
                 String key = name.toString();
                 String value1 = ((Paire)(URIs.get(name))).getCategorie();
@@ -29,7 +28,6 @@ public class ActionTraiterRecherche extends Action{
                 double value3 = ((Paire)(URIs.get(name))).getReputation();
                 System.out.println(key + " , " + value1 + " , " + value2 + " , " + value3);
             }
-            System.out.println("----");
             request.setAttribute("listeURIs", URIs);
             return true;
         } catch (Exception e){
