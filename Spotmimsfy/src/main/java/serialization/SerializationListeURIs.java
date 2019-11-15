@@ -12,6 +12,7 @@ import com.google.gson.JsonObject;
 import general.Paire;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -24,32 +25,10 @@ public class SerializationListeURIs extends Serialization{
     
     @Override
     public void serialiser(HttpServletRequest request, HttpServletResponse reponse) throws IOException {
-        Map <String, Paire> listeURIs = (Map)request.getAttribute("listeURIs");
-        JsonObject jsonListeResultats = new JsonObject();
         
-        if(listeURIs.isEmpty()){
-            jsonListeResultats.addProperty("listeVide", true);
-        } else {
-            jsonListeResultats.addProperty("listeVide", false);
-            JsonArray jsonArrayResultats = new JsonArray();
-            
-            int compteurResultats = 0;
-            for(Object mapElement: listeURIs.keySet()){
-                JsonObject resultat = new JsonObject();
-                String key = mapElement.toString();
-                Paire value = listeURIs.get(mapElement);
-                resultat.addProperty("URI", key);
-                resultat.addProperty("categorie", value.getCategorie());
-                resultat.addProperty("distance", value.getDistance());
-                resultat.addProperty("reputation", value.getReputation());
-                jsonArrayResultats.add(resultat);
-                compteurResultats++;
-            }
-            jsonListeResultats.add("resultats", jsonArrayResultats);
-            jsonListeResultats.addProperty("nbrResultats", compteurResultats);
-        }
+        Map <String, List<String>> listeURIs = (Map)request.getAttribute("listeURIs");
         PrintWriter out = this.getWriterWithJsonHeader(reponse);
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        gson.toJson(jsonListeResultats, out);
+        gson.toJson(listeURIs, out);
     }
 }

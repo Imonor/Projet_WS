@@ -19,6 +19,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author herme
  */
 public class SerializationInfos extends Serialization{
+    @Override
     public void serialiser(HttpServletRequest request, HttpServletResponse reponse) throws IOException {
         
         Map<String, List<String>> infos = (Map)request.getAttribute("infos");

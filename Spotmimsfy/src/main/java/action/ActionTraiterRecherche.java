@@ -8,6 +8,9 @@ package action;
 import general.Paire;
 import javax.servlet.http.HttpServletRequest;
 import general.RechercheURIService;
+import general.ResearchManager;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 
@@ -20,14 +23,15 @@ public class ActionTraiterRecherche extends Action{
     public boolean executer(HttpServletRequest request){
         try{
             String recherche = request.getParameter("recherche");
-            Map<String, Paire> URIs = RechercheURIService.getListeURIV2(recherche, this.path);
-            for(Object name: URIs.keySet()){
-                String key = name.toString();
-                String value1 = ((Paire)(URIs.get(name))).getCategorie();
-                double value2 = ((Paire)(URIs.get(name))).getDistance();
-                double value3 = ((Paire)(URIs.get(name))).getReputation();
-                System.out.println(key + " , " + value1 + " , " + value2 + " , " + value3);
-            }
+            Map<String, List<String>> URIs = new HashMap<>();
+            List<String> artistes =  ResearchManager.getArtistes(recherche);
+            List<String> albums =  ResearchManager.getAlbums(recherche);
+            List<String> chansons =  ResearchManager.getChansons(recherche);
+            
+            URIs.put("artiste", artistes);
+            URIs.put("album", albums);
+            URIs.put("chanson", chansons);
+            
             request.setAttribute("listeURIs", URIs);
             return true;
         } catch (Exception e){
