@@ -64,7 +64,7 @@ public class ResearchManager {
                 + "   FILTER CONTAINS(UCASE(?n), UCASE(\"" + recherche + "\"))\n"
                 + "} GROUP BY ?album\n"
                 + "ORDER BY DESC(?count)\n"
-                + "LIMIT 100";
+                + "LIMIT 50";
 
         List<QuerySolution> results = SPARQLService.executeQuery(query);
         List<String> lines = new ArrayList<>();
@@ -92,7 +92,7 @@ public class ResearchManager {
                 + "   FILTER CONTAINS(UCASE(?n), UCASE(\"" + recherche + "\"))\n"
                 + "} GROUP BY ?chanson\n"
                 + "ORDER BY DESC(?count)\n"
-                + "LIMIT 100";
+                + "LIMIT 50";
 
         List<QuerySolution> results = SPARQLService.executeQuery(query);
         List<String> lines = new ArrayList<>();

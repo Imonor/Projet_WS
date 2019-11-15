@@ -10,7 +10,6 @@ import action.Action;
 import action.ActionGetInfos;
 import action.ActionTraiterRecherche;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -38,24 +37,25 @@ public class Controller extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        try ( PrintWriter out = response.getWriter()) {
-            String servletContextPath = this.getServletContext().getRealPath("/WEB-INF/database/");
+        try {
             String todo = request.getParameter("todo");
             Action action = null;
             Serialization serialization = null;
             
             if("traiterRecherche".equals(todo)){
-                action = new ActionTraiterRecherche(servletContextPath);
+                action = new ActionTraiterRecherche();
                 action.executer(request);
                 serialization = new SerializationListeURIs();
                 serialization.serialiser(request, response);
+                
             }else if("getInfos".equals(todo)){
-                action = new ActionGetInfos(servletContextPath);
+                action = new ActionGetInfos();
                 action.executer(request);
                 serialization = new SerializationInfos();
                 serialization.serialiser(request, response);
-//                
             }
+        } catch(Exception e) {
+            
         }
     }
 

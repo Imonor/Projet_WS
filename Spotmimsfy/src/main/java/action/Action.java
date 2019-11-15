@@ -12,11 +12,7 @@ package action;
 import javax.servlet.http.HttpServletRequest;
 
 public abstract class Action {
-    protected String path;
     
     public abstract boolean executer(HttpServletRequest request);
     
-    public Action(String path){
-        this.path = path;
-    }
 }

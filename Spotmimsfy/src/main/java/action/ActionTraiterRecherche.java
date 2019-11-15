@@ -5,9 +5,7 @@
  */
 package action;
 
-import general.Paire;
 import javax.servlet.http.HttpServletRequest;
-import general.RechercheURIService;
 import general.ResearchManager;
 import java.util.HashMap;
 import java.util.List;
@@ -37,9 +35,5 @@ public class ActionTraiterRecherche extends Action{
         } catch (Exception e){
             return false;
         }
-    }
-    
-    public ActionTraiterRecherche(String path){
-        super(path);
     }
 }

@@ -8,8 +8,6 @@ package action;
 import general.AlbumService;
 import general.ArtisteService;
 import general.ChansonService;
-import general.Paire;
-import general.RechercheURIService;
 import java.util.List;
 import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
@@ -46,9 +44,5 @@ public class ActionGetInfos extends Action {
         } catch (Exception e){
             return false;
         }
-    }
-    
-    public ActionGetInfos(String path){
-        super(path);
     }
 }
