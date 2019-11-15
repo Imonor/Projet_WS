@@ -22,7 +22,7 @@ public class SPARQLService {
 
     public static List<QuerySolution> executeQuery(String stringQuery) {
         // now creating query object
-        List<QuerySolution> youpi = new ArrayList<>();
+        List<QuerySolution> solutions = new ArrayList<>();
         Query query = QueryFactory.create(stringQuery);
         // initializing queryExecution factory with remote service.
         // **this actually was the main problem I couldn't figure out.**
@@ -32,13 +32,13 @@ public class SPARQLService {
         try {
             ResultSet results = qexec.execSelect();
             for (; results.hasNext();) {
-                youpi.add(results.next());
+                solutions.add(results.next());
             }
             // Result processing is done here.
         } finally {
             qexec.close();
         }
-        return youpi;
+        return solutions;
     }
 
     public static List<String> getLiteral(String URI, String literalName) {
