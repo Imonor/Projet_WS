@@ -31,34 +31,32 @@ and open the template in the editor.
             <div class="row">
                 <div id="column1" style="background-color:#22A2AB;">
                     <h2 style="color:#104A4E">ALBUMS</h2>
-                    
-                    <table>
-                        
-                        
+
+                    <table id="resulatsAlbums">
+
+
                     </table>
-                    
+
                 </div>
-                
+
                 <div id="column2" style="background-color:#C6FFF4;">
                     <h2 style="color:#5A746F">CHANSONS</h2>
-                    
-                    <table>
-                        <tr>
-                            Some text
-                        </tr>
+
+                    <table id="resulatsChansons">
+
+
                     </table>
-                    
+
                 </div>
-                
+
                 <div id="column3" style="background-color:#FFEC91;">
                     <h2 style="color:#746C42">ARTISTES</h2>
-                    
-                    <table>
-                        <tr>
-                            Some text
-                        </tr>
+
+                    <table id="resulatsArtistes">
+
+
                     </table>
-                    
+
                 </div>
             </div>
 
@@ -69,24 +67,35 @@ and open the template in the editor.
                     url: './ActionServlet',
                     type: 'POST',
                     data: {
-                        todo: 'chargerDonneesArtistes'
+                        todo: 'traiterRecherche'
                     },
                     dataType: 'json'
                 }).done(function (response) {
                     console.log(response);
-                    for (var i = 0; i < response.nbLignes; i++) {
-                        var tableArtiste = document.getElementById("tableArtiste");
-                        var nouvelleLigne = tableArtiste.insertRow(-1);
-                        var nouvelleCellule1 = nouvelleLigne.insertCell(-1);
-                        var nouveauTexte1 = document.createTextNode(response.resultat[i].URI);
-                        nouvelleCellule1.appendChild(nouveauTexte1);
-                        var nouvelleCellule2 = nouvelleLigne.insertCell(-1);
-                        var nouveauTexte2 = document.createTextNode(response.resultat[i].type);
-                        nouvelleCellule2.appendChild(nouveauTexte2);
-                        var nouvelleCellule3 = nouvelleLigne.insertCell(-1);
-                        var nouveauTexte3 = document.createTextNode(response.resultat[i].name);
-                        nouvelleCellule3.appendChild(nouveauTexte3);
-                    }
+                    
+                            for (var i = 0; i < response.listeURIs.get(artiste).length; i++) {
+                                var resulatsArtistes = document.getElementById("resulatsArtistes");
+                                var nouvelleLigne = resulatsArtistes.insertRow(-1);
+                                var nouvelleCellule = nouvelleLigne.insertCell(-1);
+                                var nouveauTexte = document.createTextNode(response.listeURIs.get(artiste)[i]);
+                                nouvelleCellule.appendChild(nouveauTexte);
+                            }
+                            
+                            for (var i = 0; i < response.listeURIs.get(chanson).length; i++) {
+                                var resulatsChansons = document.getElementById("resulatsChansons");
+                                var nouvelleLigne = resulatsChansons.insertRow(-1);
+                                var nouvelleCellule = nouvelleLigne.insertCell(-1);
+                                var nouveauTexte = document.createTextNode(response.listeURIs.get(chanson)[i]);
+                                nouvelleCellule.appendChild(nouveauTexte);
+                            }
+                            
+                            for (var i = 0; i < response.listeURIs.get(album).length; i++) {
+                                var resulatsAlbums = document.getElementById("resulatsAlbums");
+                                var nouvelleLigne = resulatsAlbums.insertRow(-1);
+                                var nouvelleCellule = nouvelleLigne.insertCell(-1);
+                                var nouveauTexte = document.createTextNode(response.listeURIs.get(album)[i]);
+                                nouvelleCellule.appendChild(nouveauTexte);
+                            }
                 });
             });
         </script>

@@ -1,5 +1,3 @@
-package general;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -10,24 +8,22 @@ import action.Action;
 import action.ActionGetInfos;
 import action.ActionGetSearchedTerm;
 import action.ActionTraiterRecherche;
+import serialization.Serialization;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import serialization.Serialization;
 import serialization.SerializationGetSearchedTerm;
-import serialization.SerializationInfos;
 import serialization.SerializationListeURIs;
 
 /**
  *
- * @author herme
+ * @author ysimiandco
  */
-@WebServlet(urlPatterns = {"/Controller"})
-public class Controller extends HttpServlet {
-    
+@WebServlet(name = "ActionServlet", urlPatterns = {"/ActionServlet"})
+public class ActionServlet extends HttpServlet {
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -37,34 +33,28 @@ public class Controller extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        try {
-            String todo = request.getParameter("todo");
-            Action action = null;
-            Serialization serialization = null;
-            
-            if("traiterRecherche".equals(todo)){
-                action = new ActionTraiterRecherche();
-                action.executer(request);
-                serialization = new SerializationListeURIs();
-                serialization.serialiser(request, response);
-                
-            }else if("getInfos".equals(todo)){
-                action = new ActionGetInfos();
-                action.executer(request);
-                serialization = new SerializationInfos();
-                serialization.serialiser(request, response);
-            
-            }else if("getSearchedTerm".equals(todo)){
-                action = new ActionGetSearchedTerm();
-                action.executer(request);
-                serialization = new SerializationGetSearchedTerm();
-                serialization.serialiser(request, response);
-            }
-        } catch(Exception e) {
-            
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        response.setContentType("application/json;charset=UTF-8");
+
+        request.setCharacterEncoding("UTF-8");
+
+        String todo = request.getParameter("todo");
+
+        Action action = null;
+        Serialization serialization = null;
+
+        if ("traiterRecherche".equals(todo)) {
+            action = new ActionTraiterRecherche();
+            serialization = new SerializationListeURIs();
+        } else if ("chargerDonneesArtistes".equals(todo)) {
+            action = new ActionGetInfos();
+            serialization = new SerializationListeURIs();
+        } else if ("getSearchedTerm".equals(todo)) {
+            action = new ActionGetSearchedTerm();
+            serialization = new SerializationGetSearchedTerm();
         }
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

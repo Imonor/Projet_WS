@@ -17,22 +17,13 @@ import javax.servlet.http.HttpSession;
  *
  * @author herme
  */
-public class ActionTraiterRecherche extends Action{
+public class ActionGetSearchedTerm extends Action{
     @Override
     public boolean executer(HttpServletRequest request){
         try{
             HttpSession session = request.getSession(true);
-            String recherche = (String) session.getAttribute("recherche");
-            Map<String, List<String>> URIs = new HashMap<>();
-            List<String> artistes =  ResearchManager.getArtistes(recherche);
-            List<String> albums =  ResearchManager.getAlbums(recherche);
-            List<String> chansons =  ResearchManager.getChansons(recherche);
-            
-            URIs.put("artiste", artistes);
-            URIs.put("album", albums);
-            URIs.put("chanson", chansons);
-            
-            request.setAttribute("listeURIs", URIs);
+            String recherche = request.getParameter("recherche");            
+            session.setAttribute("recherche", recherche);
             return true;
         } catch (Exception e){
             return false;
