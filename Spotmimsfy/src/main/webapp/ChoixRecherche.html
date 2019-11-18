@@ -27,13 +27,11 @@ and open the template in the editor.
         <br>
 
         <div id="cadre"> 
-
             <div class="row">
                 <div id="column1" style="background-color:#22A2AB;">
                     <h2 style="color:#104A4E">ALBUMS</h2>
 
                     <table id="resulatsAlbums">
-
 
                     </table>
 
@@ -68,6 +66,7 @@ and open the template in the editor.
                     type: 'GET',
                     data: {
                         todo: 'traiterRecherche'
+
                     },
                     dataType: 'json'
                 }).done(function (response) {
@@ -79,7 +78,16 @@ and open the template in the editor.
                         var nouvelleCellule = nouvelleLigne.insertCell(-1);
                         var tab = response.artiste[i].toString().split("/");
                         var nouveauTexte = document.createTextNode(tab[4]);
-                        nouvelleCellule.appendChild(nouveauTexte);
+
+                        var p = document.createElement('p');
+                        p.appendChild(nouveauTexte);
+
+                        var btn = document.createElement('button');
+                        btn.id = "artistes";
+                        btn.setAttribute('type', 'button');
+                        btn.setAttribute('value', response.artiste[i].toString());
+                        nouvelleCellule.appendChild(p);
+                        nouvelleCellule.appendChild(btn);
                     }
 
                     for (var i = 0; i < response.chanson.length; i++) {
@@ -100,7 +108,29 @@ and open the template in the editor.
                         nouvelleCellule.appendChild(nouveauTexte);
                     }
                 });
+
             });
+            
+            $(document).on('click', '#artistes',function () {
+                alert($(this).val())
+                $.ajax({
+                        url: './Controller',
+                        type: 'POST',
+                        data: {
+                            todo: 'getSearchedTerm',
+                            URI: $(this).val(),
+                            categorie: 'Artiste'
+                        },
+                        dataType: 'json'
+                    }).done(function (response) {
+                        console.log(response);
+                        //window.location = "./ChoixRecherche.html";
+                    }).fail(function (error) {
+                        console.log(error);
+                        alert("[ERROR] Problème lors de la recherche. Réessayez plus tard :)");
+                    });
+            });
+
         </script>
     </body>
 </html>

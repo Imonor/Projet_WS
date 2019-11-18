@@ -1,10 +1,52 @@
 <!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
 <html>
     <head>
-        <title>Start Page</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>Accueil</title>
+
+        <link rel="stylesheet" href="style.css">
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+        
+        <!-- Ajax -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
+
+    <body id="body-choix-recherche">
+        <div id="search_bar">
+            <img src="./logoFull.png" alt = "super logo" align="middle" >
+            <input id="recherche" name="recherche" type="text" placeholder="Rechercher...">
+            <input id="bouton-recherche" name="bouton-recherche" type="submit" value="" src="https://www.pngfind.com/pngs/m/54-545482_vector-search-icon-search-icon-vector-png-transparent.png">
+        </div>
+        
+        <script>
+            $(document).ready(function () {
+                $('#bouton-recherche').on('click', function () {
+                    $.ajax({
+                        url: './Controller',
+                        type: 'POST',
+                        data: {
+                            todo: 'getSearchedTerm',
+                            recherche: $('#recherche').val()
+                        },
+                        dataType: 'json'
+                    }).done(function (response) {
+                        console.log(response);
+                        window.location = "./ChoixRecherche.html";
+                    }).fail(function (error) {
+                        console.log(error);
+                        alert("[ERROR] Problème lors de la recherche. Réessayez plus tard :)");
+                    });
+                });
+            });
+        </script>
+    </body>  
 </html>
