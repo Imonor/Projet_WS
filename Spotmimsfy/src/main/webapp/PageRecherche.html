@@ -31,7 +31,7 @@ and open the template in the editor.
             $(document).ready(function () {
                 $('#bouton-recherche').on('click', function () {
                     $.ajax({
-                        url: './ActionServlet',
+                        url: './Controller',
                         type: 'POST',
                         data: {
                             todo: 'getSearchedTerm',

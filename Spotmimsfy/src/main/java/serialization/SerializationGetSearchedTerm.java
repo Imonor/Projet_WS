@@ -5,6 +5,8 @@
  */
 package serialization;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.http.HttpServletRequest;
@@ -21,7 +23,9 @@ public class SerializationGetSearchedTerm extends Serialization {
     public void serialiser(HttpServletRequest request, HttpServletResponse response) throws IOException {
         HttpSession session = request.getSession(true);
         PrintWriter out = this.getWriterWithJsonHeader(response);
-        out.println("terme de la recherche: " + session.getAttribute("recherche"));
+        String recherche = (String) session.getAttribute("recherche");
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        gson.toJson(recherche, out);
     }
 
 }

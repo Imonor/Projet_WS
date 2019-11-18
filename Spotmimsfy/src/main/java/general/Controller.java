@@ -41,6 +41,7 @@ public class Controller extends HttpServlet {
             throws ServletException, IOException {
         try {
             String todo = request.getParameter("todo");
+            String test = request.getParameter("test1");
             Action action = null;
             Serialization serialization = null;
             
@@ -63,7 +64,7 @@ public class Controller extends HttpServlet {
                 serialization.serialiser(request, response);
             }
         } catch(Exception e) {
-            
+            System.out.println(e);
         }
     }
 

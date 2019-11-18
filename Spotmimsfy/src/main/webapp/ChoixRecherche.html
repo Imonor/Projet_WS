@@ -64,38 +64,41 @@ and open the template in the editor.
         <script>
             $(document).ready(function () {
                 $.ajax({
-                    url: './ActionServlet',
-                    type: 'POST',
+                    url: './Controller',
+                    type: 'GET',
                     data: {
                         todo: 'traiterRecherche'
                     },
                     dataType: 'json'
                 }).done(function (response) {
                     console.log(response);
-                    
-                            for (var i = 0; i < response.listeURIs.get(artiste).length; i++) {
-                                var resulatsArtistes = document.getElementById("resulatsArtistes");
-                                var nouvelleLigne = resulatsArtistes.insertRow(-1);
-                                var nouvelleCellule = nouvelleLigne.insertCell(-1);
-                                var nouveauTexte = document.createTextNode(response.listeURIs.get(artiste)[i]);
-                                nouvelleCellule.appendChild(nouveauTexte);
-                            }
-                            
-                            for (var i = 0; i < response.listeURIs.get(chanson).length; i++) {
-                                var resulatsChansons = document.getElementById("resulatsChansons");
-                                var nouvelleLigne = resulatsChansons.insertRow(-1);
-                                var nouvelleCellule = nouvelleLigne.insertCell(-1);
-                                var nouveauTexte = document.createTextNode(response.listeURIs.get(chanson)[i]);
-                                nouvelleCellule.appendChild(nouveauTexte);
-                            }
-                            
-                            for (var i = 0; i < response.listeURIs.get(album).length; i++) {
-                                var resulatsAlbums = document.getElementById("resulatsAlbums");
-                                var nouvelleLigne = resulatsAlbums.insertRow(-1);
-                                var nouvelleCellule = nouvelleLigne.insertCell(-1);
-                                var nouveauTexte = document.createTextNode(response.listeURIs.get(album)[i]);
-                                nouvelleCellule.appendChild(nouveauTexte);
-                            }
+
+                    for (var i = 0; i < response.artiste.length; i++) {
+                        var resulatsArtistes = document.getElementById("resulatsArtistes");
+                        var nouvelleLigne = resulatsArtistes.insertRow(-1);
+                        var nouvelleCellule = nouvelleLigne.insertCell(-1);
+                        var tab = response.artiste[i].toString().split("/");
+                        var nouveauTexte = document.createTextNode(tab[4]);
+                        nouvelleCellule.appendChild(nouveauTexte);
+                    }
+
+                    for (var i = 0; i < response.chanson.length; i++) {
+                        var resulatsChansons = document.getElementById("resulatsChansons");
+                        var nouvelleLigne = resulatsChansons.insertRow(-1);
+                        var nouvelleCellule = nouvelleLigne.insertCell(-1);
+                        var tab = response.chanson[i].toString().split("/");
+                        var nouveauTexte = document.createTextNode(tab[4]);
+                        nouvelleCellule.appendChild(nouveauTexte);
+                    }
+
+                    for (var i = 0; i < response.album.length; i++) {
+                        var resulatsAlbums = document.getElementById("resulatsAlbums");
+                        var nouvelleLigne = resulatsAlbums.insertRow(-1);
+                        var nouvelleCellule = nouvelleLigne.insertCell(-1);
+                        var tab = response.album[i].toString().split("/");
+                        var nouveauTexte = document.createTextNode(tab[4]);
+                        nouvelleCellule.appendChild(nouveauTexte);
+                    }
                 });
             });
         </script>
