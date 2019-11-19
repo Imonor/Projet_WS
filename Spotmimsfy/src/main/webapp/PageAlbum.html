@@ -294,6 +294,26 @@ and open the template in the editor.
                         alert("[ERROR] Problème lors de la recherche. Réessayez plus tard :)");
                     });
                 });
+                
+                $(document).on('keypress', function (e) {
+                    if (e.which == 13) {
+                        $.ajax({
+                            url: './Controller',
+                            type: 'POST',
+                            data: {
+                                todo: 'getSearchedTerm',
+                                recherche: $('#recherche').val()
+                            },
+                            dataType: 'json'
+                        }).done(function (response) {
+                            console.log(response);
+                            window.location = "./ChoixRecherche.html";
+                        }).fail(function (error) {
+                            console.log(error);
+                            alert("[ERROR] Problème lors de la recherche. Réessayez plus tard :)");
+                        });
+                    }
+                });
             });
         </script>
     </body>

@@ -15,7 +15,7 @@ and open the template in the editor.
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-        
+
         <!-- Ajax -->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     </head>
@@ -26,7 +26,7 @@ and open the template in the editor.
             <input id="recherche" name="recherche" type="text" placeholder="Rechercher...">
             <input id="bouton-recherche" name="bouton-recherche" type="submit" value="" src="https://www.pngfind.com/pngs/m/54-545482_vector-search-icon-search-icon-vector-png-transparent.png">
         </div>
-        
+
         <script>
             $(document).ready(function () {
                 $('#bouton-recherche').on('click', function () {
@@ -46,7 +46,28 @@ and open the template in the editor.
                         alert("[ERROR] Problème lors de la recherche. Réessayez plus tard :)");
                     });
                 });
+                $(document).on('keypress', function (e) {
+                    if (e.which == 13) {
+                        $.ajax({
+                            url: './Controller',
+                            type: 'POST',
+                            data: {
+                                todo: 'getSearchedTerm',
+                                recherche: $('#recherche').val()
+                            },
+                            dataType: 'json'
+                        }).done(function (response) {
+                            console.log(response);
+                            window.location = "./ChoixRecherche.html";
+                        }).fail(function (error) {
+                            console.log(error);
+                            alert("[ERROR] Problème lors de la recherche. Réessayez plus tard :)");
+                        });
+                    }
+                });
             });
+
+
         </script>
     </body>  
 </html>

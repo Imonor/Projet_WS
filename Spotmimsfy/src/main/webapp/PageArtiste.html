@@ -166,8 +166,7 @@ and open the template in the editor.
                             var content = document.createTextNode(genreName[4].replace(/_/g," ") + "\n");
                             var br = document.createElement("br");
                             document.getElementById("bands").appendChild(content);
-                            document.getElementById("bands").appendChild(br);                         
-                           
+                            document.getElementById("bands").appendChild(br);                                                
                         }
                     }
                     
@@ -223,6 +222,26 @@ and open the template in the editor.
                         console.log(error);
                         alert("[ERROR] Problème lors de la recherche. Réessayez plus tard :)");
                     });
+                });
+                
+                $(document).on('keypress', function (e) {
+                    if (e.which == 13) {
+                        $.ajax({
+                            url: './Controller',
+                            type: 'POST',
+                            data: {
+                                todo: 'getSearchedTerm',
+                                recherche: $('#recherche').val()
+                            },
+                            dataType: 'json'
+                        }).done(function (response) {
+                            console.log(response);
+                            window.location = "./ChoixRecherche.html";
+                        }).fail(function (error) {
+                            console.log(error);
+                            alert("[ERROR] Problème lors de la recherche. Réessayez plus tard :)");
+                        });
+                    }
                 });
             });
 
