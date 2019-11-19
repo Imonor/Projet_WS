@@ -18,7 +18,7 @@ public class ChansonService {
     public static Map<String, List<String>> getInfosChanson(String albumURI) {
         Map<String, List<String>> infosChanson = new HashMap<>();
         
-        infosChanson.put("title", SPARQLService.getLiteral(albumURI, "dbp:title"));
+        infosChanson.put("title", SPARQLService.getLiteral(albumURI, "dbp:thisSingle"));
         infosChanson.put("resume", SPARQLService.getResume(albumURI));
         infosChanson.put("artist", SPARQLService.getResourceURI(albumURI, "dbo:musicalArtist"));
         infosChanson.put("album", SPARQLService.getResourceURI(albumURI, "dbo:album"));

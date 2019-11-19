@@ -48,25 +48,22 @@ and open the template in the editor.
                 <tbody>
                     <tr>
                         <td class="chanson-col-1" style="background-color: rgb(34,162,171);">
-                            <h1 style="color:white;">CHANSON</h1>
+                            <h1 id="name" style="color:white; padding: 10px; text-align: center; font-size: 45px"></h1>
                         </td>
 
                         <td class="separer-col"></td>
 
-                        <td class="chanson-col-2" rowspan="5">
-                            <h1 style="color:white;" >IMAGE</h1>
+                    </tr>
+                    <tr class="separer-ligne"></tr>
+                    <tr>
+                        <td class="chanson-col-1">
+                            <h1 id="album" style="color:white; padding: 10px; text-align: center; font-size: 18px">Album : <br></h1>
                         </td>
                     </tr>
                     <tr class="separer-ligne"></tr>
                     <tr>
                         <td class="chanson-col-1">
-                            <h1 style="color:white;">ALBUM</h1>
-                        </td>
-                    </tr>
-                    <tr class="separer-ligne"></tr>
-                    <tr>
-                        <td class="chanson-col-1">
-                            <h1 style="color:white;">ARTISTE</h1>
+                            <h1 id="artist" style="color:white; padding: 10px; text-align: center; font-size: 18px">Artiste : <br> </h1>
                         </td>
                     </tr>
 
@@ -80,13 +77,13 @@ and open the template in the editor.
 
                                 <tr>
                                     <td class="chanson-col-1-small">
-                                        <h1 style="color:white;">DATE SORTIE</h1>
+                                        <h1 id="sortie" style="color:white; padding: 10px; text-align: center; font-size: 18px">Date de sortie : <br></h1>
                                     </td>
 
                                     <td class="separer-col"></td>
 
                                     <td class="chanson-col-1-small">
-                                        <h1 style="color:white;" >DUREE</h1>
+                                        <h1 id="duree" style="color:white; padding: 10px; text-align: center; font-size: 18px" >Durée : <br></h1>
                                     </td>
                                 </tr>
 
@@ -94,13 +91,13 @@ and open the template in the editor.
 
                                 <tr>
                                     <td class="chanson-col-1-small">
-                                        <h1 style="color:white;">LABEL</h1>
+                                        <h1 id="recordLabel" style="color:white; padding: 10px; text-align: center; font-size: 18px">Label : <br></h1>
                                     </td>
 
                                     <td class="separer-col"></td>
 
                                     <td class="chanson-col-1-small">
-                                        <h1 style="color:white;" >WRITER</h1>
+                                        <h1 id="auteur" style="color:white; padding: 10px; text-align: center; font-size: 18px" >Auteur : <br></h1>
                                     </td>
                                 </tr>
 
@@ -108,10 +105,6 @@ and open the template in the editor.
 
 
                         <td class="separer-col"></td>
-
-                        <td class="chanson-col-2" rowspan="1">
-                            <h1 style="color:white;" >IMAGE ARTISTE</h1>
-                        </td>
                     </tr>
 
                     
@@ -121,19 +114,16 @@ and open the template in the editor.
                     
                     <tr>
                         <td class="chanson-col-1">
-                            <h1 style="color:white;">ABSTRAIT</h1>
+                            <p id="abstract" style="color:white; padding: 10px; text-align: center; font-size: 18px;"></p>
                         </td>
 
                         <td class="separer-col"></td>
 
-                        <td class="chanson-col-2" rowspan="3">
-                            <h1 style="color:white;" >AWARDS</h1>
-                        </td>
                     </tr>
                     <tr class="separer-ligne"></tr>
                     <tr>
                         <td class="chanson-col-1">
-                            <h1 style="color:white;">GENRE</h1>
+                            <h1 id="genres" style="color:white; padding: 10px; text-align: center; font-size: 18px;">Genre : <br></h1>
                         </td>
                     </tr>
 
@@ -149,5 +139,124 @@ and open the template in the editor.
 
         </div>
 
+        <script>
+            $(document).ready(function () {
+                $.ajax({
+                    url: './Controller',
+                    type: 'GET',
+                    data: {
+                        todo: 'getInfos'
+                    },
+                    dataType: 'json'
+                }).done(function (response) {
+                    console.log(response);
+
+                    //Ajouter le abstract
+                    document.getElementById("abstract").innerHTML = response.resume[0];
+                    
+                    //Ajouter le nom
+                    if (response.title.length == 0) {
+                        var content = document.createTextNode("\n Pas de nom");
+                        document.getElementById("name").appendChild(content);
+                    } else {
+                        var content = document.createTextNode(response.title[0] + "\n");
+                        document.getElementById("name").appendChild(content);
+                    }
+                    
+                    //Ajouter l'album
+                    if (response.album.length == 0) {
+                        var content = document.createTextNode("\n Pas d'album");
+                        document.getElementById("album").appendChild(content);
+                    } else {
+                        for (var i = 0; i < response.album.length; i++) {
+                            var album = response.album[i].toString().split("/");
+                            var content = document.createTextNode(album[4].toString().replace(/_/g, " ") + "\n");
+                            var br = document.createElement("br");
+
+                            document.getElementById("album").appendChild(content);
+                            document.getElementById("album").appendChild(br);
+                        }
+                    }
+                    
+                    //Ajouter l'artiste
+                    if (response.artist.length == 0) {
+                        var content = document.createTextNode("\n Pas d'artiste");
+                        document.getElementById("artist").appendChild(content);
+                    } else {
+                        for (var i = 0; i < response.artist.length; i++) {
+                            var artist = response.artist[i].toString().split("/");
+                            var content = document.createTextNode(artist[4].toString().replace(/_/g, " ") + "\n");
+                            var br = document.createElement("br");
+
+                            document.getElementById("artist").appendChild(content);
+                            document.getElementById("artist").appendChild(br);
+                        }
+                    }
+                    
+                    //Ajouter la durée de la chanson
+                    if (response.runtime.length == 0) {
+                        var content = document.createTextNode("\n Pas de durée disponible");
+                        document.getElementById("duree").appendChild(content);
+                    } else {
+                        var content = document.createTextNode(response.runtime[0] + " secondes \n");
+                        document.getElementById("duree").appendChild(content);
+                    }
+                    
+                    //Ajouter la date de sortie
+                    if (response.runtime.length == 0) {
+                        var content = document.createTextNode("\n Pas de durée disponible");
+                        document.getElementById("sortie").appendChild(content);
+                    } else {
+                        var content = document.createTextNode(response.releaseDate[0]);
+                        document.getElementById("sortie").appendChild(content);
+                    }
+                    
+                    //Ajouter les auteurs
+                    if (response.writer.length == 0) {
+                        var content = document.createTextNode("\n Pas d'auteurs");
+                        document.getElementById("auteur").appendChild(content);
+                    } else {
+                        for (var i = 0; i < response.writer.length; i++) {
+                            var writer = response.writer[i];
+                            var content = document.createTextNode(writer + "\n");
+                            var br = document.createElement("br");
+
+                            document.getElementById("auteur").appendChild(content);
+                            document.getElementById("auteur").appendChild(br);
+                        }
+                    }
+                    
+                    //Ajouter les labels
+                    if (response.recordLabel.length == 0) {
+                        var content = document.createTextNode("\n Pas de label");
+                        document.getElementById("recordLabel").appendChild(content);
+                    } else {
+                        for (var i = 0; i < response.recordLabel.length; i++) {
+                            var recordLabel = response.recordLabel[i];
+                            var content = document.createTextNode(recordLabel + "\n");
+                            var br = document.createElement("br");
+
+                            document.getElementById("recordLabel").appendChild(content);
+                            document.getElementById("recordLabel").appendChild(br);
+                        }
+                    }
+                    
+                    //Ajouter les genres
+                    if (response.genres.length == 0) {
+                        var content = document.createTextNode("\n Pas de genres");
+                        document.getElementById("genres").appendChild(content);
+                    } else {
+                        for (var i = 0; i < response.genres.length; i++) {
+                            var genres = response.genres[i];
+                            var content = document.createTextNode(genres + "\n");
+                            var br = document.createElement("br");
+
+                            document.getElementById("genres").appendChild(content);
+                            document.getElementById("genres").appendChild(br);
+                        }
+                    }
+                });
+            });
+        </script>
     </body>
 </html>

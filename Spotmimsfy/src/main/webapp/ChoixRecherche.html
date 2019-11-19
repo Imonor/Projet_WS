@@ -56,17 +56,16 @@ and open the template in the editor.
                 </div>
 
                 <div id="column2" style="background-color:#C6FFF4;">
-                    <h2 style="color:#5A746F">CHANSONS</h2>
+                    <h2 style="color:#5A746F" >CHANSONS</h2>
 
                     <table id="resulatsChansons">
-
 
                     </table>
 
                 </div>
 
                 <div id="column3" style="background-color:#FFEC91;">
-                    <h2 style="color:#746C42">ARTISTES</h2>
+                     <h2 style="color:#746C42; margin-left: -65px">ARTISTES</h2>
 
                     <table id="resulatsArtistes">
 
@@ -95,36 +94,36 @@ and open the template in the editor.
                         var nouvelleLigne = resulatsArtistes.insertRow(-1);
                         var nouvelleCellule = nouvelleLigne.insertCell(-1);
                         var tab = response.artiste[i].toString().split("/");
-                        var nouveauTexte = document.createTextNode(tab[4]);
-
-                        var p = document.createElement('p');
-                        p.appendChild(nouveauTexte);
-
+                        var nouveauTexte = document.createTextNode(tab[4].toString().replace(/_/g, " "));
+                        
                         var btn = document.createElement('button');
-                        btn.id = "artistes";
-                        btn.setAttribute('type', 'button');
+                        btn.appendChild(nouveauTexte);
+                        btn.setAttribute('id', 'artistes');
                         btn.setAttribute('value', response.artiste[i].toString());
-                        nouvelleCellule.appendChild(p);
+                        btn.style.border = "none";
+                        btn.style.textAlign = "center";
+                        btn.style.backgroundColor = "#FFEC91";
+                        
                         nouvelleCellule.appendChild(btn);
                     }
 
                     for (var i = 0; i < response.chanson.length; i++) {
                         var resulatsChansons = document.getElementById("resulatsChansons");
                         var nouvelleLigne = resulatsChansons.insertRow(-1);
-                        var nouvelleCellule = nouvelleLigne.insertCell(-1);
+                        var nouvelleCellule1 = nouvelleLigne.insertCell(-1);
                         var tab = response.chanson[i].toString().split("/");
-                        var nouveauTexte = document.createTextNode(tab[4]);
-                        
-                           
-                        var p = document.createElement('p');
-                        p.appendChild(nouveauTexte);
+                        var nouveauTexte = document.createTextNode(tab[4].toString().replace(/_/g, " "));
 
                         var btn = document.createElement('button');
-                        btn.id = "chansons";
-                        btn.setAttribute('type', 'button');
+                        btn.appendChild(nouveauTexte);
+                        btn.setAttribute('id', 'chansons');
                         btn.setAttribute('value', response.chanson[i].toString());
-                        nouvelleCellule.appendChild(p);                                              
-                        nouvelleCellule.appendChild(btn);
+                        btn.style.border = "none";
+                        btn.style.textAlign = "center";
+                        btn.style.backgroundColor = "#C6FFF4";
+                        
+                        nouvelleCellule1.appendChild(btn);
+                        
                     }
 
                     for (var i = 0; i < response.album.length; i++) {
@@ -132,77 +131,77 @@ and open the template in the editor.
                         var nouvelleLigne = resulatsAlbums.insertRow(-1);
                         var nouvelleCellule = nouvelleLigne.insertCell(-1);
                         var tab = response.album[i].toString().split("/");
-                        var nouveauTexte = document.createTextNode(tab[4]);
-                        
-                        var p = document.createElement('p');
-                        p.appendChild(nouveauTexte);
+                        var nouveauTexte = document.createTextNode(tab[4].toString().replace(/_/g, " "));
 
                         var btn = document.createElement('button');
-                        btn.id = "albums";
-                        btn.setAttribute('type', 'button');
-                        btn.setAttribute('value', response.album[i].toString());
-                        nouvelleCellule.appendChild(p);
+                        btn.appendChild(nouveauTexte);
+                        btn.setAttribute('id', 'albums');
+                        btn.setAttribute('value', response.artiste[i].toString());
+                        btn.style.border = "none";
+                        btn.style.textAlign = "center";
+                        btn.style.backgroundColor = "#22A2AB";
+                        
                         nouvelleCellule.appendChild(btn);
                     }
                 });
 
             });
-            
-            $(document).on('click', '#artistes',function () {
+
+            $(document).on('click', '#artistes', function () {
                 $.ajax({
-                        url: './Controller',
-                        type: 'POST',
-                        data: {
-                            todo: 'getItemSelected',
-                            URI: $(this).val(),
-                            categorie: 'Artiste'
-                        },
-                        dataType: 'json'
-                    }).done(function (response) {
-                        console.log(response);
-                        window.location = "./PageArtiste.html";
-                    }).fail(function (error) {
-                        console.log(error);
-                        alert("[ERROR] Problème lors de la recherche. Réessayez plus tard :)");
-                    });
+                    url: './Controller',
+                    type: 'POST',
+                    data: {
+                        todo: 'getItemSelected',
+                        URI: $(this).val(),
+                        categorie: 'Artiste'
+                    },
+                    dataType: 'json'
+                }).done(function (response) {
+                    console.log(response);
+                    window.location = "./PageArtiste.html";
+                }).fail(function (error) {
+                    console.log(error);
+                    alert("[ERROR] Problème lors de la recherche. Réessayez plus tard :)");
+                });
             });
-                       
-            $(document).on('click', '#albums',function () {
+
+            $(document).on('click', '#albums', function () {
                 $.ajax({
-                        url: './Controller',
-                        type: 'POST',
-                        data: {
-                            todo: 'getItemSelected',
-                            URI: $(this).val(),
-                            categorie: 'Album'
-                        },
-                        dataType: 'json'
-                    }).done(function (response) {
-                        console.log(response);
-                        window.location = "./PageAlbum.html";
-                    }).fail(function (error) {
-                        console.log(error);
-                        alert("[ERROR] Problème lors de la recherche. Réessayez plus tard :)");
-                    });
+                    url: './Controller',
+                    type: 'POST',
+                    data: {
+                        todo: 'getItemSelected',
+                        URI: $(this).val(),
+                        categorie: 'Album'
+                    },
+                    dataType: 'json'
+                }).done(function (response) {
+                    console.log(response);
+                    window.location = "./PageAlbum.html";
+                }).fail(function (error) {
+                    console.log(error);
+                    alert("[ERROR] Problème lors de la recherche. Réessayez plus tard :)");
+                });
             });
-            
-            $(document).on('click', '#chansons',function () {
+
+            $(document).on('click', '#chansons', function () {
                 $.ajax({
-                        url: './Controller',
-                        type: 'POST',
-                        data: {
-                            todo: 'getItemSelected',
-                            URI: $(this).val(),
-                            categorie: 'Chanson'
-                        },
-                        dataType: 'json'
-                    }).done(function (response) {
-                        console.log(response);
-                        window.location = "./PageChanson.html";
-                    }).fail(function (error) {
-                        console.log(error);
-                        alert("[ERROR] Problème lors de la recherche. Réessayez plus tard :)");
-                    });
+                    url: './Controller',
+                    type: 'POST',
+                    data: {
+                        todo: 'getItemSelected',
+                        URI: $(this).val(),
+                        categorie: 'Chanson'
+                    },
+                    dataType: 'json'
+                }).done(function (response) {
+                    console.log(response);
+                    window.location = "./PageChanson.html";
+                }).fail(function (error) {
+                    console.log(error);
+                    alert("[ERROR] Problème lors de la recherche. Réessayez plus tard :)");
+                });
             });
 
         </script>

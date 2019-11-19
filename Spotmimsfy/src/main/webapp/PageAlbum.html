@@ -10,12 +10,12 @@ and open the template in the editor.
         <title>Page information</title>
 
         <link rel="stylesheet" href="style.css">
-        
+
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-        
+
         <!-- Ajax -->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     </head>
@@ -27,10 +27,10 @@ and open the template in the editor.
                         <td class="case-en-tete">
                             <div id="div-bouton-retour">
                                 <a href="./index.html" id="bouton-retour"></a>
-                             </div>
+                            </div>
                         </td>
                         <td class="case-en-tete">
-                            
+
                         </td>
                         <td class="case-en-tete">
                             <div id="recherche-informations">
@@ -42,23 +42,23 @@ and open the template in the editor.
                 </tbody>
             </table>        
         </div>
-        
+
         <div id="div-album">
             <table id="table-album">
                 <tbody>
                     <tr>
-                        <td class="album-col-1" >
-                            <h1 style="color:white;">ALBUM</h1>
+                        <td class="album-col-1" style="background-color: rgb(34,162,171);" >
+                            <h1 id="name" style="color:white;"></h1>
                         </td>
                         <td class="separer-col" ></td>
                         <td class="artiste-col-2" rowspan="3">
-                            <h1 style="color:white;">IMAGE</h1>
+                            <h1 id="image" style="color:white;"></h1>
                         </td>
                     </tr>
                     <tr class="separer-ligne"></tr>
                     <tr>
                         <td class="artiste-col-2">
-                            <h1 style="color:white;">Artiste</h1>
+                            <h1 id="artiste" style="color:white; padding: 10px; text-align: center; font-size: 18px">Artistes : <br></h1>
                         </td>
                     </tr>
                     <tr class="separer-ligne"></tr>
@@ -68,11 +68,11 @@ and open the template in the editor.
                                 <tbody>
                                     <tr>
                                         <td class="album-col-small">
-                                            <h1 style="color:white;">Date Sortie</h1>
+                                            <h1 id = "sortie" style="color:white; padding: 10px; text-align: center; font-size: 18px">Date de sortie : </h1>
                                         </td>
                                         <td class="separer-col"></td>
                                         <td class="album-col-small">
-                                            <h1 style="color:white;">Durée</h1>
+                                            <h1 id="duree" style="color:white; padding: 10px; text-align: center; font-size: 18px">Durée : </h1>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -80,7 +80,7 @@ and open the template in the editor.
                         </td>
                         <td class="separer-col"></td>
                         <td class="artiste-col-2">
-                            <h1 style="color:white;">LABEL</h1>
+                            <h1 id="recordLabel" style="color:white; padding: 10px; text-align: center; font-size: 18px">Label : <br> </h1>
                         </td>
                     </tr>
                     <tr class="separer-ligne"></tr>
@@ -90,11 +90,11 @@ and open the template in the editor.
                                 <tbody>
                                     <tr>
                                         <td class="album-col-small">
-                                            <h1 style="color:white;">Producteur</h1>
+                                            <h1 id = "producer" style="color:white; padding: 10px; text-align: center; font-size: 18px">Producteur : <br> </h1>
                                         </td>
                                         <td class="separer-col"></td>
                                         <td class="album-col-small">
-                                            <h1 style="color:white;">Awards</h1>
+                                            <h1 id="awrads" style="color:white; padding: 10px; text-align: center; font-size: 18px">Prix reçus : <br> </h1>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -102,13 +102,13 @@ and open the template in the editor.
                         </td>
                         <td class="separer-col"></td>
                         <td class="artiste-col-2" rowspan="6">
-                            <h1 style="color:white;">TITRES</h1>
+                            <h1 id="title" style="color:white; padding: 10px; text-align: center; font-size: 18px">Titres : <br> </h1>
                         </td>
                     </tr>
                     <tr class="separer-ligne"></tr>
                     <tr>
                         <td class="artiste-col-1">
-                            <h1 style="color:white;">ABSTRACT</h1>
+                            <p id="abstract" style="color:white; padding: 10px; text-align: left"></p>
                         </td>
                         <td class="separer-col"></td>
                     </tr>
@@ -118,34 +118,168 @@ and open the template in the editor.
                     <tr class="separer-ligne"></tr>  
                     <tr>
                         <td class="artiste-col-1">
-                            <h1 style="color:white;">GENRES</h1>
+                            <h1 id="genres" style="color:white; padding: 10px; text-align: center; font-size: 18px">Genres : <br> </h1>
                         </td>
-                    </tr>
-                </tbody>
-            </table>
-            <table id="table-autres-albums">
-                <tbody>
-                    <tr>
-                        <td colspan = 5>
-                            <h1 style="color:white;">Autres albums du même artiste</h1>
-                        </td>
-                    </tr>
-                    <tr class="separer-ligne"></tr>
-                    <tr>
-                        <td class="artiste-album-col"><h1 style="color:white;">ALBUMS 1</h1></td>
-                        <td class="separer-album-col"></td>
-                        <td class="artiste-album-col"><h1 style="color:white;">ALBUMS 2</h1></td>
-                        <td class="separer-album-col"></td>
-                        <td class="artiste-album-col"><h1 style="color:white;">ALBUMS 3</h1></td>
-                        <td class="separer-album-col"></td>
-                        <td class="artiste-album-col"><h1 style="color:white;">ALBUMS 4</h1></td>
-                        <td class="separer-album-col"></td>
-                        <td class="artiste-album-col"><h1 style="color:white;">ALBUMS 5</h1></td>
-                        <td class="separer-album-col"></td>
-                        <td class="artiste-album-col"><h1 style="color:white;">ALBUMS 6</h1></td>
                     </tr>
                 </tbody>
             </table>
         </div>
+
+        <script>
+            $(document).ready(function () {
+                $.ajax({
+                    url: './Controller',
+                    type: 'GET',
+                    data: {
+                        todo: 'getInfos'
+                    },
+                    dataType: 'json'
+                }).done(function (response) {
+                    console.log(response);
+
+                    //Ajouter le abstract
+                    document.getElementById("abstract").innerHTML = response.resume[0];
+
+                    //Ajouter les artistes
+                    if (response.artist.length == 0) {
+                        var content = document.createTextNode("\n Pas d'occupation");
+                        document.getElementById("occupation").appendChild(content);
+                    } else {
+                        for (var i = 0; i < response.artist.length; i++) {
+                            var artiste = response.artist[i].toString().split("/");
+                            var content = document.createTextNode(artiste[4].toString().replace(/_/g, " ") + "\n");
+                            var br = document.createElement("br");
+
+                            document.getElementById("artiste").appendChild(content);
+                            document.getElementById("artiste").appendChild(br);
+                        }
+                    }
+
+                    //Ajouter le nom
+                    if (response.name.length == 0) {
+                        var content = document.createTextNode("\n Pas de nom");
+                        document.getElementById("name").appendChild(content);
+                    } else {
+                        var content = document.createTextNode(response.name[0] + "\n");
+                        document.getElementById("name").appendChild(content);
+                    }
+
+                    //Ajouter l'image de l'artiste
+                    if (response.thumbnail.length == 0) {
+                        var content = document.createTextNode("\n Pas d'image disponible");
+                        document.getElementById("image").appendChild(content);
+                    } else {
+                        var img = document.createElement("img");
+                        img.src = response.thumbnail[0];
+                        document.getElementById("image").appendChild(img);
+                    }
+
+                    //Ajouter la durée de l'album
+                    if (response.runtime.length == 0) {
+                        var content = document.createTextNode("\n Pas de durée disponible");
+                        document.getElementById("duree").appendChild(content);
+                    } else {
+                        var content = document.createTextNode(response.runtime[0] + " secondes \n");
+                        document.getElementById("duree").appendChild(content);
+                    }
+
+                    //Ajouter la date de sortie de l'album
+                    if (response.runtime.length == 0) {
+                        var content = document.createTextNode("\n Pas de durée disponible");
+                        document.getElementById("sortie").appendChild(content);
+                    } else {
+                        var content = document.createTextNode(response.releaseDate[0] + "\n");
+                        document.getElementById("sortie").appendChild(content);
+                    }
+
+                    //Ajouter les producteurs
+                    if (response.producer.length == 0) {
+                        var content = document.createTextNode("\n Pas de producteur");
+                        document.getElementById("producer").appendChild(content);
+                    } else {
+                        for (var i = 0; i < response.producer.length; i++) {
+                            var producer = response.producer[i];
+                            var content = document.createTextNode(producer + "\n");
+                            var br = document.createElement("br");
+
+                            document.getElementById("producer").appendChild(content);
+                            document.getElementById("producer").appendChild(br);
+                        }
+                    }
+
+                    //Ajouter les awards
+                    if (response.awrads.length == 0) {
+                        var content = document.createTextNode("\n Pas de prix");
+                        document.getElementById("awrads").appendChild(content);
+                    } else {
+                        for (var i = 0; i < response.awrads.length; i++) {
+                            var awrads = response.awrads[i];
+                            var content = document.createTextNode(awrads + "\n");
+                            var br = document.createElement("br");
+
+                            document.getElementById("awrads").appendChild(content);
+                            document.getElementById("awrads").appendChild(br);
+                        }
+                    }
+
+                    //Ajouter les labels
+                    if (response.recordLabel.length == 0) {
+                        var content = document.createTextNode("\n Pas de label");
+                        document.getElementById("recordLabel").appendChild(content);
+                    } else {
+                        for (var i = 0; i < response.recordLabel.length; i++) {
+                            var recordLabel = response.recordLabel[i];
+                            var content = document.createTextNode(recordLabel + "\n");
+                            var br = document.createElement("br");
+
+                            document.getElementById("recordLabel").appendChild(content);
+                            document.getElementById("recordLabel").appendChild(br);
+                        }
+                    }
+
+                    //Ajouter les titres
+                    if (response.songTitles.length == 0) {
+                        var content = document.createTextNode("\n Pas de titles");
+                        document.getElementById("title").appendChild(content);
+                    } else {
+                        for (var i = 0; i < response.songTitles.length; i++) {
+                            
+                            if (!response.songTitles[i].includes("http")) {
+                                var songTitles = response.songTitles[i];
+                                var content = document.createTextNode(songTitles + "\n");
+                                var br = document.createElement("br");
+
+                                document.getElementById("title").appendChild(content);
+                                document.getElementById("title").appendChild(br);
+                            } else {
+                                var songTitles = response.songTitles[i].toString().split("/");
+                                var content = document.createTextNode(songTitles[4].toString().replace(/_/g, " ") + "\n");
+                                var br = document.createElement("br");
+
+                                document.getElementById("title").appendChild(content);
+                                document.getElementById("title").appendChild(br);
+                            }
+
+                        }
+                    }
+
+                    //Ajouter les genres
+                    if (response.title.genres == 0) {
+                        var content = document.createTextNode("\n Pas de genres");
+                        document.getElementById("genres").appendChild(content);
+                    } else {
+                        for (var i = 0; i < response.genres.length; i++) {
+                            var genres = response.genres[i];
+                            var content = document.createTextNode(genres + "\n");
+                            var br = document.createElement("br");
+
+                            document.getElementById("genres").appendChild(content);
+                            document.getElementById("genres").appendChild(br);
+                        }
+                    }
+
+                });
+            });
+        </script>
     </body>
 </html>

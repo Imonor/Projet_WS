@@ -77,11 +77,18 @@
     border: solid lightgrey;
 }
 
-#column1,#column2,#column3{
-    overflow:scroll;
-    overflow-x: hidden;
-    width: 30%;
+#column1,#column2{
+    width: 31%;
     margin:10px;
+    padding:2%;
+    text-align: center;
+}
+
+#column3{
+    width: 31%;
+    margin:10px;
+    padding-top: 2%;
+    padding-left:5%;
     text-align: center;
 }
 
@@ -190,7 +197,7 @@
 /******************************************* PageChanson.html *****************************/
 
 #table-chanson {
-    margin-left: 5%;
+    margin-left: 10%;
     margin-right: 5%;
     margin-top :2.5%;
     width: 90%;
@@ -230,15 +237,6 @@
     height: 50px;
 }
 
-.chanson-col-2 {
-    width: 40%;
-    border-width:1px;
-    border-style:solid; 
-    border-color:rgb(157,190,187);
-    border-radius: 10px;
-    text-align: center;
-    background-color: rgb(51,61,64);
-}
 
 /******************************************* PageAlbum.html *****************************/
 

@@ -163,14 +163,15 @@ and open the template in the editor.
                     } else {
                         for (var i = 0; i < response.bands.length; i++) {
                             var genreName = response.bands[i].toString().split("/");
-                            var content = document.createTextNode(genreName[4] + "\n");
+                            var content = document.createTextNode(genreName[4].replace(/_/g," ") + "\n");
                             var br = document.createElement("br");
                             document.getElementById("bands").appendChild(content);
-                            document.getElementById("bands").appendChild(br);
-                            
+                            document.getElementById("bands").appendChild(br);                         
+                           
                         }
                     }
-
+                    
+                    //Ajouter les occupations
                     if (response.occupations.length == 0) {
                         var content = document.createTextNode("\n Pas d'occupation");
                         document.getElementById("occupation").appendChild(content);
@@ -202,7 +203,7 @@ and open the template in the editor.
                     var content = document.createTextNode(name[4]);
                     document.getElementById("album6").appendChild(content);
 
-                    //Ajouter les occupations
+                    
 
                 });
             });
