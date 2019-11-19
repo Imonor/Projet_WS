@@ -10,12 +10,12 @@ and open the template in the editor.
         <title>Page information</title>
 
         <link rel="stylesheet" href="style.css">
-        
+
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-        
+
         <!-- Ajax -->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     </head>
@@ -27,10 +27,10 @@ and open the template in the editor.
                         <td class="case-en-tete">
                             <div id="div-bouton-retour">
                                 <a href="./index.html" id="bouton-retour"></a>
-                             </div>
+                            </div>
                         </td>
                         <td class="case-en-tete">
-                            
+
                         </td>
                         <td class="case-en-tete">
                             <div id="recherche-informations">
@@ -42,55 +42,52 @@ and open the template in the editor.
                 </tbody>
             </table>        
         </div>
-        
+
         <div id="div-artiste">
             <table id="table-artiste">
                 <tbody>
                     <tr>
                         <td class="artiste-col-1" rowspan="3">
-                            <h1 style="color:white;">IMAGE</h1>
+                            <h1 id="image" style="color:white;"></h1>
                         </td>
                         <td class="separer-col"></td>
                         <td class="artiste-col-2" style="background-color: rgb(34,162,171);">
-                            <h1 style="color:white;">ARTISTE</h1>
+                            <h1 id ="name" style="color:white;"></h1>
                         </td>
                     </tr>
                     <tr class="separer-ligne"></tr>
                     <tr>
                         <td class="separer-col"></td>
                         <td class="artiste-col-2" style="margin-top: 500px;">
-                            <h1 style="color:white;">DESCRIPTION</h1>
+                            <h1 id="description" style="color:white;">Description : </h1>
                         </td>
                     </tr>
                     <tr class="separer-ligne"></tr>
                     <tr>
                         <td class="artiste-col-1">
-                            <h1 style="color:white;">ASSOCIATE BAND</h1>
+                            <h1 id="bands" style="color:white; padding: 10px; text-align: left; font-size: 18px"> Groupes associés : <br> </h1>
                         </td>
                         <td class="separer-col"></td>
-                        <td class="artiste-col-2">
-                            <h1 style="color:white;">BIRTH -> DEATH</h1>
+                        <td class="artiste-col-2" rowspan="5">
+                            <p id="abstract" style="color:white; padding: 10px; text-align: left">  Informations : <br> </p>
                         </td>
                     </tr>
                     <tr class="separer-ligne"></tr>
                     <tr>
                         <td class="artiste-col-1">
-                            <h1 style="color:white;">OCCUPATION</h1>
+                            <h1 id="occupation" style="color:white; padding: 10px; text-align: left; font-size: 18px"> Occupation : </h1>
                         </td>
                         <td class="separer-col"></td>
-                        <td class="artiste-col-2" rowspan="3">
-                            <h1 style="color:white;">ABSTRACT</h1>
-                        </td>
                     </tr>
                     <tr class="separer-ligne"></tr>
                     <tr>
                         <td class="artiste-col-1">
-                            <h1 style="color:white;">GENRES</h1>
+                            <h1 id="genre" style="color:white; padding: 10px; text-align: left; font-size: 18px">  Genres : <br> </h1>
                         </td>
                     </tr>
                 </tbody>
             </table>
-            <table id="table-artiste-albums">
+            <table id="table-artiste-albums" style="color:white; padding: 10px; text-align: center">
                 <tbody>
                     <tr>
                         <td>
@@ -98,20 +95,119 @@ and open the template in the editor.
                         </td>
                     </tr>
                     <tr>
-                        <td class="artiste-album-col"><h1 style="color:white;">ALBUMS 1</h1></td>
+                        <td id="album1" class="artiste-album-col"><h1 style="color:white;"></h1></td>
                         <td class="separer-album-col"></td>
-                        <td class="artiste-album-col"><h1 style="color:white;">ALBUMS 2</h1></td>
+                        <td id="album2" class="artiste-album-col"><h1 style="color:white;"></h1></td>
                         <td class="separer-album-col"></td>
-                        <td class="artiste-album-col"><h1 style="color:white;">ALBUMS 3</h1></td>
+                        <td id="album3" class="artiste-album-col"><h1 style="color:white;"></h1></td>
                         <td class="separer-album-col"></td>
-                        <td class="artiste-album-col"><h1 style="color:white;">ALBUMS 4</h1></td>
+                        <td id="album4" class="artiste-album-col"><h1 style="color:white;"></h1></td>
                         <td class="separer-album-col"></td>
-                        <td class="artiste-album-col"><h1 style="color:white;">ALBUMS 5</h1></td>
+                        <td id="album5" class="artiste-album-col"><h1 style="color:white;"></h1></td>
                         <td class="separer-album-col"></td>
-                        <td class="artiste-album-col"><h1 style="color:white;">ALBUMS 6</h1></td>
+                        <td id="album6" class="artiste-album-col"><h1 style="color:white;"></h1></td>
                     </tr>
                 </tbody>
             </table>
         </div>
+
+        <script>
+            $(document).ready(function () {
+                $.ajax({
+                    url: './Controller',
+                    type: 'GET',
+                    data: {
+                        todo: 'getInfos'
+                    },
+                    dataType: 'json'
+                }).done(function (response) {
+                    console.log(response);
+                    //Ajouter le abstract
+                    document.getElementById("abstract").innerHTML = response.resume[0];
+                    //Ajouter l'image de l'artiste
+                    var img = document.createElement("img");
+                    img.src = response.thumbnail[0];
+                    document.getElementById("image").appendChild(img);
+                    //Ajouter le nom
+                    if (response.name.length == 0) {
+                        var content = document.createTextNode("\n Pas de nom");
+                        document.getElementById("name").appendChild(content);
+                    } else {
+                        var content = document.createTextNode(response.name[0] + "\n");
+                        document.getElementById("name").appendChild(content);
+                    }
+                    //Ajouter la description
+                    if (response.description.length == 0) {
+                        var content = document.createTextNode("\n Pas de description");
+                        document.getElementById("description").appendChild(content);
+                    } else {
+                        var content = document.createTextNode(response.name[0] + "\n");
+                        document.getElementById("name").appendChild(content);
+                    }
+                    //Ajouter le genre
+                    if (response.genres.length == 0) {
+                        var content = document.createTextNode("\n Pas de genres associés");
+                        document.getElementById("genre").appendChild(content);
+                    } else {
+                        for (var i = 0; i < response.genres.length; i++) {
+                            var content = document.createTextNode(response.genres[i]);
+                            var br = document.createElement("br");
+                            document.getElementById("genre").appendChild(content);
+                            document.getElementById("genre").appendChild(br);
+                        }
+                    }
+                    //Ajouter les bands boys
+                    if (response.bands.length == 0) {
+                        var content = document.createTextNode("\n Pas de groupes associés");
+                        document.getElementById("bands").appendChild(content);
+                    } else {
+                        for (var i = 0; i < response.bands.length; i++) {
+                            var genreName = response.bands[i].toString().split("/");
+                            var content = document.createTextNode(genreName[4] + "\n");
+                            var br = document.createElement("br");
+                            document.getElementById("bands").appendChild(content);
+                            document.getElementById("bands").appendChild(br);
+                            
+                        }
+                    }
+
+                    if (response.occupations.length == 0) {
+                        var content = document.createTextNode("\n Pas d'occupation");
+                        document.getElementById("occupation").appendChild(content);
+                    } else {
+                        for (var i = 0; i < response.occupations.length; i++) {
+                            var genreName = response.occupations[i].toString().split("/");
+                            var content = document.createTextNode(genreName[4] + "\n");
+                            document.getElementById("occupation").appendChild(content);
+                        }
+                    }
+
+                    //Ajouter les albums
+                    var name = response.albums[0].toString().split("/");
+                    var content = document.createTextNode(name[4]);
+                    document.getElementById("album1").appendChild(content);
+                    var name = response.albums[1].toString().split("/");
+                    var content = document.createTextNode(name[4]);
+                    document.getElementById("album2").appendChild(content);
+                    var name = response.albums[2].toString().split("/");
+                    var content = document.createTextNode(name[4]);
+                    document.getElementById("album3").appendChild(content);
+                    var name = response.albums[3].toString().split("/");
+                    var content = document.createTextNode(name[4]);
+                    document.getElementById("album4").appendChild(content);
+                    var name = response.albums[4].toString().split("/");
+                    var content = document.createTextNode(name[4]);
+                    document.getElementById("album5").appendChild(content);
+                    var name = response.albums[5].toString().split("/");
+                    var content = document.createTextNode(name[4]);
+                    document.getElementById("album6").appendChild(content);
+
+                    //Ajouter les occupations
+
+                });
+            });
+
+        </script>
+
     </body>
 </html>

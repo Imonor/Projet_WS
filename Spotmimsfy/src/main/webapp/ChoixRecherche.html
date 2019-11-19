@@ -20,10 +20,28 @@ and open the template in the editor.
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     </head>
     <body id="body-accueil">
-        <div id="recherche-choix">
-            <input type="text" placeholder="Recherche..">
-            <input type="submit" value="" src="https://www.pngfind.com/pngs/m/54-545482_vector-search-icon-search-icon-vector-png-transparent.png">
-        </div>
+        <div id="div-en-tete">   
+            <table id="en-tete">
+                <tbody>
+                    <tr>
+                        <td class="case-en-tete">
+                            <div id="div-bouton-retour">
+                                <a href="./index.html" id="bouton-retour"></a>
+                            </div>
+                        </td>
+                        <td class="case-en-tete">
+
+                        </td>
+                        <td class="case-en-tete">
+                            <div id="recherche-choix">
+                                <input type="text" placeholder="Recherche..">
+                                <input type="submit" value="" src="https://www.pngfind.com/pngs/m/54-545482_vector-search-icon-search-icon-vector-png-transparent.png">
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>        
+        </div>      
         <br>
 
         <div id="cadre"> 
@@ -112,19 +130,18 @@ and open the template in the editor.
             });
             
             $(document).on('click', '#artistes',function () {
-                alert($(this).val())
                 $.ajax({
                         url: './Controller',
                         type: 'POST',
                         data: {
-                            todo: 'getSearchedTerm',
+                            todo: 'getItemSelected',
                             URI: $(this).val(),
                             categorie: 'Artiste'
                         },
                         dataType: 'json'
                     }).done(function (response) {
                         console.log(response);
-                        //window.location = "./ChoixRecherche.html";
+                        window.location = "./PageArtiste.html";
                     }).fail(function (error) {
                         console.log(error);
                         alert("[ERROR] Problème lors de la recherche. Réessayez plus tard :)");

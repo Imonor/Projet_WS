@@ -1,0 +1,609 @@
+19-Nov-2019 13:46:40.719 GRAVE [main] org.apache.catalina.startup.Catalina.initDirs Cannot find specified temporary folder at [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\temp]
+19-Nov-2019 13:46:41.264 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.29
+19-Nov-2019 13:46:41.265 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 5 2018 13:11:12 UTC
+19-Nov-2019 13:46:41.265 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.29.0
+19-Nov-2019 13:46:41.265 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+19-Nov-2019 13:46:41.265 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+19-Nov-2019 13:46:41.265 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+19-Nov-2019 13:46:41.265 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_144\jre
+19-Nov-2019 13:46:41.265 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_144-b01
+19-Nov-2019 13:46:41.265 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+19-Nov-2019 13:46:41.265 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142
+19-Nov-2019 13:46:41.265 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         H:\Mes documents\WebCiment\Projet_WS\TOMCAT\apache-tomcat-8.5.29
+19-Nov-2019 13:46:41.265 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\logging.properties
+19-Nov-2019 13:46:41.265 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+19-Nov-2019 13:46:41.265 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|IF501-204-06
+19-Nov-2019 13:46:41.265 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+19-Nov-2019 13:46:41.265 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+19-Nov-2019 13:46:41.266 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+19-Nov-2019 13:46:41.266 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142
+19-Nov-2019 13:46:41.266 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=H:\Mes documents\WebCiment\Projet_WS\TOMCAT\apache-tomcat-8.5.29
+19-Nov-2019 13:46:41.266 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\temp
+19-Nov-2019 13:46:41.266 INFOS [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_144\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Anaconda2;C:\Anaconda2\Library\mingw-w64\bin;C:\Anaconda2\Library\usr\bin;C:\Anaconda2\Library\bin;C:\Anaconda2\Scripts;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\MiKTeX 2.9\miktex\bin\x64\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\doxygen\bin;C:\MATLAB\R2017a\runtime\win64;C:\MATLAB\R2017a\bin;C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\instantclient_12_1;C:\Program Files\Git\cmd;C:\Program Files\Oracle\Virtualbox;C:\Program Files\Java\jdk1.8.0_101\bin;.]
+19-Nov-2019 13:46:41.527 INFOS [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+19-Nov-2019 13:46:41.655 INFOS [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+19-Nov-2019 13:46:41.668 INFOS [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+19-Nov-2019 13:46:41.672 INFOS [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+19-Nov-2019 13:46:41.672 INFOS [main] org.apache.catalina.startup.Catalina.load Initialization processed in 952 ms
+19-Nov-2019 13:46:41.783 INFOS [main] org.apache.catalina.core.StandardService.startInternal Démarrage du service [Catalina]
+19-Nov-2019 13:46:41.783 INFOS [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.29
+19-Nov-2019 13:46:41.829 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\manager.xml]
+19-Nov-2019 13:46:43.060 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\manager.xml] has finished in [1 229] ms
+19-Nov-2019 13:46:43.061 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\ROOT.xml]
+19-Nov-2019 13:46:43.136 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\ROOT.xml] has finished in [75] ms
+19-Nov-2019 13:46:43.136 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml]
+19-Nov-2019 13:46:49.518 INFOS [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 13:46:50.038 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml] has finished in [6 902] ms
+19-Nov-2019 13:46:50.043 INFOS [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+19-Nov-2019 13:46:50.063 INFOS [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+19-Nov-2019 13:46:50.066 INFOS [main] org.apache.catalina.startup.Catalina.start Server startup in 8394 ms
+19-Nov-2019 13:46:54.903 INFOS [http-nio-8080-exec-1] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Spotmimsfy/index.html]
+19-Nov-2019 13:46:55.283 INFOS [http-nio-8080-exec-2] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml]
+19-Nov-2019 13:46:58.312 INFOS [http-nio-8080-exec-2] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 13:46:58.318 INFOS [http-nio-8080-exec-2] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml] has finished in [3 035] ms
+19-Nov-2019 13:46:58.321 INFOS [http-nio-8080-exec-9] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy/index.html]] after start() had already been called. The second call will be ignored.
+19-Nov-2019 13:47:46.184 INFOS [http-nio-8080-exec-11] org.apache.catalina.core.StandardWrapper.unload Waiting for [2] instance(s) to be deallocated for Servlet [general.Controller]
+19-Nov-2019 13:47:47.188 INFOS [http-nio-8080-exec-11] org.apache.catalina.core.StandardWrapper.unload Waiting for [2] instance(s) to be deallocated for Servlet [general.Controller]
+19-Nov-2019 13:47:48.192 INFOS [http-nio-8080-exec-11] org.apache.catalina.core.StandardWrapper.unload Waiting for [2] instance(s) to be deallocated for Servlet [general.Controller]
+19-Nov-2019 13:47:48.313 AVERTISSEMENT [http-nio-8080-exec-11] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Spotmimsfy#index.html] is still processing a request that has yet to finish. This is very likely to create a memory leak. You can control the time allowed for requests to finish by using the unloadDelay attribute of the standard Context implementation. Stack trace of request processing thread:[
+ java.net.SocketInputStream.socketRead0(Native Method)
+ java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+ java.net.SocketInputStream.read(SocketInputStream.java:171)
+ java.net.SocketInputStream.read(SocketInputStream.java:141)
+ org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:137)
+ org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:153)
+ org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+ org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138)
+ org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+ org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+ org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163)
+ org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157)
+ org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+ org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+ org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272)
+ org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+ org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+ org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+ org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+ org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+ org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+ org.apache.jena.riot.web.HttpOp.exec(HttpOp.java:1084)
+ org.apache.jena.riot.web.HttpOp.execHttpGet(HttpOp.java:322)
+ org.apache.jena.sparql.engine.http.HttpQuery.execHttpGet(HttpQuery.java:348)
+ org.apache.jena.sparql.engine.http.HttpQuery.execGet(HttpQuery.java:330)
+ org.apache.jena.sparql.engine.http.HttpQuery.exec(HttpQuery.java:293)
+ org.apache.jena.sparql.engine.http.QueryEngineHTTP.execResultSetInner(QueryEngineHTTP.java:353)
+ org.apache.jena.sparql.engine.http.QueryEngineHTTP.execSelect(QueryEngineHTTP.java:346)
+ general.SPARQLService.executeQuery(SPARQLService.java:28)
+ general.ResearchManager.getChansons(ResearchManager.java:97)
+ action.ActionTraiterRecherche.executer(ActionTraiterRecherche.java:29)
+ general.Controller.processRequest(Controller.java:49)
+ general.Controller.doGet(Controller.java:82)
+ javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+ javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+ org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+ org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+ org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+ org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)
+ org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+ org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+ org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+ org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+ org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+ org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+ org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+ org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+ org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+ org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+ java.lang.Thread.run(Thread.java:748)]
+19-Nov-2019 13:47:48.348 AVERTISSEMENT [http-nio-8080-exec-11] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Spotmimsfy#index.html] is still processing a request that has yet to finish. This is very likely to create a memory leak. You can control the time allowed for requests to finish by using the unloadDelay attribute of the standard Context implementation. Stack trace of request processing thread:[
+ java.net.SocketInputStream.socketRead0(Native Method)
+ java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+ java.net.SocketInputStream.read(SocketInputStream.java:171)
+ java.net.SocketInputStream.read(SocketInputStream.java:141)
+ org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:137)
+ org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:153)
+ org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+ org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138)
+ org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+ org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+ org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163)
+ org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157)
+ org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+ org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+ org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272)
+ org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+ org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+ org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+ org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+ org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+ org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+ org.apache.jena.riot.web.HttpOp.exec(HttpOp.java:1084)
+ org.apache.jena.riot.web.HttpOp.execHttpGet(HttpOp.java:322)
+ org.apache.jena.sparql.engine.http.HttpQuery.execHttpGet(HttpQuery.java:348)
+ org.apache.jena.sparql.engine.http.HttpQuery.execGet(HttpQuery.java:330)
+ org.apache.jena.sparql.engine.http.HttpQuery.exec(HttpQuery.java:293)
+ org.apache.jena.sparql.engine.http.QueryEngineHTTP.execResultSetInner(QueryEngineHTTP.java:353)
+ org.apache.jena.sparql.engine.http.QueryEngineHTTP.execSelect(QueryEngineHTTP.java:346)
+ general.SPARQLService.executeQuery(SPARQLService.java:28)
+ general.ResearchManager.getChansons(ResearchManager.java:97)
+ action.ActionTraiterRecherche.executer(ActionTraiterRecherche.java:29)
+ general.Controller.processRequest(Controller.java:49)
+ general.Controller.doGet(Controller.java:82)
+ javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+ javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+ org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+ org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+ org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+ org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)
+ org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+ org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+ org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+ org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+ org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+ org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+ org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+ org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+ org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+ org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+ java.lang.Thread.run(Thread.java:748)]
+19-Nov-2019 13:47:48.477 INFOS [http-nio-8080-exec-13] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Illegal access: this web application instance has been stopped already. Could not load [java.sql.Timestamp]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+ java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load [java.sql.Timestamp]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1311)
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForClassLoading(WebappClassLoaderBase.java:1299)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1158)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1119)
+	at com.google.gson.internal.bind.TypeAdapters$26.create(TypeAdapters.java:575)
+	at com.google.gson.Gson.getAdapter(Gson.java:458)
+	at com.google.gson.Gson.toJson(Gson.java:696)
+	at com.google.gson.Gson.toJson(Gson.java:683)
+	at com.google.gson.Gson.toJson(Gson.java:658)
+	at serialization.SerializationListeURIs.serialiser(SerializationListeURIs.java:29)
+	at general.Controller.processRequest(Controller.java:51)
+	at general.Controller.doGet(Controller.java:82)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+19-Nov-2019 13:47:49.027 INFOS [http-nio-8080-exec-11] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Spotmimsfy/index.html]
+19-Nov-2019 13:47:49.103 INFOS [http-nio-8080-exec-16] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml]
+19-Nov-2019 13:47:53.920 INFOS [http-nio-8080-exec-16] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 13:47:53.927 INFOS [http-nio-8080-exec-16] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml] has finished in [4 824] ms
+19-Nov-2019 13:47:53.930 INFOS [http-nio-8080-exec-10] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy/index.html]] after start() had already been called. The second call will be ignored.
+19-Nov-2019 13:52:15.027 INFOS [http-nio-8080-exec-18] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/Spotmimsfy/index.html] a démarré
+19-Nov-2019 13:52:19.462 INFOS [http-nio-8080-exec-18] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 13:52:19.497 INFOS [http-nio-8080-exec-18] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+19-Nov-2019 13:52:32.717 INFOS [http-nio-8080-exec-26] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/Spotmimsfy/index.html] a démarré
+19-Nov-2019 13:52:36.968 INFOS [http-nio-8080-exec-26] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 13:52:37.002 INFOS [http-nio-8080-exec-26] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+19-Nov-2019 13:52:37.196 INFOS [http-nio-8080-exec-27] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/Spotmimsfy/index.html] a démarré
+19-Nov-2019 13:52:39.399 INFOS [http-nio-8080-exec-27] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 13:52:39.436 INFOS [http-nio-8080-exec-27] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+19-Nov-2019 13:52:42.911 INFOS [http-nio-8080-exec-19] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/Spotmimsfy/index.html] a démarré
+19-Nov-2019 13:52:45.680 INFOS [http-nio-8080-exec-19] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 13:52:45.714 INFOS [http-nio-8080-exec-19] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+19-Nov-2019 13:52:45.874 INFOS [http-nio-8080-exec-28] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/Spotmimsfy/index.html] a démarré
+19-Nov-2019 13:52:48.157 INFOS [http-nio-8080-exec-28] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 13:52:48.189 INFOS [http-nio-8080-exec-28] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+19-Nov-2019 13:53:01.809 INFOS [http-nio-8080-exec-31] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/Spotmimsfy/index.html] a démarré
+19-Nov-2019 13:53:04.649 INFOS [http-nio-8080-exec-31] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 13:53:04.680 INFOS [http-nio-8080-exec-31] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+19-Nov-2019 13:53:20.989 INFOS [http-nio-8080-exec-29] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/Spotmimsfy/index.html] a démarré
+19-Nov-2019 13:53:24.924 INFOS [http-nio-8080-exec-29] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 13:53:25.077 INFOS [http-nio-8080-exec-29] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+19-Nov-2019 13:53:46.118 INFOS [http-nio-8080-exec-34] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/Spotmimsfy/index.html] a démarré
+19-Nov-2019 13:53:50.139 INFOS [http-nio-8080-exec-34] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 13:53:50.190 INFOS [http-nio-8080-exec-34] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+19-Nov-2019 13:54:10.339 INFOS [http-nio-8080-exec-30] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/Spotmimsfy/index.html] a démarré
+19-Nov-2019 13:54:14.331 INFOS [http-nio-8080-exec-30] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 13:54:14.364 INFOS [http-nio-8080-exec-30] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+19-Nov-2019 13:54:42.896 INFOS [http-nio-8080-exec-39] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/Spotmimsfy/index.html] a démarré
+19-Nov-2019 13:54:46.955 INFOS [http-nio-8080-exec-39] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 13:54:46.989 INFOS [http-nio-8080-exec-39] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+19-Nov-2019 13:55:02.098 INFOS [http-nio-8080-exec-23] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/Spotmimsfy/index.html] a démarré
+19-Nov-2019 13:55:06.014 INFOS [http-nio-8080-exec-23] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 13:55:06.083 INFOS [http-nio-8080-exec-23] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+19-Nov-2019 13:55:12.558 INFOS [http-nio-8080-exec-41] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Spotmimsfy/index.html]
+19-Nov-2019 13:55:12.650 INFOS [http-nio-8080-exec-43] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml]
+19-Nov-2019 13:55:15.444 INFOS [http-nio-8080-exec-43] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 13:55:15.450 INFOS [http-nio-8080-exec-43] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml] has finished in [2 800] ms
+19-Nov-2019 13:55:15.453 INFOS [http-nio-8080-exec-45] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy/index.html]] after start() had already been called. The second call will be ignored.
+19-Nov-2019 13:55:55.921 INFOS [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+19-Nov-2019 13:55:55.921 INFOS [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+19-Nov-2019 13:55:56.014 INFOS [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+19-Nov-2019 13:55:56.101 INFOS [main] org.apache.catalina.core.StandardService.stopInternal Arrêt du service [Catalina]
+19-Nov-2019 13:55:56.122 INFOS [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+19-Nov-2019 13:55:56.123 INFOS [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+19-Nov-2019 13:55:56.124 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+19-Nov-2019 13:55:56.125 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+19-Nov-2019 13:56:02.034 GRAVE [main] org.apache.catalina.startup.Catalina.initDirs Cannot find specified temporary folder at [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\temp]
+19-Nov-2019 13:56:02.559 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.29
+19-Nov-2019 13:56:02.559 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 5 2018 13:11:12 UTC
+19-Nov-2019 13:56:02.559 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.29.0
+19-Nov-2019 13:56:02.560 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+19-Nov-2019 13:56:02.560 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+19-Nov-2019 13:56:02.560 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+19-Nov-2019 13:56:02.560 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_144\jre
+19-Nov-2019 13:56:02.560 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_144-b01
+19-Nov-2019 13:56:02.560 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+19-Nov-2019 13:56:02.560 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142
+19-Nov-2019 13:56:02.560 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         H:\Mes documents\WebCiment\Projet_WS\TOMCAT\apache-tomcat-8.5.29
+19-Nov-2019 13:56:02.560 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\logging.properties
+19-Nov-2019 13:56:02.560 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+19-Nov-2019 13:56:02.560 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|IF501-204-06
+19-Nov-2019 13:56:02.560 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+19-Nov-2019 13:56:02.561 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+19-Nov-2019 13:56:02.561 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -agentlib:jdwp=transport=dt_shmem,address=tomcat_shared_memory_id,server=y,suspend=n
+19-Nov-2019 13:56:02.561 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+19-Nov-2019 13:56:02.561 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142
+19-Nov-2019 13:56:02.561 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=H:\Mes documents\WebCiment\Projet_WS\TOMCAT\apache-tomcat-8.5.29
+19-Nov-2019 13:56:02.561 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\temp
+19-Nov-2019 13:56:02.561 INFOS [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_144\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Anaconda2;C:\Anaconda2\Library\mingw-w64\bin;C:\Anaconda2\Library\usr\bin;C:\Anaconda2\Library\bin;C:\Anaconda2\Scripts;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\MiKTeX 2.9\miktex\bin\x64\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\doxygen\bin;C:\MATLAB\R2017a\runtime\win64;C:\MATLAB\R2017a\bin;C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\instantclient_12_1;C:\Program Files\Git\cmd;C:\Program Files\Oracle\Virtualbox;C:\Program Files\Java\jdk1.8.0_101\bin;.]
+19-Nov-2019 13:56:02.774 INFOS [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+19-Nov-2019 13:56:02.873 INFOS [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+19-Nov-2019 13:56:02.886 INFOS [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+19-Nov-2019 13:56:02.889 INFOS [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+19-Nov-2019 13:56:02.889 INFOS [main] org.apache.catalina.startup.Catalina.load Initialization processed in 855 ms
+19-Nov-2019 13:56:03.001 INFOS [main] org.apache.catalina.core.StandardService.startInternal Démarrage du service [Catalina]
+19-Nov-2019 13:56:03.001 INFOS [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.29
+19-Nov-2019 13:56:03.029 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\manager.xml]
+19-Nov-2019 13:56:03.707 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\manager.xml] has finished in [677] ms
+19-Nov-2019 13:56:03.707 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\ROOT.xml]
+19-Nov-2019 13:56:03.761 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\ROOT.xml] has finished in [54] ms
+19-Nov-2019 13:56:03.761 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml]
+19-Nov-2019 13:56:08.120 INFOS [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 13:56:08.179 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml] has finished in [4 418] ms
+19-Nov-2019 13:56:08.186 INFOS [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+19-Nov-2019 13:56:08.212 INFOS [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+19-Nov-2019 13:56:08.215 INFOS [main] org.apache.catalina.startup.Catalina.start Server startup in 5326 ms
+19-Nov-2019 13:56:11.426 INFOS [http-nio-8080-exec-6] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Spotmimsfy/index.html]
+19-Nov-2019 13:56:11.489 INFOS [http-nio-8080-exec-1] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml]
+19-Nov-2019 13:56:14.513 INFOS [http-nio-8080-exec-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 13:56:14.522 INFOS [http-nio-8080-exec-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml] has finished in [3 033] ms
+19-Nov-2019 13:56:14.532 INFOS [http-nio-8080-exec-2] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy/index.html]] after start() had already been called. The second call will be ignored.
+19-Nov-2019 14:01:43.931 INFOS [http-nio-8080-exec-11] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/Spotmimsfy/index.html] a démarré
+19-Nov-2019 14:01:48.522 INFOS [http-nio-8080-exec-11] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:01:48.678 INFOS [http-nio-8080-exec-11] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+19-Nov-2019 14:01:49.238 INFOS [http-nio-8080-exec-12] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Spotmimsfy/index.html]
+19-Nov-2019 14:01:49.341 INFOS [http-nio-8080-exec-21] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml]
+19-Nov-2019 14:01:52.344 INFOS [http-nio-8080-exec-21] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:01:52.351 INFOS [http-nio-8080-exec-21] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml] has finished in [3 010] ms
+19-Nov-2019 14:01:52.355 INFOS [http-nio-8080-exec-14] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy/index.html]] after start() had already been called. The second call will be ignored.
+19-Nov-2019 14:02:18.233 INFOS [http-nio-8080-exec-30] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/Spotmimsfy/index.html] a démarré
+19-Nov-2019 14:02:21.527 INFOS [http-nio-8080-exec-30] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:02:21.564 INFOS [http-nio-8080-exec-30] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+19-Nov-2019 14:02:22.105 INFOS [http-nio-8080-exec-26] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Spotmimsfy/index.html]
+19-Nov-2019 14:02:22.188 INFOS [http-nio-8080-exec-20] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml]
+19-Nov-2019 14:02:24.473 INFOS [http-nio-8080-exec-20] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:02:24.480 INFOS [http-nio-8080-exec-20] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml] has finished in [2 292] ms
+19-Nov-2019 14:02:24.483 INFOS [http-nio-8080-exec-31] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy/index.html]] after start() had already been called. The second call will be ignored.
+19-Nov-2019 14:04:38.776 INFOS [http-nio-8080-exec-34] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/Spotmimsfy/index.html] a démarré
+19-Nov-2019 14:04:43.041 INFOS [http-nio-8080-exec-34] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:04:43.077 INFOS [http-nio-8080-exec-34] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+19-Nov-2019 14:04:43.618 INFOS [http-nio-8080-exec-39] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Spotmimsfy/index.html]
+19-Nov-2019 14:04:43.699 INFOS [http-nio-8080-exec-42] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml]
+19-Nov-2019 14:04:45.928 INFOS [http-nio-8080-exec-42] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:04:45.935 INFOS [http-nio-8080-exec-42] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml] has finished in [2 235] ms
+19-Nov-2019 14:04:45.938 INFOS [http-nio-8080-exec-44] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy/index.html]] after start() had already been called. The second call will be ignored.
+19-Nov-2019 14:06:06.361 INFOS [http-nio-8080-exec-49] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/Spotmimsfy/index.html] a démarré
+19-Nov-2019 14:06:10.825 INFOS [http-nio-8080-exec-49] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:06:10.864 INFOS [http-nio-8080-exec-49] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+19-Nov-2019 14:06:32.397 INFOS [http-nio-8080-exec-55] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Spotmimsfy/index.html]
+19-Nov-2019 14:06:32.490 INFOS [http-nio-8080-exec-54] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml]
+19-Nov-2019 14:06:36.706 INFOS [http-nio-8080-exec-54] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:06:36.713 INFOS [http-nio-8080-exec-54] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml] has finished in [4 223] ms
+19-Nov-2019 14:06:36.716 INFOS [http-nio-8080-exec-48] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy/index.html]] after start() had already been called. The second call will be ignored.
+19-Nov-2019 14:06:58.337 INFOS [http-nio-8080-exec-50] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Spotmimsfy/index.html]
+19-Nov-2019 14:06:58.402 INFOS [http-nio-8080-exec-61] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml]
+19-Nov-2019 14:07:01.539 INFOS [http-nio-8080-exec-61] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:07:01.544 INFOS [http-nio-8080-exec-61] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml] has finished in [3 143] ms
+19-Nov-2019 14:07:01.547 INFOS [http-nio-8080-exec-60] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy/index.html]] after start() had already been called. The second call will be ignored.
+19-Nov-2019 14:09:52.295 INFOS [http-nio-8080-exec-70] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Spotmimsfy/index.html]
+19-Nov-2019 14:09:52.356 INFOS [http-nio-8080-exec-68] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml]
+19-Nov-2019 14:09:57.115 INFOS [http-nio-8080-exec-68] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:09:57.121 INFOS [http-nio-8080-exec-68] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml] has finished in [4 765] ms
+19-Nov-2019 14:09:57.124 INFOS [http-nio-8080-exec-65] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy/index.html]] after start() had already been called. The second call will be ignored.
+19-Nov-2019 14:10:05.478 INFOS [http-nio-8080-exec-67] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Spotmimsfy/index.html]
+19-Nov-2019 14:10:32.296 INFOS [http-nio-8080-exec-66] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml]
+19-Nov-2019 14:10:36.291 INFOS [http-nio-8080-exec-66] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:10:36.298 INFOS [http-nio-8080-exec-66] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml] has finished in [4 002] ms
+19-Nov-2019 14:10:36.302 INFOS [http-nio-8080-exec-63] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy/index.html]] after start() had already been called. The second call will be ignored.
+19-Nov-2019 14:12:11.778 INFOS [http-nio-8080-exec-84] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Spotmimsfy/index.html]
+19-Nov-2019 14:12:11.867 INFOS [http-nio-8080-exec-78] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml]
+19-Nov-2019 14:12:16.571 INFOS [http-nio-8080-exec-78] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:12:16.579 INFOS [http-nio-8080-exec-78] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml] has finished in [4 711] ms
+19-Nov-2019 14:12:16.582 INFOS [http-nio-8080-exec-83] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy/index.html]] after start() had already been called. The second call will be ignored.
+19-Nov-2019 14:13:15.887 INFOS [http-nio-8080-exec-92] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Spotmimsfy/index.html]
+19-Nov-2019 14:13:15.985 INFOS [http-nio-8080-exec-80] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml]
+19-Nov-2019 14:13:20.094 INFOS [http-nio-8080-exec-80] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:13:20.099 INFOS [http-nio-8080-exec-80] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml] has finished in [4 114] ms
+19-Nov-2019 14:13:20.103 INFOS [http-nio-8080-exec-86] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy/index.html]] after start() had already been called. The second call will be ignored.
+19-Nov-2019 14:15:17.176 INFOS [http-nio-8080-exec-95] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Spotmimsfy/index.html]
+19-Nov-2019 14:15:17.271 INFOS [http-nio-8080-exec-102] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml]
+19-Nov-2019 14:15:21.973 INFOS [http-nio-8080-exec-102] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:15:21.978 INFOS [http-nio-8080-exec-102] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml] has finished in [4 707] ms
+19-Nov-2019 14:15:21.980 INFOS [http-nio-8080-exec-98] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy/index.html]] after start() had already been called. The second call will be ignored.
+19-Nov-2019 14:18:32.391 INFOS [http-nio-8080-exec-110] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Spotmimsfy/index.html]
+19-Nov-2019 14:18:32.467 INFOS [http-nio-8080-exec-107] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml]
+19-Nov-2019 14:18:36.489 INFOS [http-nio-8080-exec-107] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:18:36.495 INFOS [http-nio-8080-exec-107] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml] has finished in [4 028] ms
+19-Nov-2019 14:18:36.498 INFOS [http-nio-8080-exec-113] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/Spotmimsfy/index.html] a démarré
+19-Nov-2019 14:18:39.285 INFOS [http-nio-8080-exec-113] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:18:39.288 INFOS [http-nio-8080-exec-113] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+19-Nov-2019 14:18:39.291 INFOS [http-nio-8080-exec-114] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy/index.html]] after start() had already been called. The second call will be ignored.
+19-Nov-2019 14:20:29.928 INFOS [http-nio-8080-exec-118] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Spotmimsfy/index.html]
+19-Nov-2019 14:20:30.023 INFOS [http-nio-8080-exec-117] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml]
+19-Nov-2019 14:20:34.205 INFOS [http-nio-8080-exec-117] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:20:34.209 INFOS [http-nio-8080-exec-117] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml] has finished in [4 186] ms
+19-Nov-2019 14:20:34.212 INFOS [http-nio-8080-exec-121] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy/index.html]] after start() had already been called. The second call will be ignored.
+19-Nov-2019 14:22:38.862 INFOS [http-nio-8080-exec-118] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Spotmimsfy/index.html]
+19-Nov-2019 14:22:38.925 INFOS [http-nio-8080-exec-123] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml]
+19-Nov-2019 14:22:42.952 INFOS [http-nio-8080-exec-123] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:22:42.956 INFOS [http-nio-8080-exec-123] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml] has finished in [4 031] ms
+19-Nov-2019 14:22:42.961 INFOS [http-nio-8080-exec-125] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy/index.html]] after start() had already been called. The second call will be ignored.
+19-Nov-2019 14:23:04.965 INFOS [http-nio-8080-exec-125] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Spotmimsfy/index.html]
+19-Nov-2019 14:23:05.060 INFOS [http-nio-8080-exec-106] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml]
+19-Nov-2019 14:23:09.492 INFOS [http-nio-8080-exec-106] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:23:09.498 INFOS [http-nio-8080-exec-106] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml] has finished in [4 438] ms
+19-Nov-2019 14:23:09.501 INFOS [http-nio-8080-exec-131] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy/index.html]] after start() had already been called. The second call will be ignored.
+19-Nov-2019 14:24:28.865 INFOS [http-nio-8080-exec-138] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Spotmimsfy/index.html]
+19-Nov-2019 14:24:28.949 INFOS [http-nio-8080-exec-143] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml]
+19-Nov-2019 14:24:33.136 INFOS [http-nio-8080-exec-143] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:24:33.140 INFOS [http-nio-8080-exec-143] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml] has finished in [4 191] ms
+19-Nov-2019 14:24:33.143 INFOS [http-nio-8080-exec-141] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy/index.html]] after start() had already been called. The second call will be ignored.
+19-Nov-2019 14:25:54.487 INFOS [http-nio-8080-exec-153] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Spotmimsfy/index.html]
+19-Nov-2019 14:26:10.374 INFOS [http-nio-8080-exec-151] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml]
+19-Nov-2019 14:26:13.653 INFOS [http-nio-8080-exec-151] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:26:13.657 INFOS [http-nio-8080-exec-151] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml] has finished in [3 283] ms
+19-Nov-2019 14:26:13.660 INFOS [http-nio-8080-exec-154] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy/index.html]] after start() had already been called. The second call will be ignored.
+19-Nov-2019 14:27:08.592 INFOS [http-nio-8080-exec-159] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Spotmimsfy/index.html]
+19-Nov-2019 14:27:08.667 INFOS [http-nio-8080-exec-158] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml]
+19-Nov-2019 14:27:12.647 INFOS [http-nio-8080-exec-158] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:27:12.652 INFOS [http-nio-8080-exec-158] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml] has finished in [3 985] ms
+19-Nov-2019 14:27:12.655 INFOS [http-nio-8080-exec-161] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy/index.html]] after start() had already been called. The second call will be ignored.
+19-Nov-2019 14:28:03.585 INFOS [http-nio-8080-exec-155] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Spotmimsfy/index.html]
+19-Nov-2019 14:28:03.914 INFOS [http-nio-8080-exec-165] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml]
+19-Nov-2019 14:28:07.896 INFOS [http-nio-8080-exec-165] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:28:07.902 INFOS [http-nio-8080-exec-165] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml] has finished in [3 988] ms
+19-Nov-2019 14:28:07.906 INFOS [http-nio-8080-exec-166] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy/index.html]] after start() had already been called. The second call will be ignored.
+19-Nov-2019 14:28:43.879 INFOS [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+19-Nov-2019 14:28:43.880 INFOS [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+19-Nov-2019 14:28:43.971 INFOS [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+19-Nov-2019 14:28:44.020 INFOS [main] org.apache.catalina.core.StandardService.stopInternal Arrêt du service [Catalina]
+19-Nov-2019 14:28:44.038 INFOS [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+19-Nov-2019 14:28:44.040 INFOS [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+19-Nov-2019 14:28:44.042 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+19-Nov-2019 14:28:44.042 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+19-Nov-2019 14:29:14.299 GRAVE [main] org.apache.catalina.startup.Catalina.initDirs Cannot find specified temporary folder at [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\temp]
+19-Nov-2019 14:29:14.864 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.29
+19-Nov-2019 14:29:14.864 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 5 2018 13:11:12 UTC
+19-Nov-2019 14:29:14.864 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.29.0
+19-Nov-2019 14:29:14.864 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+19-Nov-2019 14:29:14.864 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+19-Nov-2019 14:29:14.864 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+19-Nov-2019 14:29:14.864 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_144\jre
+19-Nov-2019 14:29:14.864 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_144-b01
+19-Nov-2019 14:29:14.865 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+19-Nov-2019 14:29:14.865 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142
+19-Nov-2019 14:29:14.865 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         H:\Mes documents\WebCiment\Projet_WS\TOMCAT\apache-tomcat-8.5.29
+19-Nov-2019 14:29:14.865 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\logging.properties
+19-Nov-2019 14:29:14.865 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+19-Nov-2019 14:29:14.865 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|IF501-204-06
+19-Nov-2019 14:29:14.865 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+19-Nov-2019 14:29:14.865 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+19-Nov-2019 14:29:14.865 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+19-Nov-2019 14:29:14.865 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142
+19-Nov-2019 14:29:14.865 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=H:\Mes documents\WebCiment\Projet_WS\TOMCAT\apache-tomcat-8.5.29
+19-Nov-2019 14:29:14.865 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\temp
+19-Nov-2019 14:29:14.865 INFOS [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_144\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Anaconda2;C:\Anaconda2\Library\mingw-w64\bin;C:\Anaconda2\Library\usr\bin;C:\Anaconda2\Library\bin;C:\Anaconda2\Scripts;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\MiKTeX 2.9\miktex\bin\x64\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\doxygen\bin;C:\MATLAB\R2017a\runtime\win64;C:\MATLAB\R2017a\bin;C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\instantclient_12_1;C:\Program Files\Git\cmd;C:\Program Files\Oracle\Virtualbox;C:\Program Files\Java\jdk1.8.0_101\bin;.]
+19-Nov-2019 14:29:15.170 INFOS [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+19-Nov-2019 14:29:15.270 INFOS [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+19-Nov-2019 14:29:15.283 INFOS [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+19-Nov-2019 14:29:15.285 INFOS [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+19-Nov-2019 14:29:15.285 INFOS [main] org.apache.catalina.startup.Catalina.load Initialization processed in 987 ms
+19-Nov-2019 14:29:15.385 INFOS [main] org.apache.catalina.core.StandardService.startInternal Démarrage du service [Catalina]
+19-Nov-2019 14:29:15.385 INFOS [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.29
+19-Nov-2019 14:29:15.411 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\manager.xml]
+19-Nov-2019 14:29:16.104 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\manager.xml] has finished in [692] ms
+19-Nov-2019 14:29:16.104 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\ROOT.xml]
+19-Nov-2019 14:29:16.152 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\ROOT.xml] has finished in [48] ms
+19-Nov-2019 14:29:16.152 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml]
+19-Nov-2019 14:29:20.301 INFOS [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:29:20.355 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy#index.html.xml] has finished in [4 202] ms
+19-Nov-2019 14:29:20.359 INFOS [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+19-Nov-2019 14:29:20.379 INFOS [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+19-Nov-2019 14:29:20.382 INFOS [main] org.apache.catalina.startup.Catalina.start Server startup in 5096 ms
+19-Nov-2019 14:29:27.092 INFOS [http-nio-8080-exec-10] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Spotmimsfy/index.html]
+19-Nov-2019 14:29:27.200 INFOS [http-nio-8080-exec-2] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml]
+19-Nov-2019 14:29:30.568 INFOS [http-nio-8080-exec-2] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:29:30.574 INFOS [http-nio-8080-exec-2] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml] has finished in [3 374] ms
+19-Nov-2019 14:29:30.604 INFOS [http-nio-8080-exec-3] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy]] after start() had already been called. The second call will be ignored.
+19-Nov-2019 14:29:36.821 INFOS [http-nio-8080-exec-7] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Spotmimsfy]
+19-Nov-2019 14:29:36.881 INFOS [http-nio-8080-exec-9] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml]
+19-Nov-2019 14:29:39.788 INFOS [http-nio-8080-exec-9] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:29:39.795 INFOS [http-nio-8080-exec-9] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml] has finished in [2 915] ms
+19-Nov-2019 14:29:39.799 INFOS [http-nio-8080-exec-3] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy]] after start() had already been called. The second call will be ignored.
+19-Nov-2019 14:31:09.409 INFOS [http-nio-8080-exec-22] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Spotmimsfy]
+19-Nov-2019 14:31:31.032 INFOS [http-nio-8080-exec-19] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml]
+19-Nov-2019 14:31:34.197 INFOS [http-nio-8080-exec-19] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:31:34.203 INFOS [http-nio-8080-exec-19] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml] has finished in [3 171] ms
+19-Nov-2019 14:31:34.206 INFOS [http-nio-8080-exec-24] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy]] after start() had already been called. The second call will be ignored.
+19-Nov-2019 14:32:47.526 INFOS [http-nio-8080-exec-25] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/Spotmimsfy] a démarré
+19-Nov-2019 14:32:51.950 INFOS [http-nio-8080-exec-25] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:32:51.984 INFOS [http-nio-8080-exec-25] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+19-Nov-2019 14:33:02.972 INFOS [http-nio-8080-exec-30] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/Spotmimsfy] a démarré
+19-Nov-2019 14:33:06.276 INFOS [http-nio-8080-exec-30] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:33:06.302 INFOS [http-nio-8080-exec-30] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+19-Nov-2019 14:33:06.446 INFOS [http-nio-8080-exec-24] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/Spotmimsfy] a démarré
+19-Nov-2019 14:33:09.163 INFOS [http-nio-8080-exec-24] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:33:09.393 INFOS [http-nio-8080-exec-24] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+19-Nov-2019 14:33:47.778 INFOS [http-nio-8080-exec-28] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/Spotmimsfy] a démarré
+19-Nov-2019 14:33:52.936 INFOS [http-nio-8080-exec-28] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:33:52.975 INFOS [http-nio-8080-exec-28] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+19-Nov-2019 14:34:01.944 INFOS [http-nio-8080-exec-36] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/Spotmimsfy] a démarré
+19-Nov-2019 14:34:04.778 INFOS [http-nio-8080-exec-36] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:34:04.811 INFOS [http-nio-8080-exec-36] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+19-Nov-2019 14:34:08.796 INFOS [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+19-Nov-2019 14:34:08.796 INFOS [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+19-Nov-2019 14:34:08.889 INFOS [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+19-Nov-2019 14:34:08.984 INFOS [main] org.apache.catalina.core.StandardService.stopInternal Arrêt du service [Catalina]
+19-Nov-2019 14:34:09.009 INFOS [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+19-Nov-2019 14:34:09.016 INFOS [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+19-Nov-2019 14:34:09.020 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+19-Nov-2019 14:34:09.022 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+19-Nov-2019 14:34:14.689 GRAVE [main] org.apache.catalina.startup.Catalina.initDirs Cannot find specified temporary folder at [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\temp]
+19-Nov-2019 14:34:15.256 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.29
+19-Nov-2019 14:34:15.257 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 5 2018 13:11:12 UTC
+19-Nov-2019 14:34:15.257 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.29.0
+19-Nov-2019 14:34:15.257 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+19-Nov-2019 14:34:15.257 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+19-Nov-2019 14:34:15.257 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+19-Nov-2019 14:34:15.257 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_144\jre
+19-Nov-2019 14:34:15.257 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_144-b01
+19-Nov-2019 14:34:15.257 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+19-Nov-2019 14:34:15.257 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142
+19-Nov-2019 14:34:15.257 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         H:\Mes documents\WebCiment\Projet_WS\TOMCAT\apache-tomcat-8.5.29
+19-Nov-2019 14:34:15.257 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\logging.properties
+19-Nov-2019 14:34:15.257 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+19-Nov-2019 14:34:15.257 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|IF501-204-06
+19-Nov-2019 14:34:15.257 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+19-Nov-2019 14:34:15.257 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+19-Nov-2019 14:34:15.257 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -agentlib:jdwp=transport=dt_shmem,address=tomcat_shared_memory_id,server=y,suspend=n
+19-Nov-2019 14:34:15.257 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+19-Nov-2019 14:34:15.257 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142
+19-Nov-2019 14:34:15.257 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=H:\Mes documents\WebCiment\Projet_WS\TOMCAT\apache-tomcat-8.5.29
+19-Nov-2019 14:34:15.257 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\temp
+19-Nov-2019 14:34:15.257 INFOS [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_144\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Anaconda2;C:\Anaconda2\Library\mingw-w64\bin;C:\Anaconda2\Library\usr\bin;C:\Anaconda2\Library\bin;C:\Anaconda2\Scripts;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\MiKTeX 2.9\miktex\bin\x64\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\doxygen\bin;C:\MATLAB\R2017a\runtime\win64;C:\MATLAB\R2017a\bin;C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\instantclient_12_1;C:\Program Files\Git\cmd;C:\Program Files\Oracle\Virtualbox;C:\Program Files\Java\jdk1.8.0_101\bin;.]
+19-Nov-2019 14:34:15.601 INFOS [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+19-Nov-2019 14:34:15.703 INFOS [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+19-Nov-2019 14:34:15.713 INFOS [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+19-Nov-2019 14:34:15.716 INFOS [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+19-Nov-2019 14:34:15.716 INFOS [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1028 ms
+19-Nov-2019 14:34:15.784 INFOS [main] org.apache.catalina.core.StandardService.startInternal Démarrage du service [Catalina]
+19-Nov-2019 14:34:15.785 INFOS [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.29
+19-Nov-2019 14:34:15.808 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\manager.xml]
+19-Nov-2019 14:34:16.837 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\manager.xml] has finished in [1 028] ms
+19-Nov-2019 14:34:16.837 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\ROOT.xml]
+19-Nov-2019 14:34:16.881 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\ROOT.xml] has finished in [44] ms
+19-Nov-2019 14:34:16.881 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml]
+19-Nov-2019 14:34:20.131 INFOS [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:34:20.200 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml] has finished in [3 319] ms
+19-Nov-2019 14:34:20.207 INFOS [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+19-Nov-2019 14:34:20.256 INFOS [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+19-Nov-2019 14:34:20.265 INFOS [main] org.apache.catalina.startup.Catalina.start Server startup in 4548 ms
+19-Nov-2019 14:34:22.294 INFOS [http-nio-8080-exec-2] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Spotmimsfy]
+19-Nov-2019 14:34:22.403 INFOS [http-nio-8080-exec-4] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml]
+19-Nov-2019 14:34:25.486 INFOS [http-nio-8080-exec-4] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:34:25.493 INFOS [http-nio-8080-exec-4] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml] has finished in [3 090] ms
+19-Nov-2019 14:34:25.497 INFOS [http-nio-8080-exec-9] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy]] after start() had already been called. The second call will be ignored.
+19-Nov-2019 14:38:19.119 INFOS [http-nio-8080-exec-20] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Spotmimsfy]
+19-Nov-2019 14:38:19.214 INFOS [http-nio-8080-exec-17] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml]
+19-Nov-2019 14:38:24.143 INFOS [http-nio-8080-exec-17] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:38:24.151 INFOS [http-nio-8080-exec-17] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml] has finished in [4 937] ms
+19-Nov-2019 14:38:24.155 INFOS [http-nio-8080-exec-12] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy]] after start() had already been called. The second call will be ignored.
+19-Nov-2019 14:42:49.498 INFOS [http-nio-8080-exec-30] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Spotmimsfy]
+19-Nov-2019 14:42:49.599 INFOS [http-nio-8080-exec-23] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml]
+19-Nov-2019 14:42:53.521 INFOS [http-nio-8080-exec-23] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:42:53.529 INFOS [http-nio-8080-exec-23] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml] has finished in [3 930] ms
+19-Nov-2019 14:42:53.532 INFOS [http-nio-8080-exec-24] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy]] after start() had already been called. The second call will be ignored.
+19-Nov-2019 14:44:17.825 INFOS [http-nio-8080-exec-39] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Spotmimsfy]
+19-Nov-2019 14:44:17.910 INFOS [http-nio-8080-exec-34] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml]
+19-Nov-2019 14:44:21.953 INFOS [http-nio-8080-exec-34] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:44:21.960 INFOS [http-nio-8080-exec-34] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml] has finished in [4 050] ms
+19-Nov-2019 14:44:21.962 INFOS [http-nio-8080-exec-36] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy]] after start() had already been called. The second call will be ignored.
+19-Nov-2019 14:44:47.930 INFOS [http-nio-8080-exec-44] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Spotmimsfy]
+19-Nov-2019 14:44:47.986 INFOS [http-nio-8080-exec-48] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml]
+19-Nov-2019 14:44:51.655 INFOS [http-nio-8080-exec-48] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:44:51.662 INFOS [http-nio-8080-exec-48] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml] has finished in [3 676] ms
+19-Nov-2019 14:44:51.665 INFOS [http-nio-8080-exec-46] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy]] after start() had already been called. The second call will be ignored.
+19-Nov-2019 14:48:13.272 INFOS [http-nio-8080-exec-57] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Spotmimsfy]
+19-Nov-2019 14:48:13.373 INFOS [http-nio-8080-exec-58] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml]
+19-Nov-2019 14:48:17.807 INFOS [http-nio-8080-exec-58] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:48:17.814 INFOS [http-nio-8080-exec-58] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml] has finished in [4 441] ms
+19-Nov-2019 14:48:17.817 INFOS [http-nio-8080-exec-49] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy]] after start() had already been called. The second call will be ignored.
+19-Nov-2019 14:52:22.379 INFOS [http-nio-8080-exec-66] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Spotmimsfy]
+19-Nov-2019 14:52:22.485 INFOS [http-nio-8080-exec-61] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml]
+19-Nov-2019 14:52:27.286 INFOS [http-nio-8080-exec-61] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:52:27.292 INFOS [http-nio-8080-exec-61] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml] has finished in [4 807] ms
+19-Nov-2019 14:52:27.295 INFOS [http-nio-8080-exec-67] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy]] after start() had already been called. The second call will be ignored.
+19-Nov-2019 14:54:35.563 INFOS [http-nio-8080-exec-75] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Spotmimsfy]
+19-Nov-2019 14:54:35.671 INFOS [http-nio-8080-exec-76] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml]
+19-Nov-2019 14:54:41.123 INFOS [http-nio-8080-exec-76] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:54:41.129 INFOS [http-nio-8080-exec-76] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml] has finished in [5 458] ms
+19-Nov-2019 14:54:41.133 INFOS [http-nio-8080-exec-70] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy]] after start() had already been called. The second call will be ignored.
+19-Nov-2019 14:57:41.154 INFOS [http-nio-8080-exec-82] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Spotmimsfy]
+19-Nov-2019 14:57:41.233 INFOS [http-nio-8080-exec-85] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml]
+19-Nov-2019 14:57:45.793 INFOS [http-nio-8080-exec-85] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:57:45.798 INFOS [http-nio-8080-exec-85] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml] has finished in [4 565] ms
+19-Nov-2019 14:57:45.800 INFOS [http-nio-8080-exec-87] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy]] after start() had already been called. The second call will be ignored.
+19-Nov-2019 14:58:44.900 INFOS [http-nio-8080-exec-89] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Spotmimsfy]
+19-Nov-2019 14:58:44.984 INFOS [http-nio-8080-exec-92] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml]
+19-Nov-2019 14:58:49.487 INFOS [http-nio-8080-exec-92] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 14:58:49.494 INFOS [http-nio-8080-exec-92] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml] has finished in [4 510] ms
+19-Nov-2019 14:58:49.510 INFOS [http-nio-8080-exec-94] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy]] after start() had already been called. The second call will be ignored.
+19-Nov-2019 15:00:19.250 INFOS [http-nio-8080-exec-98] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Spotmimsfy]
+19-Nov-2019 15:00:19.361 INFOS [http-nio-8080-exec-103] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml]
+19-Nov-2019 15:00:26.214 INFOS [http-nio-8080-exec-103] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 15:00:26.218 INFOS [http-nio-8080-exec-103] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml] has finished in [6 857] ms
+19-Nov-2019 15:00:26.221 INFOS [http-nio-8080-exec-101] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy]] after start() had already been called. The second call will be ignored.
+19-Nov-2019 15:05:02.207 INFOS [http-nio-8080-exec-115] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Spotmimsfy]
+19-Nov-2019 15:05:02.298 INFOS [http-nio-8080-exec-108] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml]
+19-Nov-2019 15:05:06.942 INFOS [http-nio-8080-exec-108] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 15:05:06.947 INFOS [http-nio-8080-exec-108] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml] has finished in [4 648] ms
+19-Nov-2019 15:05:06.949 INFOS [http-nio-8080-exec-112] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy]] after start() had already been called. The second call will be ignored.
+19-Nov-2019 15:10:05.792 INFOS [http-nio-8080-exec-124] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Spotmimsfy]
+19-Nov-2019 15:10:05.907 INFOS [http-nio-8080-exec-119] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml]
+19-Nov-2019 15:10:12.815 INFOS [http-nio-8080-exec-119] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 15:10:12.821 INFOS [http-nio-8080-exec-119] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml] has finished in [6 914] ms
+19-Nov-2019 15:10:12.823 INFOS [http-nio-8080-exec-123] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy]] after start() had already been called. The second call will be ignored.
+19-Nov-2019 15:10:46.130 INFOS [http-nio-8080-exec-118] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Spotmimsfy]
+19-Nov-2019 15:10:46.225 INFOS [http-nio-8080-exec-126] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml]
+19-Nov-2019 15:10:52.057 INFOS [http-nio-8080-exec-126] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 15:10:52.064 INFOS [http-nio-8080-exec-126] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml] has finished in [5 839] ms
+19-Nov-2019 15:10:52.066 INFOS [http-nio-8080-exec-128] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy]] after start() had already been called. The second call will be ignored.
+19-Nov-2019 15:39:19.786 INFOS [http-nio-8080-exec-139] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/Spotmimsfy] a démarré
+19-Nov-2019 15:39:23.731 INFOS [http-nio-8080-exec-139] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 15:39:23.768 INFOS [http-nio-8080-exec-139] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+19-Nov-2019 15:39:23.912 INFOS [http-nio-8080-exec-136] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/Spotmimsfy] a démarré
+19-Nov-2019 15:39:26.679 INFOS [http-nio-8080-exec-136] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 15:39:26.710 INFOS [http-nio-8080-exec-136] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+19-Nov-2019 15:39:59.623 INFOS [http-nio-8080-exec-140] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Spotmimsfy]
+19-Nov-2019 15:39:59.727 INFOS [http-nio-8080-exec-142] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml]
+19-Nov-2019 15:40:04.042 INFOS [http-nio-8080-exec-142] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2019 15:40:04.048 INFOS [http-nio-8080-exec-142] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [H:\Mes documents\WebCiment\Projet_WS\TOMCAT\H4142\conf\Catalina\localhost\Spotmimsfy.xml] has finished in [4 321] ms
+19-Nov-2019 15:40:04.051 INFOS [http-nio-8080-exec-138] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Spotmimsfy]] after start() had already been called. The second call will be ignored.

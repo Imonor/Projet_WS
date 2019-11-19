@@ -29,6 +29,7 @@ public class ArtisteService {
         infosArtiste.put("bands", SPARQLService.getResourceURI(artistURI, "dbo:associatedBand"));
         infosArtiste.put("occupations", SPARQLService.getLiteral(artistURI, "dbp:occupation", " LIMIT 3"));
         infosArtiste.put("albums", getAlbums(artistURI));
+        infosArtiste.put("name", SPARQLService.getLiteral(artistURI, "foaf:name"));
 
         return infosArtiste;
     }

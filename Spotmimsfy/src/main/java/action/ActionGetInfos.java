@@ -11,6 +11,7 @@ import general.ChansonService;
 import java.util.List;
 import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -20,8 +21,9 @@ public class ActionGetInfos extends Action {
         @Override
     public boolean executer(HttpServletRequest request){
         try{
-            String URI = request.getParameter("URI");
-            String categorie = request.getParameter("categorie");
+            HttpSession session = request.getSession(true);
+            String URI = (String) session.getAttribute("URI");
+            String categorie = (String) session.getAttribute("categorie");
             
             Map<String, List<String>> infos = null;
             

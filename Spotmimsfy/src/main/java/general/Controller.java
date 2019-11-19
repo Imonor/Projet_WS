@@ -8,6 +8,7 @@ package general;
 
 import action.Action;
 import action.ActionGetInfos;
+import action.ActionGetItemSelected;
 import action.ActionGetSearchedTerm;
 import action.ActionTraiterRecherche;
 import java.io.IOException;
@@ -17,6 +18,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import serialization.Serialization;
+import serialization.SerializationGetItemSelected;
 import serialization.SerializationGetSearchedTerm;
 import serialization.SerializationInfos;
 import serialization.SerializationListeURIs;
@@ -60,6 +62,12 @@ public class Controller extends HttpServlet {
                 action = new ActionGetSearchedTerm();
                 action.executer(request);
                 serialization = new SerializationGetSearchedTerm();
+                serialization.serialiser(request, response);
+                
+            }else if("getItemSelected".equals(todo)){
+                action = new ActionGetItemSelected();
+                action.executer(request);
+                serialization = new SerializationGetItemSelected();
                 serialization.serialiser(request, response);
             }
         } catch(Exception e) {
