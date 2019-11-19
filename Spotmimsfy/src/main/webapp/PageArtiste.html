@@ -95,17 +95,17 @@ and open the template in the editor.
                         </td>
                     </tr>
                     <tr>
-                        <td id="album1" class="artiste-album-col"><h1 style="color:white;"></h1></td>
+                        <td id="album1" class="artiste-album-col"> <input type="hidden"></td>
                         <td class="separer-album-col"></td>
-                        <td id="album2" class="artiste-album-col"><h1 style="color:white;"></h1></td>
+                        <td id="album2" class="artiste-album-col"></td>
                         <td class="separer-album-col"></td>
-                        <td id="album3" class="artiste-album-col"><h1 style="color:white;"></h1></td>
+                        <td id="album3" class="artiste-album-col"></td>
                         <td class="separer-album-col"></td>
-                        <td id="album4" class="artiste-album-col"><h1 style="color:white;"></h1></td>
+                        <td id="album4" class="artiste-album-col"></td>
                         <td class="separer-album-col"></td>
-                        <td id="album5" class="artiste-album-col"><h1 style="color:white;"></h1></td>
+                        <td id="album5" class="artiste-album-col"></td>
                         <td class="separer-album-col"></td>
-                        <td id="album6" class="artiste-album-col"><h1 style="color:white;"></h1></td>
+                        <td id="album6" class="artiste-album-col"></td>
                     </tr>
                 </tbody>
             </table>
@@ -184,22 +184,22 @@ and open the template in the editor.
 
                     //Ajouter les albums
                     var name = response.albums[0].toString().split("/");
-                    var content = document.createTextNode(name[4]);
+                    var content = document.createTextNode(name[4].replace(/_/g," "));
                     document.getElementById("album1").appendChild(content);
                     var name = response.albums[1].toString().split("/");
-                    var content = document.createTextNode(name[4]);
+                    var content = document.createTextNode(name[4].replace(/_/g," "));
                     document.getElementById("album2").appendChild(content);
                     var name = response.albums[2].toString().split("/");
-                    var content = document.createTextNode(name[4]);
+                    var content = document.createTextNode(name[4].replace(/_/g," "));
                     document.getElementById("album3").appendChild(content);
                     var name = response.albums[3].toString().split("/");
-                    var content = document.createTextNode(name[4]);
+                    var content = document.createTextNode(name[4].replace(/_/g," "));
                     document.getElementById("album4").appendChild(content);
                     var name = response.albums[4].toString().split("/");
-                    var content = document.createTextNode(name[4]);
+                    var content = document.createTextNode(name[4].replace(/_/g," "));
                     document.getElementById("album5").appendChild(content);
                     var name = response.albums[5].toString().split("/");
-                    var content = document.createTextNode(name[4]);
+                    var content = document.createTextNode(name[4].replace(/_/g," "));
                     document.getElementById("album6").appendChild(content);
 
                     
