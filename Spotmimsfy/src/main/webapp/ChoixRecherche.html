@@ -100,6 +100,7 @@ and open the template in the editor.
                         btn.style.border = "none";
                         btn.style.textAlign = "center";
                         btn.style.backgroundColor = "#FFEC91";
+                        btn.style.hover
                         
                         nouvelleCellule.appendChild(btn);
                     }
@@ -162,6 +163,13 @@ and open the template in the editor.
                     });
                 });
             
+             $(document).on('mouseover', 'button',function(){
+                 $(this).css("font-weight", 'bold');
+             });
+             
+             $(document).on('mouseleave', 'button',function(){
+                 $(this).css("font-weight", 'normal');
+             });
             
             $(document).on('click', '#artistes', function () {
                 $.ajax({
