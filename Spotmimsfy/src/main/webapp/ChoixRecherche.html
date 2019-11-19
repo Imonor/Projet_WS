@@ -114,7 +114,17 @@ and open the template in the editor.
                         var nouvelleCellule = nouvelleLigne.insertCell(-1);
                         var tab = response.chanson[i].toString().split("/");
                         var nouveauTexte = document.createTextNode(tab[4]);
-                        nouvelleCellule.appendChild(nouveauTexte);
+                        
+                           
+                        var p = document.createElement('p');
+                        p.appendChild(nouveauTexte);
+
+                        var btn = document.createElement('button');
+                        btn.id = "chansons";
+                        btn.setAttribute('type', 'button');
+                        btn.setAttribute('value', response.chanson[i].toString());
+                        nouvelleCellule.appendChild(p);                                              
+                        nouvelleCellule.appendChild(btn);
                     }
 
                     for (var i = 0; i < response.album.length; i++) {
@@ -123,7 +133,16 @@ and open the template in the editor.
                         var nouvelleCellule = nouvelleLigne.insertCell(-1);
                         var tab = response.album[i].toString().split("/");
                         var nouveauTexte = document.createTextNode(tab[4]);
-                        nouvelleCellule.appendChild(nouveauTexte);
+                        
+                        var p = document.createElement('p');
+                        p.appendChild(nouveauTexte);
+
+                        var btn = document.createElement('button');
+                        btn.id = "albums";
+                        btn.setAttribute('type', 'button');
+                        btn.setAttribute('value', response.album[i].toString());
+                        nouvelleCellule.appendChild(p);
+                        nouvelleCellule.appendChild(btn);
                     }
                 });
 
