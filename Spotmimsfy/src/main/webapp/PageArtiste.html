@@ -33,9 +33,9 @@ and open the template in the editor.
 
                         </td>
                         <td class="case-en-tete">
-                            <div id="recherche-informations">
-                                <input type="text" placeholder="Recherche..">
-                                <input type="submit" value="" src="https://www.pngfind.com/pngs/m/54-545482_vector-search-icon-search-icon-vector-png-transparent.png">
+                            <div id="recherche-choix">
+                                <input id="recherche" style="margin-left: -50px" type="text" placeholder="Recherche..">
+                                <input id="bouton-recherche" type="submit" value="" src="https://www.pngfind.com/pngs/m/54-545482_vector-search-icon-search-icon-vector-png-transparent.png">
                             </div>
                         </td>
                     </tr>
@@ -205,6 +205,24 @@ and open the template in the editor.
 
                     
 
+                });
+                
+                $('#bouton-recherche').on('click', function () {
+                    $.ajax({
+                        url: './Controller',
+                        type: 'POST',
+                        data: {
+                            todo: 'getSearchedTerm',
+                            recherche: $('#recherche').val()
+                        },
+                        dataType: 'json'
+                    }).done(function (response) {
+                        console.log(response);
+                        window.location = "./ChoixRecherche.html";
+                    }).fail(function (error) {
+                        console.log(error);
+                        alert("[ERROR] Problème lors de la recherche. Réessayez plus tard :)");
+                    });
                 });
             });
 

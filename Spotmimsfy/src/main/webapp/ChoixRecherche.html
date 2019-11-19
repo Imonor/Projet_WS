@@ -30,12 +30,9 @@ and open the template in the editor.
                             </div>
                         </td>
                         <td class="case-en-tete">
-
-                        </td>
-                        <td class="case-en-tete">
                             <div id="recherche-choix">
-                                <input type="text" placeholder="Recherche..">
-                                <input type="submit" value="" src="https://www.pngfind.com/pngs/m/54-545482_vector-search-icon-search-icon-vector-png-transparent.png">
+                                <input id="recherche" style="margin-left: -50px" type="text" placeholder="Recherche..">
+                                <input id="bouton-recherche" type="submit" value="" src="https://www.pngfind.com/pngs/m/54-545482_vector-search-icon-search-icon-vector-png-transparent.png">
                             </div>
                         </td>
                     </tr>
@@ -136,7 +133,7 @@ and open the template in the editor.
                         var btn = document.createElement('button');
                         btn.appendChild(nouveauTexte);
                         btn.setAttribute('id', 'albums');
-                        btn.setAttribute('value', response.artiste[i].toString());
+                        btn.setAttribute('value', response.album[i].toString());
                         btn.style.border = "none";
                         btn.style.textAlign = "center";
                         btn.style.backgroundColor = "#22A2AB";
@@ -146,7 +143,26 @@ and open the template in the editor.
                 });
 
             });
-
+            
+            $('#bouton-recherche').on('click', function () {
+                    $.ajax({
+                        url: './Controller',
+                        type: 'POST',
+                        data: {
+                            todo: 'getSearchedTerm',
+                            recherche: $('#recherche').val()
+                        },
+                        dataType: 'json'
+                    }).done(function (response) {
+                        console.log(response);
+                        window.location = "./ChoixRecherche.html";
+                    }).fail(function (error) {
+                        console.log(error);
+                        alert("[ERROR] Problème lors de la recherche. Réessayez plus tard :)");
+                    });
+                });
+            
+            
             $(document).on('click', '#artistes', function () {
                 $.ajax({
                     url: './Controller',
