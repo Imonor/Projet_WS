@@ -62,7 +62,9 @@ and open the template in the editor.
                     <tr class="separer-ligne"></tr>
                     <tr>
                         <td class="chanson-col-1">
-                            <h1 id="artist" style="color:white; padding: 10px; text-align: center; font-size: 18px">Artiste : <br> </h1>
+                            <h1 id="artist" style="color:white; padding: 10px; text-align: center; font-size: 18px"> <input type="hidden">
+                                Artiste : <br> 
+                            </h1>
                         </td>
                     </tr>
 
@@ -189,6 +191,7 @@ and open the template in the editor.
                             var br = document.createElement("br");
 
                             document.getElementById("artist").appendChild(content);
+                            $('#artist').children('input').val(response.artist[i]);
                             document.getElementById("artist").appendChild(br);
                         }
                     }
@@ -315,11 +318,39 @@ and open the template in the editor.
                     });
                 });
                 
+                $(document).on('click', '#artist', function () {
+
+                    $.ajax({
+                        url: './Controller',
+                        type: 'POST',
+                        data: {
+                            todo: 'getItemSelected',
+                            URI: $(this).children('input').val(),
+                            categorie: 'Artiste'
+                        },
+                        dataType: 'json'
+                    }).done(function (response) {
+                        console.log(response);
+                        window.location = "./PageArtiste.html";
+                    }).fail(function (error) {
+                        console.log(error);
+                        alert("[ERROR] Problème lors de la recherche. Réessayez plus tard :)");
+                    });
+                });
+                
                 $(document).on('mouseover', '#album', function () {
                     $(this).css("font-weight", 'bold');
                 });
 
                 $(document).on('mouseleave', '#album', function () {
+                    $(this).css("font-weight", 'normal');
+                });
+                
+                $(document).on('mouseover', '#artist', function () {
+                    $(this).css("font-weight", 'bold');
+                });
+
+                $(document).on('mouseleave', '#artist', function () {
                     $(this).css("font-weight", 'normal');
                 });
             });
