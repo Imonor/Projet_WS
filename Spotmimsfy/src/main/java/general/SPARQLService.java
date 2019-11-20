@@ -14,21 +14,21 @@ import org.apache.jena.query.*;
  */
 public class SPARQLService {
 
+    /**
+     * This function will execute the SPARQL query in parameter to dbpedia then return all the results.
+     * 
+     * @param stringQuery
+     * @return List<QuerySolution
+     */
     public static List<QuerySolution> executeQuery(String stringQuery) {
-        // now creating query object
         List<QuerySolution> solutions = new ArrayList<>();
         Query query = QueryFactory.create(stringQuery);
-        // initializing queryExecution factory with remote service.
-        // **this actually was the main problem I couldn't figure out.**
         QueryExecution qexec = QueryExecutionFactory.sparqlService("http://dbpedia.org/sparql", query);
-        //after it goes standard query execution and result processing which can
-        // be found in almost any Jena/SPARQL tutorial.
         try {
             ResultSet results = qexec.execSelect();
             for (; results.hasNext();) {
                 solutions.add(results.next());
             }
-            // Result processing is done here.
         } finally {
             qexec.close();
         }
@@ -38,6 +38,13 @@ public class SPARQLService {
     public static List<String> getLiteral(String URI, String literalName) {
         return getLiteral(URI, literalName, "");
     }
+    /**
+     * This function will execute the request to get the Literal property "literalName" of the resource "URI".
+     * @param URI
+     * @param literalName
+     * @param addOn (for example a LIMIT)
+     * @return 
+     */
     public static List<String> getLiteral(String URI, String literalName, String addOn) {
         String query = "PREFIX dbr:<http://dbpedia.org/resource/>\n"
                 + "PREFIX dbo:<http://dbpedia.org/ontology/>\n"
@@ -62,6 +69,14 @@ public class SPARQLService {
     public static List<String> getResourceText(String URI, String resourceName) {
         return getResourceText(URI, resourceName, "");
     }
+    
+    /**
+     * This function will execute the request to get the name of the Resource property "resourceName" of the resource "URI".
+     * @param URI
+     * @param resourceName
+     * @param addOn (for example LIMIT)
+     * @return 
+     */
     public static List<String> getResourceText(String URI, String resourceName, String addOn) {
         String query = "PREFIX dbr:<http://dbpedia.org/resource/>\n"
                 + "PREFIX dbo:<http://dbpedia.org/ontology/>\n"
@@ -87,6 +102,14 @@ public class SPARQLService {
     public static List<String> getResourceURI(String URI, String resourceName) {
         return getResourceURI(URI, resourceName, "");
     }
+    
+    /**
+     * This function will execute the request to get the URI of the Resource property "resourceName" of the resource "URI".
+     * @param URI
+     * @param resourceName
+     * @param addOn (for example LIMIT)
+     * @return 
+     */
     public static List<String> getResourceURI(String URI, String resourceName, String addOn) {
         String query = "PREFIX dbr:<http://dbpedia.org/resource/>\n"
                 + "PREFIX dbo:<http://dbpedia.org/ontology/>\n"
@@ -108,7 +131,12 @@ public class SPARQLService {
         return values;
     }
     
-    
+    /**
+     * This function will return a description of the artist, album or song.
+     * We made a function for that because we had to check the language was English.
+     * @param URI
+     * @return 
+     */
     public static List<String> getResume(String URI) {
         String query = "PREFIX dbo:<http://dbpedia.org/ontology/>\n"
                 + "SELECT  ?value\n"
@@ -125,6 +153,7 @@ public class SPARQLService {
         return values;
     }
 
+    // For test purposes
 //    public static void main(String[] args) {
 //        String query = "PREFIX dbr:<http://dbpedia.org/resource/>\n"
 //                + "PREFIX dbo:<http://dbpedia.org/ontology/>\n"

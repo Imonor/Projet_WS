@@ -9,7 +9,7 @@ import org.apache.jena.rdf.model.Literal;
 import org.apache.jena.rdf.model.Resource;
 
 /*
- * ChansonService
+ * AlbumService
  * Provides functions to get all information relative to an album
  */
 /**
@@ -19,6 +19,11 @@ import org.apache.jena.rdf.model.Resource;
  
 public class AlbumService {
 
+    /**
+     * This function returns a map containing all the informations we want about an album.
+     * @param albumURI
+     * @return 
+     */
     public static Map<String, List<String>> getInfosAlbum(String albumURI) {
         Map<String, List<String>> infosAlbum = new HashMap<>();
 
@@ -38,6 +43,12 @@ public class AlbumService {
         return infosAlbum;
     }
     
+    
+    /**
+     * This function returns the list of the song in the album.
+     * @param albumURI
+     * @return 
+     */
     private static List<String> getSongTitles(String albumURI) {
         String query = "PREFIX dbp: <http://dbpedia.org/property/>\n"
                 + "SELECT  ?value\n"
@@ -48,6 +59,7 @@ public class AlbumService {
         List<QuerySolution> results = SPARQLService.executeQuery(query);
         List<String> values = new ArrayList<>();
         for (QuerySolution line : results) {
+            // Some songs don't have a dbpedia page, so we have to test if it is a resource, and if not we just take the name of the song.
             try {
                 Resource resource = line.getResource("value");
                 values.add(resource.getURI());

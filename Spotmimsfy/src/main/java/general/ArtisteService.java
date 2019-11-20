@@ -7,16 +7,23 @@ import java.util.Map;
 import org.apache.jena.query.QuerySolution;
 
 /*
- * ChansonService
+ * ArtisteService
  * Provides functions to get all information relative to an artist
  */
 /**
+ * This class contains static functions to get informations about an Artist
  *
  * @author Ilan PIPERNO
  */
  
 public class ArtisteService {
 
+    /**
+     * This function returns a map containing all the informations we want about an artist.
+     * 
+     * @param artistURI
+     * @return Map<String, List<String>>
+     */
     public static Map<String, List<String>> getInfosArtiste(String artistURI) {
         Map<String, List<String>> infosArtiste = new HashMap<>();
 

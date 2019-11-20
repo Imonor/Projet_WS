@@ -9,12 +9,18 @@ import java.util.Map;
  * Provides functions to get all information relative to a music
  */
 /**
+ * This class contains static functions to get informations about a Song
  *
  * @author Ilan PIPERNO
  */
  
 public class ChansonService {
     
+    /**
+     * This function returns a map containing all the informations we want about a song.
+     * @param albumURI
+     * @return 
+     */
     public static Map<String, List<String>> getInfosChanson(String albumURI) {
         Map<String, List<String>> infosChanson = new HashMap<>();
         

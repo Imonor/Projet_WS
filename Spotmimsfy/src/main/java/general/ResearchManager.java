@@ -16,8 +16,13 @@ import org.apache.jena.query.QuerySolution;
  
 public class ResearchManager {
 
-
-    public static List<String> getArtistes(String recherche) throws FileNotFoundException {
+/**
+ * This function returns all the Artists that match the name the user searcehes.
+ * 
+ * @param recherche
+ * @return
+ */
+    public static List<String> getArtistes(String recherche) {
         String query = "PREFIX dbr:<http://dbpedia.org/resource/>\n"
                 + "PREFIX dbo:<http://dbpedia.org/ontology/>\n"
                 + "PREFIX foaf:<http://xmlns.com/foaf/0.1/>\n"
@@ -49,6 +54,11 @@ public class ResearchManager {
         return lines;
     }
 
+    /**
+     * This function returns all the Albums that match the name the user searcehes.
+     * @param recherche
+     * @return 
+     */
     public static List<String> getAlbums(String recherche) {
         String query = "PREFIX dbr:<http://dbpedia.org/resource/>\n"
                 + "PREFIX dbo:<http://dbpedia.org/ontology/>\n"
@@ -75,6 +85,11 @@ public class ResearchManager {
         return lines;
     }
     
+     /**
+     * This function returns all the Songs or Singles that match the name the user searcehes.
+     * @param recherche
+     * @return 
+     */  
     public static List<String> getChansons(String recherche) {
         String query = "PREFIX dbr:<http://dbpedia.org/resource/>\n"
                 + "PREFIX dbo:<http://dbpedia.org/ontology/>\n"
