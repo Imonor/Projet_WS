@@ -54,7 +54,9 @@ and open the template in the editor.
                     <tr class="separer-ligne"></tr>
                     <tr>
                         <td class="chanson-col-1">
-                            <h1 id="album" style="color:white; padding: 10px; text-align: center; font-size: 18px">Album : <br></h1>
+                            <h1 id="album" style="color:white; padding: 10px; text-align: center; font-size: 18px"> <input type="hidden">
+                                Album : <br>
+                            </h1>
                         </td>
                     </tr>
                     <tr class="separer-ligne"></tr>
@@ -171,6 +173,7 @@ and open the template in the editor.
                             var br = document.createElement("br");
 
                             document.getElementById("album").appendChild(content);
+                            $('#album').children('input').val(response.album[i]);
                             document.getElementById("album").appendChild(br);
                         }
                     }
@@ -290,6 +293,34 @@ and open the template in the editor.
                             alert("[ERROR] Problème lors de la recherche. Réessayez plus tard :)");
                         });
                     }
+                });
+                
+                $(document).on('click', '#album', function () {
+
+                    $.ajax({
+                        url: './Controller',
+                        type: 'POST',
+                        data: {
+                            todo: 'getItemSelected',
+                            URI: $(this).children('input').val(),
+                            categorie: 'Album'
+                        },
+                        dataType: 'json'
+                    }).done(function (response) {
+                        console.log(response);
+                        window.location = "./PageAlbum.html";
+                    }).fail(function (error) {
+                        console.log(error);
+                        alert("[ERROR] Problème lors de la recherche. Réessayez plus tard :)");
+                    });
+                });
+                
+                $(document).on('mouseover', '#album', function () {
+                    $(this).css("font-weight", 'bold');
+                });
+
+                $(document).on('mouseleave', '#album', function () {
+                    $(this).css("font-weight", 'normal');
                 });
             });
         </script>
