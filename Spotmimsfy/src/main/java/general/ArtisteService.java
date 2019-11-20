@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package general;
 
 import java.util.ArrayList;
@@ -11,10 +6,15 @@ import java.util.List;
 import java.util.Map;
 import org.apache.jena.query.QuerySolution;
 
+/*
+ * ChansonService
+ * Provides functions to get all information relative to an artist
+ */
 /**
  *
- * @author Ilan
+ * @author Ilan PIPERNO
  */
+ 
 public class ArtisteService {
 
     public static Map<String, List<String>> getInfosArtiste(String artistURI) {

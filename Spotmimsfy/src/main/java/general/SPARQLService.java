@@ -5,13 +5,12 @@ import java.util.List;
 import org.apache.jena.query.*;
 
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * SPARQL Service
+ * Provides functions to create and execute queries with Jena library
  */
 /**
  *
- * @author herme
+ * @author Ilan PIPERNO
  */
 public class SPARQLService {
 

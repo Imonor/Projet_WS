@@ -1,10 +1,5 @@
 package general;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 import action.Action;
 import action.ActionGetInfos;
@@ -23,10 +18,15 @@ import serialization.SerializationGetSearchedTerm;
 import serialization.SerializationInfos;
 import serialization.SerializationListeURIs;
 
+/*
+ * Controller
+ * Manage HTTP requests to execute the corresponding action and return the adapted view and result
+ */
 /**
  *
- * @author herme
+ * @author Guilhem HERMET
  */
+ 
 @WebServlet(urlPatterns = {"/Controller"})
 public class Controller extends HttpServlet {
     
@@ -42,28 +42,35 @@ public class Controller extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
+			//todo is the main request parameter, which indicates the action to implement
             String todo = request.getParameter("todo");
+			//Action class execute the service called by the user
             Action action = null;
+			//Serialization class serializes the result of the action in Json format
             Serialization serialization = null;
             
+			//traiterRecherche returns the list of results corresponding to the research
             if("traiterRecherche".equals(todo)){
                 action = new ActionTraiterRecherche();
                 action.executer(request);
                 serialization = new SerializationListeURIs();
                 serialization.serialiser(request, response);
-                
+            
+			//getInfos provides all the information relative to the result the user chose to visualise			
             }else if("getInfos".equals(todo)){
                 action = new ActionGetInfos();
                 action.executer(request);
                 serialization = new SerializationInfos();
                 serialization.serialiser(request, response);
             
+			//getSearchedTerm returns the last term researched by the user
             }else if("getSearchedTerm".equals(todo)){
                 action = new ActionGetSearchedTerm();
                 action.executer(request);
                 serialization = new SerializationGetSearchedTerm();
                 serialization.serialiser(request, response);
-                
+            
+			//getItemSelected returns the URI and category of the result the user chose to visualise
             }else if("getItemSelected".equals(todo)){
                 action = new ActionGetItemSelected();
                 action.executer(request);
@@ -75,7 +82,6 @@ public class Controller extends HttpServlet {
         }
     }
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
      *
@@ -112,6 +118,6 @@ public class Controller extends HttpServlet {
     @Override
     public String getServletInfo() {
         return "Short description";
-    }// </editor-fold>
+    }
 
 }
