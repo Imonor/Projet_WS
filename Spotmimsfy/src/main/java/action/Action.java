@@ -1,18 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package action;
 
+/*
+ * Action
+ * Execute the action called by HTTP request
+ */
 /**
  *
- * @author herme
+ * @author Guilhem HERMET
  */
+
 import javax.servlet.http.HttpServletRequest;
 
 public abstract class Action {
     
+    //Execute the request
     public abstract boolean executer(HttpServletRequest request);
     
 }

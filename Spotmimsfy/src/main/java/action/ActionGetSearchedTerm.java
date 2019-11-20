@@ -1,28 +1,27 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package action;
 
 import javax.servlet.http.HttpServletRequest;
-import general.ResearchManager;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import javax.servlet.http.HttpSession;
 
 
+/*
+ * ActionGetSearchedTerm
+ * Execute the HTTP request in order to get the last term searched by the user
+ */
 /**
  *
- * @author herme
+ * @author Antony MARTIN
  */
+
 public class ActionGetSearchedTerm extends Action{
     @Override
     public boolean executer(HttpServletRequest request){
         try{
             HttpSession session = request.getSession(true);
-            String recherche = request.getParameter("recherche");            
+            //recherche: term researched by the user
+            String recherche = request.getParameter("recherche");    
+            
+            //returns all the information into the request
             session.setAttribute("recherche", recherche);
             return true;
         } catch (Exception e){
