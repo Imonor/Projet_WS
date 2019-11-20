@@ -155,10 +155,16 @@ and open the template in the editor.
                     } else {
                         for (var i = 0; i < response.bands.length; i++) {
                             var genreName = response.bands[i].toString().split("/");
+                            
+                            var paragraphe = document.createElement("p");
+                            paragraphe.className = 'groupeAssocie';
+                            var input = document.createElement("input"); 
+                            input.type='hidden';
+                            input.value=response.bands[i];
                             var content = document.createTextNode(genreName[4].replace(/_/g, " ") + "\n");
-                            var br = document.createElement("br");
-                            document.getElementById("bands").appendChild(content);
-                            document.getElementById("bands").appendChild(br);
+                            paragraphe.appendChild(input);
+                            paragraphe.appendChild(content);
+                            document.getElementById("bands").appendChild(paragraphe);
                         }
                     }
 
@@ -348,12 +354,40 @@ and open the template in the editor.
                         alert("[ERROR] Problème lors de la recherche. Réessayez plus tard :)");
                     });
                 });
+                
+                $(document).on('click', '.groupeAssocie', function () {
+
+                    $.ajax({
+                        url: './Controller',
+                        type: 'POST',
+                        data: {
+                            todo: 'getItemSelected',
+                            URI: $(this).children('input').val(),
+                            categorie: 'Artiste'
+                        },
+                        dataType: 'json'
+                    }).done(function (response) {
+                        console.log(response);
+                        window.location = "./PageArtiste.html";
+                    }).fail(function (error) {
+                        console.log(error);
+                        alert("[ERROR] Problème lors de la recherche. Réessayez plus tard :)");
+                    });
+                });
 
                 $(document).on('mouseover', '.artiste-album-col', function () {
                     $(this).css("font-weight", 'bold');
                 });
 
                 $(document).on('mouseleave', '.artiste-album-col', function () {
+                    $(this).css("font-weight", 'normal');
+                });
+                
+                $(document).on('mouseover', '.groupeAssocie', function () {
+                    $(this).css("font-weight", 'bold');
+                });
+
+                $(document).on('mouseleave', '.groupeAssocie', function () {
                     $(this).css("font-weight", 'normal');
                 });
             });
