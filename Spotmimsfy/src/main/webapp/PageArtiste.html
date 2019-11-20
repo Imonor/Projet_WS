@@ -88,25 +88,17 @@ and open the template in the editor.
                 </tbody>
             </table>
             <table id="table-artiste-albums" style="color:white; padding: 10px; text-align: center">
-                <tbody>
+                
+                <thead>
                     <tr>
                         <td>
                             <h1 style="color:white;">ALBUMS</h1>
                         </td>
                     </tr>
-                    <tr>
-                        <td id="album1" class="artiste-album-col"> <input type="hidden"></td>
-                        <td class="separer-album-col"></td>
-                        <td id="album2" class="artiste-album-col"></td>
-                        <td class="separer-album-col"></td>
-                        <td id="album3" class="artiste-album-col"></td>
-                        <td class="separer-album-col"></td>
-                        <td id="album4" class="artiste-album-col"></td>
-                        <td class="separer-album-col"></td>
-                        <td id="album5" class="artiste-album-col"></td>
-                        <td class="separer-album-col"></td>
-                        <td id="album6" class="artiste-album-col"></td>
-                    </tr>
+                </thead>
+                <tbody id="table-artiste-albums-body">  
+                    
+
                 </tbody>
             </table>
         </div>
@@ -137,7 +129,7 @@ and open the template in the editor.
                         document.getElementById("name").appendChild(content);
                     }
                     //Ajouter la description
-                    if (response.description.length == 0) {
+                    if (response.description.length === 0) {
                         var content = document.createTextNode("\n Pas de description");
                         document.getElementById("description").appendChild(content);
                     } else {
@@ -183,26 +175,119 @@ and open the template in the editor.
                     }
 
                     //Ajouter les albums
-                    var name = response.albums[0].toString().split("/");
-                    var content = document.createTextNode(name[4].replace(/_/g," "));
-                    document.getElementById("album1").appendChild(content);
-                    var name = response.albums[1].toString().split("/");
-                    var content = document.createTextNode(name[4].replace(/_/g," "));
-                    document.getElementById("album2").appendChild(content);
-                    var name = response.albums[2].toString().split("/");
-                    var content = document.createTextNode(name[4].replace(/_/g," "));
-                    document.getElementById("album3").appendChild(content);
-                    var name = response.albums[3].toString().split("/");
-                    var content = document.createTextNode(name[4].replace(/_/g," "));
-                    document.getElementById("album4").appendChild(content);
-                    var name = response.albums[4].toString().split("/");
-                    var content = document.createTextNode(name[4].replace(/_/g," "));
-                    document.getElementById("album5").appendChild(content);
-                    var name = response.albums[5].toString().split("/");
-                    var content = document.createTextNode(name[4].replace(/_/g," "));
-                    document.getElementById("album6").appendChild(content);
-
                     
+                    for (var i = 0;i < response.albums.length; i = i+6) {
+                        var tr = document.createElement("tr"); 
+                        
+                        var td1 = document.createElement("td"); 
+                        var td2 = document.createElement("td"); 
+                        var td3 = document.createElement("td"); 
+                        var td4 = document.createElement("td"); 
+                        var td5 = document.createElement("td"); 
+                        var td6 = document.createElement("td"); 
+                        
+                        td1.className= 'artiste-album-col';
+                        td2.className= 'artiste-album-col';
+                        td3.className= 'artiste-album-col';
+                        td4.className= 'artiste-album-col';
+                        td5.className= 'artiste-album-col';
+                        td6.className= 'artiste-album-col';
+                        
+                        var input1 = document.createElement('input');
+                        var input2 = document.createElement('input');
+                        var input3 = document.createElement('input');
+                        var input4 = document.createElement('input');
+                        var input5 = document.createElement('input');
+                        var input6 = document.createElement('input');
+                        
+                        input1.type='hidden';
+                        input1.value= response.albums[i].toString();
+                        
+                        input2.type='hidden';
+                        input2.value= response.albums[i+1].toString();
+                        
+                        input3.type='hidden';
+                        input3.value= response.albums[i+2].toString();
+                        
+                        input4.type='hidden';
+                        input4.value= response.albums[i+3].toString();
+                        
+                        input5.type='hidden';
+                        input5.value= response.albums[i+4].toString();
+                        
+                        input6.type='hidden';
+                        input6.value= response.albums[i+5].toString();
+                        
+                        var name1 = response.albums[i].toString().split("/");
+                        var content1 = document.createTextNode(name1[4].replace(/_/g," "));
+                        
+                        var name2 = response.albums[i+1].toString().split("/");
+                        var content2 = document.createTextNode(name2[4].replace(/_/g," "));
+                        
+                        var name3 = response.albums[i+2].toString().split("/");
+                        var content3 = document.createTextNode(name3[4].replace(/_/g," "));
+                        
+                        var name4 = response.albums[i+3].toString().split("/");
+                        var content4 = document.createTextNode(name4[4].replace(/_/g," "));
+                        
+                        var name5 = response.albums[i+4].toString().split("/");
+                        var content5 = document.createTextNode(name5[4].replace(/_/g," "));
+                        
+                        var name6 = response.albums[i+5].toString().split("/");
+                        var content6 = document.createTextNode(name6[4].replace(/_/g," "));
+                        
+                        td1.appendChild(input1);
+                        td1.appendChild(content1);
+                        
+                        td2.appendChild(input2);
+                        td2.appendChild(content2);
+                        
+                        td3.appendChild(input3);
+                        td3.appendChild(content3);
+                        
+                        td4.appendChild(input4);
+                        td4.appendChild(content4);
+                        
+                        td5.appendChild(input5);
+                        td5.appendChild(content5);
+                        
+                        td6.appendChild(input6);
+                        td6.appendChild(content6);
+                        
+                        var tdSep1 = document.createElement("td");
+                        tdSep1.clasName ='separer-album-col';
+                        
+                        var tdSep2 = document.createElement("td");
+                        tdSep2.clasName ='separer-album-col';
+                        
+                        var tdSep3 = document.createElement("td");
+                        tdSep3.clasName ='separer-album-col';
+                        
+                        var tdSep4 = document.createElement("td");
+                        tdSep4.clasName ='separer-album-col';
+                        
+                        var tdSep5 = document.createElement("td");
+                        tdSep5.clasName ='separer-album-col';
+                        
+                        var tdSep6 = document.createElement("td");
+                        tdSep6.clasName ='separer-album-col';
+                        
+                        // ajouter tous les elements
+                        
+                        tr.appendChild(td1);
+                        tr.appendChild(tdSep1);
+                        tr.appendChild(td2);
+                        tr.appendChild(tdSep2);
+                        tr.appendChild(td3);
+                        tr.appendChild(tdSep3);
+                        tr.appendChild(td4);
+                        tr.appendChild(tdSep4);
+                        tr.appendChild(td5);
+                        tr.appendChild(tdSep5);
+                        tr.appendChild(td6);
+                        tr.appendChild(tdSep6);
+                        document.getElementById('table-artiste-albums-body').appendChild(tr);                    
+                    }                   
 
                 });
                 
@@ -223,7 +308,7 @@ and open the template in the editor.
                         alert("[ERROR] Problème lors de la recherche. Réessayez plus tard :)");
                     });
                 });
-                
+   
                 $(document).on('keypress', function (e) {
                     if (e.which == 13) {
                         $.ajax({
@@ -242,6 +327,26 @@ and open the template in the editor.
                             alert("[ERROR] Problème lors de la recherche. Réessayez plus tard :)");
                         });
                     }
+                });
+                
+                $(document).on('click','.artiste-album-col', function () {
+                   
+                    $.ajax({
+                        url: './Controller',
+                        type: 'POST',
+                        data: {
+                            todo: 'getItemSelected',
+                            URI: $(this).children('input').val(),
+                            categorie: 'Album'
+                        },
+                        dataType: 'json'
+                    }).done(function (response) {
+                        console.log(response);
+                        window.location = "./PageAlbum.html";
+                    }).fail(function (error) {
+                        console.log(error);
+                        alert("[ERROR] Problème lors de la recherche. Réessayez plus tard :)");
+                    });
                 });
             });
 
